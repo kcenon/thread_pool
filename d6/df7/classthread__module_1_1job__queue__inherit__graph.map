@@ -1,0 +1,5 @@
+<map id="thread_module::job_queue" name="thread_module::job_queue">
+<area shape="rect" id="node1" title="Represents a thread&#45;safe queue for managing jobs." alt="" coords="19,145,212,443"/>
+<area shape="rect" id="node3" href="$d1/d10/classpriority__thread__pool__module_1_1priority__job__queue.html" title="A queue for managing priority jobs." alt="" coords="5,491,225,744"/>
+<area shape="rect" id="node2" title=" " alt="" coords="21,5,209,97"/>
+</map>

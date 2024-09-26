@@ -1,0 +1,6 @@
+<map id="thread_module::job" name="thread_module::job">
+<area shape="rect" id="node1" title="Represents a job that can be executed by a job queue." alt="" coords="99,145,247,340"/>
+<area shape="rect" id="node3" href="$df/df4/classlog__module_1_1log__job.html" title="Represents a logging job derived from the base job class." alt="" coords="5,388,159,568"/>
+<area shape="rect" id="node4" href="$d6/da0/classpriority__thread__pool__module_1_1priority__job.html" title="Represents a job with a priority level." alt="" coords="183,388,343,568"/>
+<area shape="rect" id="node2" title=" " alt="" coords="100,5,245,97"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="log_module::logger::before_start" name="log_module::logger::before_start">
+<area shape="rect" id="node1" title="Called before the logger thread starts." alt="" coords="5,5,152,47"/>
+<area shape="rect" id="node2" href="$d8/d42/classthread__module_1_1job.html#a8516f8001e878a4d8359d63ebc568acc" title="Execute the job&#39;s work." alt="" coords="200,5,348,47"/>
+</map>

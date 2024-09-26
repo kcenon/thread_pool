@@ -1,0 +1,7 @@
+<map id="thread_module::thread_base" name="thread_module::thread_base">
+<area shape="rect" id="node1" title="Base class for implementing thread&#45;based workers." alt="" coords="199,145,407,413"/>
+<area shape="rect" id="node3" href="$d1/d46/classlog__module_1_1logger.html" title="A singleton class for logging operations." alt="" coords="5,461,176,979"/>
+<area shape="rect" id="node4" href="$dd/df7/classpriority__thread__pool__module_1_1priority__thread__worker.html" title="A worker thread class that processes jobs from a priority job queue." alt="" coords="200,615,405,825"/>
+<area shape="rect" id="node5" href="$d7/d1b/classthread__pool__module_1_1thread__worker.html" title="A worker thread class that processes jobs from a job queue." alt="" coords="429,637,584,803"/>
+<area shape="rect" id="node2" title=" " alt="" coords="202,5,403,97"/>
+</map>
