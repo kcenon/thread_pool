@@ -65,7 +65,7 @@ $(function() {
 
 <h3><a id="index_a"></a>- a -</h3><ul>
 <li>after_stop()
-: <a class="el" href="d1/d46/classlog__module_1_1logger.html#a1af6cedf2a4e3f45f2c21bc91597b70a">log_module::logger</a>
+: <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#a08f9f464de3ebaf31898f61563fb7fa5">log_module::log_collector</a>
 , <a class="el" href="da/d94/classthread__module_1_1thread__base.html#a3ec3b99c50ef47c6733214a167ed9a96">thread_module::thread_base</a>
 </li>
 </ul>
@@ -73,7 +73,7 @@ $(function() {
 
 <h3><a id="index_b"></a>- b -</h3><ul>
 <li>before_start()
-: <a class="el" href="d1/d46/classlog__module_1_1logger.html#af8c50f5e281c2b29b7f9ba8ca0dd4409">log_module::logger</a>
+: <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#ad0effaa4b068ea820e828b5ac2eb0c14">log_module::log_collector</a>
 , <a class="el" href="da/d94/classthread__module_1_1thread__base.html#a42bb56bd4cb708542ab45a6a6e7dcdcc">thread_module::thread_base</a>
 </li>
 </ul>
@@ -87,11 +87,26 @@ $(function() {
 : <a class="el" href="d1/d10/classpriority__thread__pool__module_1_1priority__job__queue.html#a932d356d1abd19dc7c31b63699168884">priority_thread_pool_module::priority_job_queue&lt; priority_type &gt;</a>
 , <a class="el" href="df/d6d/classthread__module_1_1job__queue.html#a76f3ac914b567dc7bcc2971eacd4ae37">thread_module::job_queue</a>
 </li>
+<li>collector_
+: <a class="el" href="d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">log_module::logger</a>
+</li>
 <li>condition_
 : <a class="el" href="df/d6d/classthread__module_1_1job__queue.html#a862c8cfa56448b7db38792ed3ff56e1c">thread_module::job_queue</a>
 </li>
+<li>console_job()
+: <a class="el" href="db/def/classlog__module_1_1console__job.html#a4c9f2ccc17779d1a373d75efd3bae6b7">log_module::console_job</a>
+</li>
 <li>console_log_type_
-: <a class="el" href="d1/d46/classlog__module_1_1logger.html#ae0fc8e9c4a9c6cfeaa78831d648f4c2e">log_module::logger</a>
+: <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#a276fd980e9546d0884d4e094f844fa9d">log_module::log_collector</a>
+</li>
+<li>console_queue_
+: <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#a86ba5e26338ca6d9d48941b26eb5d98c">log_module::log_collector</a>
+</li>
+<li>console_writer()
+: <a class="el" href="d9/de4/classlog__module_1_1console__writer.html#a61dfd20b0c4f37840102f740bcf62f6d">log_module::console_writer</a>
+</li>
+<li>console_writer_
+: <a class="el" href="d1/d46/classlog__module_1_1logger.html#a892c32bb437af21fd3c24feeb5f65768">log_module::logger</a>
 </li>
 <li>cv_mutex_
 : <a class="el" href="da/d94/classthread__module_1_1thread__base.html#a68e452ea7136f242b1e1b8e84758cd5c">thread_module::thread_base</a>
@@ -111,8 +126,12 @@ $(function() {
 : <a class="el" href="d1/d46/classlog__module_1_1logger.html#ab731544957a7d592628b74c19d4f20d0">log_module::logger</a>
 </li>
 <li>do_work()
-: <a class="el" href="df/df4/classlog__module_1_1log__job.html#af548a3766d879ee07b2935bd859faa30">log_module::log_job</a>
-, <a class="el" href="d1/d46/classlog__module_1_1logger.html#ab084905adbb121e0bcd75ee26b9de636">log_module::logger</a>
+: <a class="el" href="db/def/classlog__module_1_1console__job.html#afaccf3f187089f5fcc39b54fbf920fb1">log_module::console_job</a>
+, <a class="el" href="d9/de4/classlog__module_1_1console__writer.html#abfc57f16181b572ef1daa7eed6482c23">log_module::console_writer</a>
+, <a class="el" href="dc/d3c/classlog__module_1_1file__job.html#a4657e5c43f7ff104c0d1af76d1c69663">log_module::file_job</a>
+, <a class="el" href="dc/d2b/classlog__module_1_1file__writer.html#a4706ea61d73d3a7e5097c4d21d12f22e">log_module::file_writer</a>
+, <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#a6dfef85b4ac015c3208a7163a79f16a6">log_module::log_collector</a>
+, <a class="el" href="df/df4/classlog__module_1_1log__job.html#af548a3766d879ee07b2935bd859faa30">log_module::log_job</a>
 , <a class="el" href="dd/df7/classpriority__thread__pool__module_1_1priority__thread__worker.html#a58f783781fc80f38081939123f36da3c">priority_thread_pool_module::priority_thread_worker&lt; priority_type &gt;</a>
 , <a class="el" href="d8/d42/classthread__module_1_1job.html#a8516f8001e878a4d8359d63ebc568acc">thread_module::job</a>
 , <a class="el" href="da/d94/classthread__module_1_1thread__base.html#a87757cc02652293c41f71280f7ec6710">thread_module::thread_base</a>
@@ -139,8 +158,20 @@ $(function() {
 
 
 <h3><a id="index_f"></a>- f -</h3><ul>
+<li>file_job()
+: <a class="el" href="dc/d3c/classlog__module_1_1file__job.html#ad2312ff62012722216456403d8fb8c46">log_module::file_job</a>
+</li>
 <li>file_log_type_
-: <a class="el" href="d1/d46/classlog__module_1_1logger.html#a50c21f938726e2438e8ecfc90cc23ed7">log_module::logger</a>
+: <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#ab57512e92c20b5c5ad52191799003e40">log_module::log_collector</a>
+</li>
+<li>file_queue_
+: <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#ab7fecba14eb03947827db31a46476eb3">log_module::log_collector</a>
+</li>
+<li>file_writer()
+: <a class="el" href="dc/d2b/classlog__module_1_1file__writer.html#ab75efa0b171d477a8716f38cd240a715">log_module::file_writer</a>
+</li>
+<li>file_writer_
+: <a class="el" href="d1/d46/classlog__module_1_1logger.html#aeefa1132bbb3173bd6dde081031df13a">log_module::logger</a>
 </li>
 <li>format()
 : <a class="el" href="d6/d5b/structfmt_1_1formatter_3_01log__module_1_1log__types_01_4.html#a37fcab0a0a2f929e3faa7744be1b292c">fmt::formatter&lt; log_module::log_types &gt;</a>
@@ -151,19 +182,24 @@ $(function() {
 
 <h3><a id="index_g"></a>- g -</h3><ul>
 <li>get_console_target()
-: <a class="el" href="d1/d46/classlog__module_1_1logger.html#a82ccb08e86e96a5ccd17ad4c9ed546a7">log_module::logger</a>
+: <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#a82d70ea3247751e4d2ff92a9fc57e013">log_module::log_collector</a>
+, <a class="el" href="d1/d46/classlog__module_1_1logger.html#a82ccb08e86e96a5ccd17ad4c9ed546a7">log_module::logger</a>
 </li>
 <li>get_file_target()
-: <a class="el" href="d1/d46/classlog__module_1_1logger.html#aacbfa5803949f8dfbe6808c9e9177047">log_module::logger</a>
+: <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#af23ea2f075d294af109091b3382b36bf">log_module::log_collector</a>
+, <a class="el" href="d1/d46/classlog__module_1_1logger.html#aacbfa5803949f8dfbe6808c9e9177047">log_module::logger</a>
 </li>
 <li>get_job_queue()
-: <a class="el" href="d6/da0/classpriority__thread__pool__module_1_1priority__job.html#aeaf0b2ac34635ff80660e44a09e5be8c">priority_thread_pool_module::priority_job&lt; priority_type &gt;</a>
+: <a class="el" href="d9/de4/classlog__module_1_1console__writer.html#a423539b760783039edb1675b2e72583c">log_module::console_writer</a>
+, <a class="el" href="dc/d2b/classlog__module_1_1file__writer.html#ad58afe57167e913f38de2efb3f45d423">log_module::file_writer</a>
+, <a class="el" href="d6/da0/classpriority__thread__pool__module_1_1priority__job.html#aeaf0b2ac34635ff80660e44a09e5be8c">priority_thread_pool_module::priority_job&lt; priority_type &gt;</a>
 , <a class="el" href="d7/d88/classpriority__thread__pool__module_1_1priority__thread__pool.html#a67f2b4f25d14c114a985d8ef1fc2f36f">priority_thread_pool_module::priority_thread_pool&lt; priority_type &gt;</a>
 , <a class="el" href="d8/d42/classthread__module_1_1job.html#a5b215be529afbe56e5328747d39779c8">thread_module::job</a>
 , <a class="el" href="d9/da1/classthread__pool__module_1_1thread__pool.html#ad4bfb75eb1899973dcc2db13d493eb3f">thread_pool_module::thread_pool</a>
 </li>
 <li>get_max_lines()
-: <a class="el" href="d1/d46/classlog__module_1_1logger.html#adedf91cc1b60577e9cbd74c5a002c658">log_module::logger</a>
+: <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#ab133ebcd785293cbbbb8b2f2e3be4631">log_module::log_collector</a>
+, <a class="el" href="d1/d46/classlog__module_1_1logger.html#adedf91cc1b60577e9cbd74c5a002c658">log_module::logger</a>
 </li>
 <li>get_name()
 : <a class="el" href="d8/d42/classthread__module_1_1job.html#a3d105dae37b1813ec252463f5f3d3f80">thread_module::job</a>
@@ -175,11 +211,15 @@ $(function() {
 , <a class="el" href="da/d94/classthread__module_1_1thread__base.html#a7635c9aa72201fe7dceb1ed49c056408">thread_module::thread_base</a>
 , <a class="el" href="d9/da1/classthread__pool__module_1_1thread__pool.html#ad46183ee284743dabbb59b79b868676d">thread_pool_module::thread_pool</a>
 </li>
+<li>get_title()
+: <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#ae5665c2626017d88618e3de95839643a">log_module::log_collector</a>
+</li>
 <li>get_type()
 : <a class="el" href="df/df4/classlog__module_1_1log__job.html#a535eca744b07e75d35ecc3928a924292">log_module::log_job</a>
 </li>
 <li>get_use_backup()
-: <a class="el" href="d1/d46/classlog__module_1_1logger.html#a0f74495dd23bc222ff823f0b9d46d005">log_module::logger</a>
+: <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#a69c6424be9eb314466f9cb03a1ad8a6b">log_module::log_collector</a>
+, <a class="el" href="d1/d46/classlog__module_1_1logger.html#a0f74495dd23bc222ff823f0b9d46d005">log_module::logger</a>
 </li>
 </ul>
 
@@ -192,7 +232,9 @@ $(function() {
 : <a class="el" href="d1/d46/classlog__module_1_1logger.html#ae29ffdbcc988b388064939276a2acdca">log_module::logger</a>
 </li>
 <li>has_work()
-: <a class="el" href="d1/d46/classlog__module_1_1logger.html#aed25fae0c99f9271564018c4ed41488e">log_module::logger</a>
+: <a class="el" href="d9/de4/classlog__module_1_1console__writer.html#aade8b3378fa104b424cb7b500ca63f2b">log_module::console_writer</a>
+, <a class="el" href="dc/d2b/classlog__module_1_1file__writer.html#a2f4337610575156b3e058721be455e47">log_module::file_writer</a>
+, <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#a40d9f944d957448006c27f98108b99fe">log_module::log_collector</a>
 , <a class="el" href="dd/df7/classpriority__thread__pool__module_1_1priority__thread__worker.html#af6969c9a05efea33c2ed50c432f2a398">priority_thread_pool_module::priority_thread_worker&lt; priority_type &gt;</a>
 , <a class="el" href="da/d94/classthread__module_1_1thread__base.html#a140e82407657ce0ef761b55fc51aa1a5">thread_module::thread_base</a>
 , <a class="el" href="d7/d1b/classthread__pool__module_1_1thread__worker.html#a018f6af23fe202df7ed7bff9107ca9c1">thread_pool_module::thread_worker</a>
@@ -215,7 +257,9 @@ $(function() {
 : <a class="el" href="df/d6d/classthread__module_1_1job__queue.html#a8d3002b24a03a4cf43d416d60fe200fe">thread_module::job_queue</a>
 </li>
 <li>job_queue_
-: <a class="el" href="d6/da0/classpriority__thread__pool__module_1_1priority__job.html#a7fe27b80e22f6ade7e84cbeb10ada4ce">priority_thread_pool_module::priority_job&lt; priority_type &gt;</a>
+: <a class="el" href="d9/de4/classlog__module_1_1console__writer.html#a8bf4b36533909d984598577a4e3dd88b">log_module::console_writer</a>
+, <a class="el" href="dc/d2b/classlog__module_1_1file__writer.html#acf13823f9d42b1c6c449f39242b50dcc">log_module::file_writer</a>
+, <a class="el" href="d6/da0/classpriority__thread__pool__module_1_1priority__job.html#a7fe27b80e22f6ade7e84cbeb10ada4ce">priority_thread_pool_module::priority_job&lt; priority_type &gt;</a>
 , <a class="el" href="d7/d88/classpriority__thread__pool__module_1_1priority__thread__pool.html#a3ecf1263197ead45f2cd2b56576b3f92">priority_thread_pool_module::priority_thread_pool&lt; priority_type &gt;</a>
 , <a class="el" href="dd/df7/classpriority__thread__pool__module_1_1priority__thread__worker.html#ab88d27c88a72f5b7338f015c455a0bde">priority_thread_pool_module::priority_thread_worker&lt; priority_type &gt;</a>
 , <a class="el" href="d8/d42/classthread__module_1_1job.html#aed0248a449f4e341057aa29c0369e625">thread_module::job</a>
@@ -229,8 +273,8 @@ $(function() {
 <li>log()
 : <a class="el" href="df/df4/classlog__module_1_1log__job.html#accc149cd61efa29663152ea112a9905d">log_module::log_job</a>
 </li>
-<li>log_buffer_
-: <a class="el" href="d1/d46/classlog__module_1_1logger.html#a33957af8a233a58be602767c12362012">log_module::logger</a>
+<li>log_collector()
+: <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#a3a89be69c8d0e2a9cc02900966626a01">log_module::log_collector</a>
 </li>
 <li>log_job()
 : <a class="el" href="df/df4/classlog__module_1_1log__job.html#a375e0c097374f266d6901f747c4bcc99">log_module::log_job</a>
@@ -239,7 +283,7 @@ $(function() {
 : <a class="el" href="df/df4/classlog__module_1_1log__job.html#a7e330ecf9e2277ead70ed16762f8037f">log_module::log_job</a>
 </li>
 <li>log_queue_
-: <a class="el" href="d1/d46/classlog__module_1_1logger.html#ab7cf620d8d00d2f0875696f1150f7be7">log_module::logger</a>
+: <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#adbdd1b4d11778f143ee74938cbb9ac25">log_module::log_collector</a>
 </li>
 <li>logger()
 : <a class="el" href="d1/d46/classlog__module_1_1logger.html#aaef094cf13302a627daf08e70fa66825">log_module::logger</a>
@@ -249,10 +293,13 @@ $(function() {
 
 <h3><a id="index_m"></a>- m -</h3><ul>
 <li>max_lines_
-: <a class="el" href="d1/d46/classlog__module_1_1logger.html#a475cef97386a2c8f012559099b01c5d9">log_module::logger</a>
+: <a class="el" href="dc/d3c/classlog__module_1_1file__job.html#a20631c8401b19faaeb195c422794e990">log_module::file_job</a>
+, <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#a67926fb482c1dd1af2ac78fa4cf7b132">log_module::log_collector</a>
 </li>
 <li>message_
-: <a class="el" href="df/df4/classlog__module_1_1log__job.html#a1858492fb1f8b5f28cab9a3786467559">log_module::log_job</a>
+: <a class="el" href="db/def/classlog__module_1_1console__job.html#af5935acda19c89e42a865fce9adf5b46">log_module::console_job</a>
+, <a class="el" href="dc/d3c/classlog__module_1_1file__job.html#a6d89e4b419a347115dd2947c0559d785">log_module::file_job</a>
+, <a class="el" href="df/df4/classlog__module_1_1log__job.html#a1858492fb1f8b5f28cab9a3786467559">log_module::log_job</a>
 </li>
 <li>mutex_
 : <a class="el" href="df/d6d/classthread__module_1_1job__queue.html#a5655e208476810a1b4437bab0f57045c">thread_module::job_queue</a>
@@ -323,11 +370,19 @@ $(function() {
 
 
 <h3><a id="index_s"></a>- s -</h3><ul>
+<li>set_console_queue()
+: <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#a744452e15ce580d916cce1bb6f44c1f3">log_module::log_collector</a>
+</li>
 <li>set_console_target()
-: <a class="el" href="d1/d46/classlog__module_1_1logger.html#a9ed974a5dbd56e5076f78dad07070320">log_module::logger</a>
+: <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#ab20a7472a67bb30a541f71e686417a16">log_module::log_collector</a>
+, <a class="el" href="d1/d46/classlog__module_1_1logger.html#a9ed974a5dbd56e5076f78dad07070320">log_module::logger</a>
+</li>
+<li>set_file_queue()
+: <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#aa93d6106a2d52cdc2de49be6011941c5">log_module::log_collector</a>
 </li>
 <li>set_file_target()
-: <a class="el" href="d1/d46/classlog__module_1_1logger.html#acf1d9178f817bc1476b1967adc246422">log_module::logger</a>
+: <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#af759112a25e1534fff4c7659e91986df">log_module::log_collector</a>
+, <a class="el" href="d1/d46/classlog__module_1_1logger.html#acf1d9178f817bc1476b1967adc246422">log_module::logger</a>
 </li>
 <li>set_job_queue()
 : <a class="el" href="d6/da0/classpriority__thread__pool__module_1_1priority__job.html#aa23c4f66925f4ad8e38f7c8da9a624ee">priority_thread_pool_module::priority_job&lt; priority_type &gt;</a>
@@ -336,22 +391,27 @@ $(function() {
 , <a class="el" href="d7/d1b/classthread__pool__module_1_1thread__worker.html#aced5aa76dbf8bd7221365b750ea5e698">thread_pool_module::thread_worker</a>
 </li>
 <li>set_max_lines()
-: <a class="el" href="d1/d46/classlog__module_1_1logger.html#a4890739ebf3c022ec8f478263021a00c">log_module::logger</a>
+: <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#a33ed9c6c7e75c07cdf8108193f50d7fe">log_module::log_collector</a>
+, <a class="el" href="d1/d46/classlog__module_1_1logger.html#a4890739ebf3c022ec8f478263021a00c">log_module::logger</a>
 </li>
 <li>set_notify()
 : <a class="el" href="df/d6d/classthread__module_1_1job__queue.html#a4899018b4a42fadf17d66faccac84d92">thread_module::job_queue</a>
 </li>
 <li>set_title()
-: <a class="el" href="d1/d46/classlog__module_1_1logger.html#a864030321457d34df5d0ac5a9d7fd871">log_module::logger</a>
+: <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#aef9c8e98af0184c5e1617c49d02b597f">log_module::log_collector</a>
+, <a class="el" href="d1/d46/classlog__module_1_1logger.html#a864030321457d34df5d0ac5a9d7fd871">log_module::logger</a>
 </li>
 <li>set_use_backup()
-: <a class="el" href="d1/d46/classlog__module_1_1logger.html#afbee5460645d61b7c9e82e63467e8098">log_module::logger</a>
+: <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#af3521b563311e726d10ba3288c767ffe">log_module::log_collector</a>
+, <a class="el" href="d1/d46/classlog__module_1_1logger.html#afbee5460645d61b7c9e82e63467e8098">log_module::logger</a>
 </li>
 <li>set_wake_interval()
-: <a class="el" href="da/d94/classthread__module_1_1thread__base.html#a3910ded89424d7f2c698bf268dad6648">thread_module::thread_base</a>
+: <a class="el" href="d1/d46/classlog__module_1_1logger.html#aae29e963c28cfd55a22794c6510ee2e7">log_module::logger</a>
+, <a class="el" href="da/d94/classthread__module_1_1thread__base.html#a3910ded89424d7f2c698bf268dad6648">thread_module::thread_base</a>
 </li>
 <li>start()
-: <a class="el" href="d7/d88/classpriority__thread__pool__module_1_1priority__thread__pool.html#af14c64eaf5f1bc8032b4a49c9316a931">priority_thread_pool_module::priority_thread_pool&lt; priority_type &gt;</a>
+: <a class="el" href="d1/d46/classlog__module_1_1logger.html#a86352e92838c910c392fa6a7d38220e5">log_module::logger</a>
+, <a class="el" href="d7/d88/classpriority__thread__pool__module_1_1priority__thread__pool.html#af14c64eaf5f1bc8032b4a49c9316a931">priority_thread_pool_module::priority_thread_pool&lt; priority_type &gt;</a>
 , <a class="el" href="da/d94/classthread__module_1_1thread__base.html#ad8573b9f904a904bb97fc554c20dce75">thread_module::thread_base</a>
 , <a class="el" href="d9/da1/classthread__pool__module_1_1thread__pool.html#ac0e10e31366167cd51559d02e7bdfe1a">thread_pool_module::thread_pool</a>
 </li>
@@ -363,7 +423,8 @@ $(function() {
 : <a class="el" href="df/df4/classlog__module_1_1log__job.html#ade6db1a8efa941e3aa7f035e2426c2a5">log_module::log_job</a>
 </li>
 <li>stop()
-: <a class="el" href="d7/d88/classpriority__thread__pool__module_1_1priority__thread__pool.html#aacf242c86df4d5fc47f012a40b3d3ebf">priority_thread_pool_module::priority_thread_pool&lt; priority_type &gt;</a>
+: <a class="el" href="d1/d46/classlog__module_1_1logger.html#a008c6b7b1763970cdeb26e12b2f13794">log_module::logger</a>
+, <a class="el" href="d7/d88/classpriority__thread__pool__module_1_1priority__thread__pool.html#aacf242c86df4d5fc47f012a40b3d3ebf">priority_thread_pool_module::priority_thread_pool&lt; priority_type &gt;</a>
 , <a class="el" href="da/d94/classthread__module_1_1thread__base.html#a02ea4fcc52b2f69e0c5d2b801d9a7b12">thread_module::thread_base</a>
 , <a class="el" href="d9/da1/classthread__pool__module_1_1thread__pool.html#a3e4a0c4e6d04eb363517ae6016036fbc">thread_pool_module::thread_pool</a>
 </li>
@@ -396,7 +457,8 @@ $(function() {
 : <a class="el" href="df/df4/classlog__module_1_1log__job.html#a6681ba745e5b9f6f005f0f41b29615b8">log_module::log_job</a>
 </li>
 <li>title_
-: <a class="el" href="d1/d46/classlog__module_1_1logger.html#a343325bc1c428ee54db3b99fbec02ee9">log_module::logger</a>
+: <a class="el" href="dc/d3c/classlog__module_1_1file__job.html#a30982760dcd77ee27d33a8f550f92dac">log_module::file_job</a>
+, <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#ad3c4dba56b47f70214898d42d5f44abf">log_module::log_collector</a>
 </li>
 <li>try_dequeue_from_priority()
 : <a class="el" href="d1/d10/classpriority__thread__pool__module_1_1priority__job__queue.html#ad1e541eaea8e6bc5e7f90092b2561866">priority_thread_pool_module::priority_job_queue&lt; priority_type &gt;</a>
@@ -409,7 +471,8 @@ $(function() {
 
 <h3><a id="index_u"></a>- u -</h3><ul>
 <li>use_backup_
-: <a class="el" href="d1/d46/classlog__module_1_1logger.html#a48dbe867a518d1e8ab1046410c62788f">log_module::logger</a>
+: <a class="el" href="dc/d3c/classlog__module_1_1file__job.html#a8c2547f6f5da18dd3db3e2e911d9dad4">log_module::file_job</a>
+, <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#a7c8fec36e6431f709976a546a032b470">log_module::log_collector</a>
 </li>
 <li>use_time_tag_
 : <a class="el" href="dd/df7/classpriority__thread__pool__module_1_1priority__thread__worker.html#a6d2563670b91ac4abbebb3987a977d6c">priority_thread_pool_module::priority_thread_worker&lt; priority_type &gt;</a>
@@ -433,13 +496,8 @@ $(function() {
 , <a class="el" href="d9/da1/classthread__pool__module_1_1thread__pool.html#a492d443faffcd01b64ab689f08308aec">thread_pool_module::thread_pool</a>
 </li>
 <li>write()
-: <a class="el" href="d1/d46/classlog__module_1_1logger.html#ab18c8d0615834489251a7e71b52e41d4">log_module::logger</a>
-</li>
-<li>write_to_console()
-: <a class="el" href="d1/d46/classlog__module_1_1logger.html#a70fb919280913856664efed6c52aa5df">log_module::logger</a>
-</li>
-<li>write_to_file()
-: <a class="el" href="d1/d46/classlog__module_1_1logger.html#a71f32da9a6d7529ab6bbe506a98c990a">log_module::logger</a>
+: <a class="el" href="d7/da3/classlog__module_1_1log__collector.html#a833c2d53c3f28e02366f2d2d605257df">log_module::log_collector</a>
+, <a class="el" href="d1/d46/classlog__module_1_1logger.html#ab18c8d0615834489251a7e71b52e41d4">log_module::logger</a>
 </li>
 </ul>
 

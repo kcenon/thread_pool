@@ -1,13 +1,7 @@
 <map id="log_module::logger" name="log_module::logger">
-<area shape="rect" id="node1" title="A singleton class for logging operations." alt="" coords="679,588,850,1047"/>
-<area shape="rect" id="node2" href="$da/d94/classthread__module_1_1thread__base.html" title="Base class for implementing thread&#45;based workers." alt="" coords="277,301,485,525"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,147,207,239"/>
-<area shape="rect" id="node4" title=" " alt="" coords="231,154,384,231"/>
-<area shape="rect" id="node5" title=" " alt="" coords="409,154,501,231"/>
-<area shape="rect" id="node6" title=" " alt="" coords="526,147,681,239"/>
-<area shape="rect" id="node7" title=" " alt="" coords="509,367,663,459"/>
-<area shape="rect" id="node8" title=" " alt="" coords="687,367,842,459"/>
-<area shape="rect" id="node9" title=" " alt="" coords="897,154,984,231"/>
-<area shape="rect" id="node11" title=" " alt="" coords="957,375,1143,452"/>
-<area shape="rect" id="node10" title=" " alt="" coords="871,5,1010,97"/>
+<area shape="rect" id="node1" title="A singleton class for logging operations." alt="" coords="289,160,459,516"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,172,97"/>
+<area shape="rect" id="node3" title=" " alt="" coords="197,5,351,97"/>
+<area shape="rect" id="node4" title=" " alt="" coords="376,5,572,97"/>
+<area shape="rect" id="node5" title=" " alt="" coords="597,5,781,97"/>
 </map>

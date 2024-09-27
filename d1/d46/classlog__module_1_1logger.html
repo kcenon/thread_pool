@@ -68,7 +68,6 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#pri-static-attribs">Static Private Attributes</a> &#124;
@@ -83,31 +82,15 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for log_module::logger:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../dd/d9b/classlog__module_1_1logger__inherit__graph.png" border="0" usemap="#alog__module_1_1logger_inherit__map" alt="Inheritance graph"/></div>
-<map name="alog__module_1_1logger_inherit__map" id="alog__module_1_1logger_inherit__map">
-<area shape="rect" title="A singleton class for logging operations." alt="" coords="24,461,195,979"/>
-<area shape="rect" href="../../da/d94/classthread__module_1_1thread__base.html" title="Base class for implementing thread&#45;based workers." alt="" coords="5,145,213,413"/>
-<area shape="rect" title=" " alt="" coords="9,5,210,97"/>
-</map>
-</div>
-<div class="dynheader">
 Collaboration diagram for log_module::logger:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/d86/classlog__module_1_1logger__coll__graph.png" border="0" usemap="#alog__module_1_1logger_coll__map" alt="Collaboration graph"/></div>
 <map name="alog__module_1_1logger_coll__map" id="alog__module_1_1logger_coll__map">
-<area shape="rect" title="A singleton class for logging operations." alt="" coords="679,588,850,1047"/>
-<area shape="rect" href="../../da/d94/classthread__module_1_1thread__base.html" title="Base class for implementing thread&#45;based workers." alt="" coords="277,301,485,525"/>
-<area shape="rect" title=" " alt="" coords="5,147,207,239"/>
-<area shape="rect" title=" " alt="" coords="231,154,384,231"/>
-<area shape="rect" title=" " alt="" coords="409,154,501,231"/>
-<area shape="rect" title=" " alt="" coords="526,147,681,239"/>
-<area shape="rect" title=" " alt="" coords="509,367,663,459"/>
-<area shape="rect" title=" " alt="" coords="687,367,842,459"/>
-<area shape="rect" title=" " alt="" coords="897,154,984,231"/>
-<area shape="rect" title=" " alt="" coords="957,375,1143,452"/>
-<area shape="rect" title=" " alt="" coords="871,5,1010,97"/>
+<area shape="rect" title="A singleton class for logging operations." alt="" coords="289,160,459,516"/>
+<area shape="rect" title=" " alt="" coords="5,5,172,97"/>
+<area shape="rect" title=" " alt="" coords="197,5,351,97"/>
+<area shape="rect" title=" " alt="" coords="376,5,572,97"/>
+<area shape="rect" title=" " alt="" coords="597,5,781,97"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -141,33 +124,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afbee5460645d61b7c9e82e63467e8098"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether to use a backup log file.  <a href="../../d1/d46/classlog__module_1_1logger.html#afbee5460645d61b7c9e82e63467e8098">More...</a><br /></td></tr>
 <tr class="separator:afbee5460645d61b7c9e82e63467e8098"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f74495dd23bc222ff823f0b9d46d005"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#a0f74495dd23bc222ff823f0b9d46d005">get_use_backup</a> (void) const -&gt; bool</td></tr>
-<tr class="memdesc:a0f74495dd23bc222ff823f0b9d46d005"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets whether to use a backup log file.  <a href="../../d1/d46/classlog__module_1_1logger.html#a0f74495dd23bc222ff823f0b9d46d005">More...</a><br /></td></tr>
+<tr class="memdesc:a0f74495dd23bc222ff823f0b9d46d005"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets whether a backup log file is being used.  <a href="../../d1/d46/classlog__module_1_1logger.html#a0f74495dd23bc222ff823f0b9d46d005">More...</a><br /></td></tr>
 <tr class="separator:a0f74495dd23bc222ff823f0b9d46d005"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae29e963c28cfd55a22794c6510ee2e7"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#aae29e963c28cfd55a22794c6510ee2e7">set_wake_interval</a> (std::chrono::milliseconds interval) -&gt; void</td></tr>
+<tr class="memdesc:aae29e963c28cfd55a22794c6510ee2e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the wake interval for the logger.  <a href="../../d1/d46/classlog__module_1_1logger.html#aae29e963c28cfd55a22794c6510ee2e7">More...</a><br /></td></tr>
+<tr class="separator:aae29e963c28cfd55a22794c6510ee2e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86352e92838c910c392fa6a7d38220e5"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#a86352e92838c910c392fa6a7d38220e5">start</a> (void) -&gt; std::tuple&lt; bool, std::optional&lt; std::string &gt;&gt;</td></tr>
+<tr class="memdesc:a86352e92838c910c392fa6a7d38220e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the logger.  <a href="../../d1/d46/classlog__module_1_1logger.html#a86352e92838c910c392fa6a7d38220e5">More...</a><br /></td></tr>
+<tr class="separator:a86352e92838c910c392fa6a7d38220e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a008c6b7b1763970cdeb26e12b2f13794"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#a008c6b7b1763970cdeb26e12b2f13794">stop</a> (void) -&gt; void</td></tr>
+<tr class="memdesc:a008c6b7b1763970cdeb26e12b2f13794"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the logger.  <a href="../../d1/d46/classlog__module_1_1logger.html#a008c6b7b1763970cdeb26e12b2f13794">More...</a><br /></td></tr>
+<tr class="separator:a008c6b7b1763970cdeb26e12b2f13794"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa00df9db34bcc8d60a06d1c6d2bc745a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#aa00df9db34bcc8d60a06d1c6d2bc745a">time_point</a> (void) -&gt; std::chrono::time_point&lt; std::chrono::high_resolution_clock &gt;</td></tr>
 <tr class="memdesc:aa00df9db34bcc8d60a06d1c6d2bc745a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current time point.  <a href="../../d1/d46/classlog__module_1_1logger.html#aa00df9db34bcc8d60a06d1c6d2bc745a">More...</a><br /></td></tr>
 <tr class="separator:aa00df9db34bcc8d60a06d1c6d2bc745a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab18c8d0615834489251a7e71b52e41d4"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#ab18c8d0615834489251a7e71b52e41d4">write</a> (<a class="el" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709">log_types</a> type, const std::string &amp;message, std::optional&lt; std::chrono::time_point&lt; std::chrono::high_resolution_clock &gt;&gt; start_time=std::nullopt) -&gt; void</td></tr>
 <tr class="memdesc:ab18c8d0615834489251a7e71b52e41d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a log message.  <a href="../../d1/d46/classlog__module_1_1logger.html#ab18c8d0615834489251a7e71b52e41d4">More...</a><br /></td></tr>
 <tr class="separator:ab18c8d0615834489251a7e71b52e41d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classthread__module_1_1thread__base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classthread__module_1_1thread__base')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../da/d94/classthread__module_1_1thread__base.html">thread_module::thread_base</a></td></tr>
-<tr class="memitem:a472594672a319ffbf24c9c8d778c29bf inherit pub_methods_classthread__module_1_1thread__base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d94/classthread__module_1_1thread__base.html#a472594672a319ffbf24c9c8d778c29bf">thread_base</a> (void)</td></tr>
-<tr class="memdesc:a472594672a319ffbf24c9c8d778c29bf inherit pub_methods_classthread__module_1_1thread__base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="../../da/d94/classthread__module_1_1thread__base.html" title="Base class for implementing thread-based workers.">thread_base</a> object.  <a href="../../da/d94/classthread__module_1_1thread__base.html#a472594672a319ffbf24c9c8d778c29bf">More...</a><br /></td></tr>
-<tr class="separator:a472594672a319ffbf24c9c8d778c29bf inherit pub_methods_classthread__module_1_1thread__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32f96f73af7e93a9ed8595b5921f0d08 inherit pub_methods_classthread__module_1_1thread__base"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d94/classthread__module_1_1thread__base.html#a32f96f73af7e93a9ed8595b5921f0d08">~thread_base</a> (void)</td></tr>
-<tr class="memdesc:a32f96f73af7e93a9ed8595b5921f0d08 inherit pub_methods_classthread__module_1_1thread__base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for the <a class="el" href="../../da/d94/classthread__module_1_1thread__base.html" title="Base class for implementing thread-based workers.">thread_base</a> class.  <a href="../../da/d94/classthread__module_1_1thread__base.html#a32f96f73af7e93a9ed8595b5921f0d08">More...</a><br /></td></tr>
-<tr class="separator:a32f96f73af7e93a9ed8595b5921f0d08 inherit pub_methods_classthread__module_1_1thread__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7635c9aa72201fe7dceb1ed49c056408 inherit pub_methods_classthread__module_1_1thread__base"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d94/classthread__module_1_1thread__base.html#a7635c9aa72201fe7dceb1ed49c056408">get_ptr</a> (void) -&gt; std::shared_ptr&lt; <a class="el" href="../../da/d94/classthread__module_1_1thread__base.html">thread_base</a> &gt;</td></tr>
-<tr class="memdesc:a7635c9aa72201fe7dceb1ed49c056408 inherit pub_methods_classthread__module_1_1thread__base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a shared pointer to this <a class="el" href="../../da/d94/classthread__module_1_1thread__base.html" title="Base class for implementing thread-based workers.">thread_base</a> object.  <a href="../../da/d94/classthread__module_1_1thread__base.html#a7635c9aa72201fe7dceb1ed49c056408">More...</a><br /></td></tr>
-<tr class="separator:a7635c9aa72201fe7dceb1ed49c056408 inherit pub_methods_classthread__module_1_1thread__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3910ded89424d7f2c698bf268dad6648 inherit pub_methods_classthread__module_1_1thread__base"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d94/classthread__module_1_1thread__base.html#a3910ded89424d7f2c698bf268dad6648">set_wake_interval</a> (const std::optional&lt; std::chrono::milliseconds &gt; &amp;wake_interval) -&gt; void</td></tr>
-<tr class="memdesc:a3910ded89424d7f2c698bf268dad6648 inherit pub_methods_classthread__module_1_1thread__base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the wake interval for the worker thread.  <a href="../../da/d94/classthread__module_1_1thread__base.html#a3910ded89424d7f2c698bf268dad6648">More...</a><br /></td></tr>
-<tr class="separator:a3910ded89424d7f2c698bf268dad6648 inherit pub_methods_classthread__module_1_1thread__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8573b9f904a904bb97fc554c20dce75 inherit pub_methods_classthread__module_1_1thread__base"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d94/classthread__module_1_1thread__base.html#ad8573b9f904a904bb97fc554c20dce75">start</a> (void) -&gt; std::tuple&lt; bool, std::optional&lt; std::string &gt;&gt;</td></tr>
-<tr class="memdesc:ad8573b9f904a904bb97fc554c20dce75 inherit pub_methods_classthread__module_1_1thread__base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the worker thread.  <a href="../../da/d94/classthread__module_1_1thread__base.html#ad8573b9f904a904bb97fc554c20dce75">More...</a><br /></td></tr>
-<tr class="separator:ad8573b9f904a904bb97fc554c20dce75 inherit pub_methods_classthread__module_1_1thread__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02ea4fcc52b2f69e0c5d2b801d9a7b12 inherit pub_methods_classthread__module_1_1thread__base"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d94/classthread__module_1_1thread__base.html#a02ea4fcc52b2f69e0c5d2b801d9a7b12">stop</a> (void) -&gt; std::tuple&lt; bool, std::optional&lt; std::string &gt;&gt;</td></tr>
-<tr class="memdesc:a02ea4fcc52b2f69e0c5d2b801d9a7b12 inherit pub_methods_classthread__module_1_1thread__base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the worker thread.  <a href="../../da/d94/classthread__module_1_1thread__base.html#a02ea4fcc52b2f69e0c5d2b801d9a7b12">More...</a><br /></td></tr>
-<tr class="separator:a02ea4fcc52b2f69e0c5d2b801d9a7b12 inherit pub_methods_classthread__module_1_1thread__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -178,62 +151,26 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:ab731544957a7d592628b74c19d4f20d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the singleton instance of the logger.  <a href="../../d1/d46/classlog__module_1_1logger.html#ab731544957a7d592628b74c19d4f20d0">More...</a><br /></td></tr>
 <tr class="separator:ab731544957a7d592628b74c19d4f20d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:aed25fae0c99f9271564018c4ed41488e"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#aed25fae0c99f9271564018c4ed41488e">has_work</a> () const -&gt; bool override</td></tr>
-<tr class="memdesc:aed25fae0c99f9271564018c4ed41488e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if there is work to be done.  <a href="../../d1/d46/classlog__module_1_1logger.html#aed25fae0c99f9271564018c4ed41488e">More...</a><br /></td></tr>
-<tr class="separator:aed25fae0c99f9271564018c4ed41488e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8c50f5e281c2b29b7f9ba8ca0dd4409"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#af8c50f5e281c2b29b7f9ba8ca0dd4409">before_start</a> () -&gt; std::tuple&lt; bool, std::optional&lt; std::string &gt;&gt; override</td></tr>
-<tr class="memdesc:af8c50f5e281c2b29b7f9ba8ca0dd4409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before the logger thread starts.  <a href="../../d1/d46/classlog__module_1_1logger.html#af8c50f5e281c2b29b7f9ba8ca0dd4409">More...</a><br /></td></tr>
-<tr class="separator:af8c50f5e281c2b29b7f9ba8ca0dd4409"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab084905adbb121e0bcd75ee26b9de636"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#ab084905adbb121e0bcd75ee26b9de636">do_work</a> () -&gt; std::tuple&lt; bool, std::optional&lt; std::string &gt;&gt; override</td></tr>
-<tr class="memdesc:ab084905adbb121e0bcd75ee26b9de636"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs the actual work of the logger thread.  <a href="../../d1/d46/classlog__module_1_1logger.html#ab084905adbb121e0bcd75ee26b9de636">More...</a><br /></td></tr>
-<tr class="separator:ab084905adbb121e0bcd75ee26b9de636"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1af6cedf2a4e3f45f2c21bc91597b70a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#a1af6cedf2a4e3f45f2c21bc91597b70a">after_stop</a> () -&gt; std::tuple&lt; bool, std::optional&lt; std::string &gt;&gt; override</td></tr>
-<tr class="memdesc:a1af6cedf2a4e3f45f2c21bc91597b70a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called after the logger thread stops.  <a href="../../d1/d46/classlog__module_1_1logger.html#a1af6cedf2a4e3f45f2c21bc91597b70a">More...</a><br /></td></tr>
-<tr class="separator:a1af6cedf2a4e3f45f2c21bc91597b70a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70fb919280913856664efed6c52aa5df"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#a70fb919280913856664efed6c52aa5df">write_to_console</a> (const std::string &amp;message) -&gt; void</td></tr>
-<tr class="memdesc:a70fb919280913856664efed6c52aa5df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a message to the console.  <a href="../../d1/d46/classlog__module_1_1logger.html#a70fb919280913856664efed6c52aa5df">More...</a><br /></td></tr>
-<tr class="separator:a70fb919280913856664efed6c52aa5df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71f32da9a6d7529ab6bbe506a98c990a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#a71f32da9a6d7529ab6bbe506a98c990a">write_to_file</a> (const std::string &amp;message) -&gt; void</td></tr>
-<tr class="memdesc:a71f32da9a6d7529ab6bbe506a98c990a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a message to a file.  <a href="../../d1/d46/classlog__module_1_1logger.html#a71f32da9a6d7529ab6bbe506a98c990a">More...</a><br /></td></tr>
-<tr class="separator:a71f32da9a6d7529ab6bbe506a98c990a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:aaef094cf13302a627daf08e70fa66825"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#aaef094cf13302a627daf08e70fa66825">logger</a> ()</td></tr>
 <tr class="memdesc:aaef094cf13302a627daf08e70fa66825"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private constructor for the logger class (singleton pattern).  <a href="../../d1/d46/classlog__module_1_1logger.html#aaef094cf13302a627daf08e70fa66825">More...</a><br /></td></tr>
 <tr class="separator:aaef094cf13302a627daf08e70fa66825"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0372ec15f5a83a10f67af6b2fa2dfac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#ad0372ec15f5a83a10f67af6b2fa2dfac">logger</a> (const <a class="el" href="../../d1/d46/classlog__module_1_1logger.html">logger</a> &amp;)=delete</td></tr>
-<tr class="memdesc:ad0372ec15f5a83a10f67af6b2fa2dfac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleted copy constructor.  <a href="../../d1/d46/classlog__module_1_1logger.html#ad0372ec15f5a83a10f67af6b2fa2dfac">More...</a><br /></td></tr>
+<tr class="memdesc:ad0372ec15f5a83a10f67af6b2fa2dfac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleted copy constructor to enforce singleton pattern.  <a href="../../d1/d46/classlog__module_1_1logger.html#ad0372ec15f5a83a10f67af6b2fa2dfac">More...</a><br /></td></tr>
 <tr class="separator:ad0372ec15f5a83a10f67af6b2fa2dfac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a895fc06ee1ea1eb3230b502b272bdb2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html">logger</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#a895fc06ee1ea1eb3230b502b272bdb2c">operator=</a> (const <a class="el" href="../../d1/d46/classlog__module_1_1logger.html">logger</a> &amp;)=delete</td></tr>
-<tr class="memdesc:a895fc06ee1ea1eb3230b502b272bdb2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleted assignment operator.  <a href="../../d1/d46/classlog__module_1_1logger.html#a895fc06ee1ea1eb3230b502b272bdb2c">More...</a><br /></td></tr>
+<tr class="memdesc:a895fc06ee1ea1eb3230b502b272bdb2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleted assignment operator to enforce singleton pattern.  <a href="../../d1/d46/classlog__module_1_1logger.html#a895fc06ee1ea1eb3230b502b272bdb2c">More...</a><br /></td></tr>
 <tr class="separator:a895fc06ee1ea1eb3230b502b272bdb2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a48dbe867a518d1e8ab1046410c62788f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#a48dbe867a518d1e8ab1046410c62788f">use_backup_</a></td></tr>
-<tr class="memdesc:a48dbe867a518d1e8ab1046410c62788f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating whether to use a backup log file.  <a href="../../d1/d46/classlog__module_1_1logger.html#a48dbe867a518d1e8ab1046410c62788f">More...</a><br /></td></tr>
-<tr class="separator:a48dbe867a518d1e8ab1046410c62788f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a475cef97386a2c8f012559099b01c5d9"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#a475cef97386a2c8f012559099b01c5d9">max_lines_</a></td></tr>
-<tr class="memdesc:a475cef97386a2c8f012559099b01c5d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of lines to keep in the log.  <a href="../../d1/d46/classlog__module_1_1logger.html#a475cef97386a2c8f012559099b01c5d9">More...</a><br /></td></tr>
-<tr class="separator:a475cef97386a2c8f012559099b01c5d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a343325bc1c428ee54db3b99fbec02ee9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#a343325bc1c428ee54db3b99fbec02ee9">title_</a></td></tr>
-<tr class="memdesc:a343325bc1c428ee54db3b99fbec02ee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Title of the logger.  <a href="../../d1/d46/classlog__module_1_1logger.html#a343325bc1c428ee54db3b99fbec02ee9">More...</a><br /></td></tr>
-<tr class="separator:a343325bc1c428ee54db3b99fbec02ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50c21f938726e2438e8ecfc90cc23ed7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709">log_types</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#a50c21f938726e2438e8ecfc90cc23ed7">file_log_type_</a></td></tr>
-<tr class="memdesc:a50c21f938726e2438e8ecfc90cc23ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Types of logs to write to file.  <a href="../../d1/d46/classlog__module_1_1logger.html#a50c21f938726e2438e8ecfc90cc23ed7">More...</a><br /></td></tr>
-<tr class="separator:a50c21f938726e2438e8ecfc90cc23ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0fc8e9c4a9c6cfeaa78831d648f4c2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709">log_types</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#ae0fc8e9c4a9c6cfeaa78831d648f4c2e">console_log_type_</a></td></tr>
-<tr class="memdesc:ae0fc8e9c4a9c6cfeaa78831d648f4c2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Types of logs to write to console.  <a href="../../d1/d46/classlog__module_1_1logger.html#ae0fc8e9c4a9c6cfeaa78831d648f4c2e">More...</a><br /></td></tr>
-<tr class="separator:ae0fc8e9c4a9c6cfeaa78831d648f4c2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33957af8a233a58be602767c12362012"><td class="memItemLeft" align="right" valign="top">std::deque&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#a33957af8a233a58be602767c12362012">log_buffer_</a></td></tr>
-<tr class="memdesc:a33957af8a233a58be602767c12362012"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer for log dequeuing related max lines.  <a href="../../d1/d46/classlog__module_1_1logger.html#a33957af8a233a58be602767c12362012">More...</a><br /></td></tr>
-<tr class="separator:a33957af8a233a58be602767c12362012"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7cf620d8d00d2f0875696f1150f7be7"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../df/d6d/classthread__module_1_1job__queue.html">job_queue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#ab7cf620d8d00d2f0875696f1150f7be7">log_queue_</a></td></tr>
-<tr class="memdesc:ab7cf620d8d00d2f0875696f1150f7be7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queue for log jobs.  <a href="../../d1/d46/classlog__module_1_1logger.html#ab7cf620d8d00d2f0875696f1150f7be7">More...</a><br /></td></tr>
-<tr class="separator:ab7cf620d8d00d2f0875696f1150f7be7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec7a729f62dd4be9ef9b35a05a69d5bb"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../d7/da3/classlog__module_1_1log__collector.html">log_collector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a></td></tr>
+<tr class="separator:aec7a729f62dd4be9ef9b35a05a69d5bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a892c32bb437af21fd3c24feeb5f65768"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../d9/de4/classlog__module_1_1console__writer.html">console_writer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#a892c32bb437af21fd3c24feeb5f65768">console_writer_</a></td></tr>
+<tr class="separator:a892c32bb437af21fd3c24feeb5f65768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeefa1132bbb3173bd6dde081031df13a"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../dc/d2b/classlog__module_1_1file__writer.html">file_writer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#aeefa1132bbb3173bd6dde081031df13a">file_writer_</a></td></tr>
+<tr class="separator:aeefa1132bbb3173bd6dde081031df13a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
@@ -243,19 +180,12 @@ Static Private Attributes</h2></td></tr>
 <tr class="memitem:a2a5d45a0ad53f54c91e35836cdf6a47a"><td class="memItemLeft" align="right" valign="top">static std::once_flag&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#a2a5d45a0ad53f54c91e35836cdf6a47a">once_</a></td></tr>
 <tr class="memdesc:a2a5d45a0ad53f54c91e35836cdf6a47a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to ensure singleton is initialized only once.  <a href="../../d1/d46/classlog__module_1_1logger.html#a2a5d45a0ad53f54c91e35836cdf6a47a">More...</a><br /></td></tr>
 <tr class="separator:a2a5d45a0ad53f54c91e35836cdf6a47a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_attribs_classthread__module_1_1thread__base"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classthread__module_1_1thread__base')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../da/d94/classthread__module_1_1thread__base.html">thread_module::thread_base</a></td></tr>
-<tr class="memitem:a47dad4325d074bf852e643aaf2e8fe95 inherit pro_attribs_classthread__module_1_1thread__base"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::chrono::milliseconds &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d94/classthread__module_1_1thread__base.html#a47dad4325d074bf852e643aaf2e8fe95">wake_interval_</a></td></tr>
-<tr class="memdesc:a47dad4325d074bf852e643aaf2e8fe95 inherit pro_attribs_classthread__module_1_1thread__base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interval at which the thread wakes up.  <a href="../../da/d94/classthread__module_1_1thread__base.html#a47dad4325d074bf852e643aaf2e8fe95">More...</a><br /></td></tr>
-<tr class="separator:a47dad4325d074bf852e643aaf2e8fe95 inherit pro_attribs_classthread__module_1_1thread__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A singleton class for logging operations. </p>
 <p>This class provides logging functionality with support for both console and file output. It inherits from thread_base to run logging operations in a separate thread. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00024">24</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00028">28</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a81fb42ee005fec2bf9bc82a070ffe51d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a81fb42ee005fec2bf9bc82a070ffe51d">&#9670;&nbsp;</a></span>~logger()</h2>
@@ -311,16 +241,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Private constructor for the logger class (singleton pattern). </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00031">31</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        : <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#ab7cf620d8d00d2f0875696f1150f7be7">log_queue_</a>(std::make_shared&lt;job_queue&gt;())</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        , <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a50c21f938726e2438e8ecfc90cc23ed7">file_log_type_</a>(<a class="code" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709a902b0d55fddef6f8d651fe1035b7d4bd">log_types::Error</a>)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        , <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#ae0fc8e9c4a9c6cfeaa78831d648f4c2e">console_log_type_</a>(<a class="code" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709aa82be0f551b8708bc08eb33cd9ded0cf">log_types::Information</a>)</div>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        : <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a>(std::make_shared&lt;log_collector&gt;())</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        , <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a892c32bb437af21fd3c24feeb5f65768">console_writer_</a>(std::make_shared&lt;console_writer&gt;())</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        , <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aeefa1132bbb3173bd6dde081031df13a">file_writer_</a>(std::make_shared&lt;file_writer&gt;())</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
-<div class="ttc" id="aclasslog__module_1_1logger_html_a50c21f938726e2438e8ecfc90cc23ed7"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#a50c21f938726e2438e8ecfc90cc23ed7">log_module::logger::file_log_type_</a></div><div class="ttdeci">log_types file_log_type_</div><div class="ttdoc">Types of logs to write to file.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/logger_8h_source.html#l00179">logger.h:179</a></div></div>
-<div class="ttc" id="aclasslog__module_1_1logger_html_ab7cf620d8d00d2f0875696f1150f7be7"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#ab7cf620d8d00d2f0875696f1150f7be7">log_module::logger::log_queue_</a></div><div class="ttdeci">std::shared_ptr&lt; job_queue &gt; log_queue_</div><div class="ttdoc">Queue for log jobs.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/logger_8h_source.html#l00188">logger.h:188</a></div></div>
-<div class="ttc" id="aclasslog__module_1_1logger_html_ae0fc8e9c4a9c6cfeaa78831d648f4c2e"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#ae0fc8e9c4a9c6cfeaa78831d648f4c2e">log_module::logger::console_log_type_</a></div><div class="ttdeci">log_types console_log_type_</div><div class="ttdoc">Types of logs to write to console.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/logger_8h_source.html#l00182">logger.h:182</a></div></div>
-<div class="ttc" id="anamespacelog__module_html_ac59af6ec9704b7fd0d73e7becbc54709a902b0d55fddef6f8d651fe1035b7d4bd"><div class="ttname"><a href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709a902b0d55fddef6f8d651fe1035b7d4bd">log_module::log_types::Error</a></div><div class="ttdeci">@ Error</div><div class="ttdoc">Error log type.</div></div>
-<div class="ttc" id="anamespacelog__module_html_ac59af6ec9704b7fd0d73e7becbc54709aa82be0f551b8708bc08eb33cd9ded0cf"><div class="ttname"><a href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709aa82be0f551b8708bc08eb33cd9ded0cf">log_module::log_types::Information</a></div><div class="ttdeci">@ Information</div><div class="ttdoc">Information log type.</div></div>
+<div class="ttc" id="aclasslog__module_1_1logger_html_a892c32bb437af21fd3c24feeb5f65768"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#a892c32bb437af21fd3c24feeb5f65768">log_module::logger::console_writer_</a></div><div class="ttdeci">std::shared_ptr&lt; console_writer &gt; console_writer_</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/logger_8h_source.html#l00147">logger.h:147</a></div></div>
+<div class="ttc" id="aclasslog__module_1_1logger_html_aec7a729f62dd4be9ef9b35a05a69d5bb"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">log_module::logger::collector_</a></div><div class="ttdeci">std::shared_ptr&lt; log_collector &gt; collector_</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/logger_8h_source.html#l00146">logger.h:146</a></div></div>
+<div class="ttc" id="aclasslog__module_1_1logger_html_aeefa1132bbb3173bd6dde081031df13a"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#aeefa1132bbb3173bd6dde081031df13a">log_module::logger::file_writer_</a></div><div class="ttdeci">std::shared_ptr&lt; file_writer &gt; file_writer_</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/logger_8h_source.html#l00148">logger.h:148</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -348,164 +276,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Deleted copy constructor. </p>
+<p>Deleted copy constructor to enforce singleton pattern. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1af6cedf2a4e3f45f2c21bc91597b70a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1af6cedf2a4e3f45f2c21bc91597b70a">&#9670;&nbsp;</a></span>after_stop()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto log_module::logger::after_stop </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; std::tuple&lt;bool, std::optional&lt;std::string&gt;&gt;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Called after the logger thread stops. </p>
-<dl class="section return"><dt>Returns</dt><dd>std::tuple&lt;bool, std::optional&lt;std::string&gt;&gt; A tuple containing:<ul>
-<li>bool: Indicates whether the cleanup was successful (true) or not (false).</li>
-<li>std::optional&lt;std::string&gt;: An optional string message, typically used for error descriptions. </li>
-</ul>
-</dd></dl>
-
-<p>Reimplemented from <a class="el" href="../../da/d94/classthread__module_1_1thread__base.html#a3ec3b99c50ef47c6733214a167ed9a96">thread_module::thread_base</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00166">166</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    {</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        log_job <a class="code" href="../../d8/d42/classthread__module_1_1job.html">job</a>(<span class="stringliteral">&quot;STOP&quot;</span>);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keyword">auto</span> [worked, work_error] = <a class="code" href="../../d8/d42/classthread__module_1_1job.html">job</a>.<a class="code" href="../../d8/d42/classthread__module_1_1job.html#a8516f8001e878a4d8359d63ebc568acc">do_work</a>();</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        std::string log</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            = (worked) ? <a class="code" href="../../d8/d42/classthread__module_1_1job.html">job</a>.log() : work_error.value_or(<span class="stringliteral">&quot;Unknown error to convert to log message&quot;</span>);</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        std::string buffer = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="preprocessor">#ifdef USE_STD_FORMAT</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        std::format_to</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        fmt::format_to</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            (std::back_inserter(buffer), <span class="stringliteral">&quot;{}\n&quot;</span>, log);</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a50c21f938726e2438e8ecfc90cc23ed7">file_log_type_</a> &gt; <a class="code" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709a6adf97f83acf6453d4a6a4b1070f3754">log_types::None</a>)</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        {</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a71f32da9a6d7529ab6bbe506a98c990a">write_to_file</a>(buffer);</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        }</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#ae0fc8e9c4a9c6cfeaa78831d648f4c2e">console_log_type_</a> &gt; <a class="code" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709a6adf97f83acf6453d4a6a4b1070f3754">log_types::None</a>)</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        {</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a70fb919280913856664efed6c52aa5df">write_to_console</a>(buffer);</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        }</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordflow">return</span> { <span class="keyword">true</span>, std::nullopt };</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    }</div>
-<div class="ttc" id="aclasslog__module_1_1logger_html_a70fb919280913856664efed6c52aa5df"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#a70fb919280913856664efed6c52aa5df">log_module::logger::write_to_console</a></div><div class="ttdeci">auto write_to_console(const std::string &amp;message) -&gt; void</div><div class="ttdoc">Writes a message to the console.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d30/logger_8cpp_source.html#l00274">logger.cpp:274</a></div></div>
-<div class="ttc" id="aclasslog__module_1_1logger_html_a71f32da9a6d7529ab6bbe506a98c990a"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#a71f32da9a6d7529ab6bbe506a98c990a">log_module::logger::write_to_file</a></div><div class="ttdeci">auto write_to_file(const std::string &amp;message) -&gt; void</div><div class="ttdoc">Writes a message to a file.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d30/logger_8cpp_source.html#l00194">logger.cpp:194</a></div></div>
-<div class="ttc" id="aclassthread__module_1_1job_html"><div class="ttname"><a href="../../d8/d42/classthread__module_1_1job.html">thread_module::job</a></div><div class="ttdoc">Represents a job that can be executed by a job queue.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d6a/job_8h_source.html#l00023">job.h:24</a></div></div>
-<div class="ttc" id="aclassthread__module_1_1job_html_a8516f8001e878a4d8359d63ebc568acc"><div class="ttname"><a href="../../d8/d42/classthread__module_1_1job.html#a8516f8001e878a4d8359d63ebc568acc">thread_module::job::do_work</a></div><div class="ttdeci">virtual auto do_work(void) -&gt; std::tuple&lt; bool, std::optional&lt; std::string &gt;&gt;</div><div class="ttdoc">Execute the job's work.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d83/job_8cpp_source.html#l00019">job.cpp:19</a></div></div>
-<div class="ttc" id="anamespacelog__module_html_ac59af6ec9704b7fd0d73e7becbc54709a6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709a6adf97f83acf6453d4a6a4b1070f3754">log_module::log_types::None</a></div><div class="ttdeci">@ None</div><div class="ttdoc">No specific log type.</div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d1/d46/classlog__module_1_1logger_a1af6cedf2a4e3f45f2c21bc91597b70a_cgraph.png" border="0" usemap="#ad1/d46/classlog__module_1_1logger_a1af6cedf2a4e3f45f2c21bc91597b70a_cgraph" alt=""/></div>
-<map name="ad1/d46/classlog__module_1_1logger_a1af6cedf2a4e3f45f2c21bc91597b70a_cgraph" id="ad1/d46/classlog__module_1_1logger_a1af6cedf2a4e3f45f2c21bc91597b70a_cgraph">
-<area shape="rect" title="Called after the logger thread stops." alt="" coords="5,5,152,47"/>
-<area shape="rect" href="../../d8/d42/classthread__module_1_1job.html#a8516f8001e878a4d8359d63ebc568acc" title="Execute the job&#39;s work." alt="" coords="200,5,348,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="af8c50f5e281c2b29b7f9ba8ca0dd4409"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8c50f5e281c2b29b7f9ba8ca0dd4409">&#9670;&nbsp;</a></span>before_start()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto log_module::logger::before_start </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; std::tuple&lt;bool, std::optional&lt;std::string&gt;&gt;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Called before the logger thread starts. </p>
-<dl class="section return"><dt>Returns</dt><dd>std::tuple&lt;bool, std::optional&lt;std::string&gt;&gt; A tuple containing:<ul>
-<li>bool: Indicates whether the initialization was successful (true) or not (false).</li>
-<li>std::optional&lt;std::string&gt;: An optional string message, typically used for error descriptions. </li>
-</ul>
-</dd></dl>
-
-<p>Reimplemented from <a class="el" href="../../da/d94/classthread__module_1_1thread__base.html#a42bb56bd4cb708542ab45a6a6e7dcdcc">thread_module::thread_base</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00088">88</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#ab7cf620d8d00d2f0875696f1150f7be7">log_queue_</a>-&gt;set_notify(!<a class="code" href="../../da/d94/classthread__module_1_1thread__base.html#a47dad4325d074bf852e643aaf2e8fe95">wake_interval_</a>.has_value());</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        log_job <a class="code" href="../../d8/d42/classthread__module_1_1job.html">job</a>(<span class="stringliteral">&quot;START&quot;</span>);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keyword">auto</span> [worked, work_error] = <a class="code" href="../../d8/d42/classthread__module_1_1job.html">job</a>.<a class="code" href="../../d8/d42/classthread__module_1_1job.html#a8516f8001e878a4d8359d63ebc568acc">do_work</a>();</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        std::string log</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            = (worked) ? <a class="code" href="../../d8/d42/classthread__module_1_1job.html">job</a>.log() : work_error.value_or(<span class="stringliteral">&quot;Unknown error to convert to log message&quot;</span>);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        std::string buffer = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#ifdef USE_STD_FORMAT</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        std::format_to</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        fmt::format_to</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            (std::back_inserter(buffer), <span class="stringliteral">&quot;{}\n&quot;</span>, log);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a50c21f938726e2438e8ecfc90cc23ed7">file_log_type_</a> &gt; <a class="code" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709a6adf97f83acf6453d4a6a4b1070f3754">log_types::None</a>)</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        {</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a71f32da9a6d7529ab6bbe506a98c990a">write_to_file</a>(buffer);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        }</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#ae0fc8e9c4a9c6cfeaa78831d648f4c2e">console_log_type_</a> &gt; <a class="code" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709a6adf97f83acf6453d4a6a4b1070f3754">log_types::None</a>)</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        {</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a70fb919280913856664efed6c52aa5df">write_to_console</a>(buffer);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        }</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordflow">return</span> { <span class="keyword">true</span>, std::nullopt };</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
-<div class="ttc" id="aclassthread__module_1_1thread__base_html_a47dad4325d074bf852e643aaf2e8fe95"><div class="ttname"><a href="../../da/d94/classthread__module_1_1thread__base.html#a47dad4325d074bf852e643aaf2e8fe95">thread_module::thread_base::wake_interval_</a></div><div class="ttdeci">std::optional&lt; std::chrono::milliseconds &gt; wake_interval_</div><div class="ttdoc">Interval at which the thread wakes up.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbc/thread__base_8h_source.html#l00121">thread_base.h:121</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d1/d46/classlog__module_1_1logger_af8c50f5e281c2b29b7f9ba8ca0dd4409_cgraph.png" border="0" usemap="#ad1/d46/classlog__module_1_1logger_af8c50f5e281c2b29b7f9ba8ca0dd4409_cgraph" alt=""/></div>
-<map name="ad1/d46/classlog__module_1_1logger_af8c50f5e281c2b29b7f9ba8ca0dd4409_cgraph" id="ad1/d46/classlog__module_1_1logger_af8c50f5e281c2b29b7f9ba8ca0dd4409_cgraph">
-<area shape="rect" title="Called before the logger thread starts." alt="" coords="5,5,152,47"/>
-<area shape="rect" href="../../d8/d42/classthread__module_1_1job.html#a8516f8001e878a4d8359d63ebc568acc" title="Execute the job&#39;s work." alt="" coords="200,5,348,47"/>
-</map>
-</div>
-
-</div>
-</div>
 <a id="ab731544957a7d592628b74c19d4f20d0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab731544957a7d592628b74c19d4f20d0">&#9670;&nbsp;</a></span>destroy()</h2>
 
@@ -533,89 +308,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00027">27</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{ <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#ae29ffdbcc988b388064939276a2acdca">handle_</a>.reset(); }</div>
-<div class="ttc" id="aclasslog__module_1_1logger_html_ae29ffdbcc988b388064939276a2acdca"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#ae29ffdbcc988b388064939276a2acdca">log_module::logger::handle_</a></div><div class="ttdeci">static std::unique_ptr&lt; logger &gt; handle_</div><div class="ttdoc">Singleton instance of the logger.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/logger_8h_source.html#l00205">logger.h:205</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="ab084905adbb121e0bcd75ee26b9de636"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab084905adbb121e0bcd75ee26b9de636">&#9670;&nbsp;</a></span>do_work()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto log_module::logger::do_work </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; std::tuple&lt;bool, std::optional&lt;std::string&gt;&gt;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Performs the actual work of the logger thread. </p>
-<dl class="section return"><dt>Returns</dt><dd>std::tuple&lt;bool, std::optional&lt;std::string&gt;&gt; A tuple containing:<ul>
-<li>bool: Indicates whether the work was successful (true) or not (false).</li>
-<li>std::optional&lt;std::string&gt;: An optional string message, typically used for error descriptions. </li>
-</ul>
-</dd></dl>
-
-<p>Reimplemented from <a class="el" href="../../da/d94/classthread__module_1_1thread__base.html#a87757cc02652293c41f71280f7ec6710">thread_module::thread_base</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00119">119</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    {</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keyword">auto</span> remaining_logs = <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#ab7cf620d8d00d2f0875696f1150f7be7">log_queue_</a>-&gt;dequeue_all();</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        std::string file_buffer = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        std::string console_buffer = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">while</span> (!remaining_logs.empty())</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        {</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="keyword">auto</span> current_job = std::move(remaining_logs.front());</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            remaining_logs.pop();</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <span class="keyword">auto</span> current_log</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                = std::unique_ptr&lt;log_job&gt;(<span class="keyword">static_cast&lt;</span>log_job*<span class="keyword">&gt;</span>(current_job.release()));</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="keyword">auto</span> [worked, work_error] = current_log-&gt;do_work();</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            std::string log = (worked)</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                                  ? current_log-&gt;log()</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                                  : work_error.value_or(<span class="stringliteral">&quot;Unknown error to convert to log message&quot;</span>);</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="keywordflow">if</span> (current_log-&gt;get_type() &lt;= <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a50c21f938726e2438e8ecfc90cc23ed7">file_log_type_</a>)</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            {</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="preprocessor">#ifdef USE_STD_FORMAT</span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                std::format_to</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                fmt::format_to</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                    (std::back_inserter(file_buffer), <span class="stringliteral">&quot;{}\n&quot;</span>, log);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            }</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keywordflow">if</span> (current_log-&gt;get_type() &lt;= <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#ae0fc8e9c4a9c6cfeaa78831d648f4c2e">console_log_type_</a>)</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            {</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor">#ifdef USE_STD_FORMAT</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                std::format_to</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                fmt::format_to</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                    (std::back_inserter(console_buffer), <span class="stringliteral">&quot;{}\n&quot;</span>, log);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            }</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        }</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a70fb919280913856664efed6c52aa5df">write_to_console</a>(console_buffer);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a71f32da9a6d7529ab6bbe506a98c990a">write_to_file</a>(file_buffer);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">return</span> { <span class="keyword">true</span>, std::nullopt };</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
+<div class="ttc" id="aclasslog__module_1_1logger_html_ae29ffdbcc988b388064939276a2acdca"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#ae29ffdbcc988b388064939276a2acdca">log_module::logger::handle_</a></div><div class="ttdeci">static std::unique_ptr&lt; logger &gt; handle_</div><div class="ttdoc">Singleton instance of the logger.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/logger_8h_source.html#l00165">logger.h:165</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -636,10 +329,18 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Gets the log types that are written to the console. </p>
-<dl class="section return"><dt>Returns</dt><dd>log_types The log types that are written to the console. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The log types that are currently set to be written to the console. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00046">46</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#ae0fc8e9c4a9c6cfeaa78831d648f4c2e">console_log_type_</a>; }</div>
+<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00078">78</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709a6adf97f83acf6453d4a6a4b1070f3754">log_types::None</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a>-&gt;get_console_target();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="ttc" id="anamespacelog__module_html_ac59af6ec9704b7fd0d73e7becbc54709a6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709a6adf97f83acf6453d4a6a4b1070f3754">log_module::log_types::None</a></div><div class="ttdeci">@ None</div><div class="ttdoc">No specific log type.</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -660,10 +361,17 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Gets the log types that are written to a file. </p>
-<dl class="section return"><dt>Returns</dt><dd>log_types The log types that are written to a file. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The log types that are currently set to be written to a file. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00042">42</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a50c21f938726e2438e8ecfc90cc23ed7">file_log_type_</a>; }</div>
+<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00058">58</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709a6adf97f83acf6453d4a6a4b1070f3754">log_types::None</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a>-&gt;get_file_target();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -684,11 +392,17 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Gets the maximum number of lines to keep in the log. </p>
-<dl class="section return"><dt>Returns</dt><dd>uint32_t The maximum number of lines to keep in the log. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The current maximum number of lines set for the log. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00050">50</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a475cef97386a2c8f012559099b01c5d9">max_lines_</a>; }</div>
-<div class="ttc" id="aclasslog__module_1_1logger_html_a475cef97386a2c8f012559099b01c5d9"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#a475cef97386a2c8f012559099b01c5d9">log_module::logger::max_lines_</a></div><div class="ttdeci">uint32_t max_lines_</div><div class="ttdoc">Maximum number of lines to keep in the log.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/logger_8h_source.html#l00173">logger.h:173</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00098">98</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a>-&gt;get_max_lines();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -708,12 +422,18 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Gets whether to use a backup log file. </p>
-<dl class="section return"><dt>Returns</dt><dd>bool True if using a backup log file, false otherwise. </dd></dl>
+<p>Gets whether a backup log file is being used. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if a backup log file is being used, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00054">54</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a48dbe867a518d1e8ab1046410c62788f">use_backup_</a>; }</div>
-<div class="ttc" id="aclasslog__module_1_1logger_html_a48dbe867a518d1e8ab1046410c62788f"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#a48dbe867a518d1e8ab1046410c62788f">log_module::logger::use_backup_</a></div><div class="ttdeci">bool use_backup_</div><div class="ttdoc">Flag indicating whether to use a backup log file.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/logger_8h_source.html#l00170">logger.h:170</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00118">118</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a>-&gt;get_use_backup();</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -742,7 +462,7 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Gets the singleton instance of the logger. </p>
-<dl class="section return"><dt>Returns</dt><dd>logger&amp; Reference to the singleton logger instance. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the singleton logger instance. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00020">20</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
@@ -750,42 +470,8 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">return</span> *<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#ae29ffdbcc988b388064939276a2acdca">handle_</a>.get();</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
-<div class="ttc" id="aclasslog__module_1_1logger_html_a2a5d45a0ad53f54c91e35836cdf6a47a"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#a2a5d45a0ad53f54c91e35836cdf6a47a">log_module::logger::once_</a></div><div class="ttdeci">static std::once_flag once_</div><div class="ttdoc">Flag to ensure singleton is initialized only once.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/logger_8h_source.html#l00208">logger.h:208</a></div></div>
+<div class="ttc" id="aclasslog__module_1_1logger_html_a2a5d45a0ad53f54c91e35836cdf6a47a"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#a2a5d45a0ad53f54c91e35836cdf6a47a">log_module::logger::once_</a></div><div class="ttdeci">static std::once_flag once_</div><div class="ttdoc">Flag to ensure singleton is initialized only once.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/logger_8h_source.html#l00168">logger.h:168</a></div></div>
 <div class="ttc" id="aclasslog__module_1_1logger_html_aaef094cf13302a627daf08e70fa66825"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#aaef094cf13302a627daf08e70fa66825">log_module::logger::logger</a></div><div class="ttdeci">logger()</div><div class="ttdoc">Private constructor for the logger class (singleton pattern).</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d30/logger_8cpp_source.html#l00031">logger.cpp:31</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="aed25fae0c99f9271564018c4ed41488e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed25fae0c99f9271564018c4ed41488e">&#9670;&nbsp;</a></span>has_work()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto log_module::logger::has_work </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Checks if there is work to be done. </p>
-<dl class="section return"><dt>Returns</dt><dd>bool True if there is work to be done, false otherwise. </dd></dl>
-
-<p>Reimplemented from <a class="el" href="../../da/d94/classthread__module_1_1thread__base.html#a140e82407657ce0ef761b55fc51aa1a5">thread_module::thread_base</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00086">86</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{ <span class="keywordflow">return</span> !<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#ab7cf620d8d00d2f0875696f1150f7be7">log_queue_</a>-&gt;empty(); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -813,7 +499,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Deleted assignment operator. </p>
+<p>Deleted assignment operator to enforce singleton pattern. </p>
 
 </div>
 </div>
@@ -841,8 +527,15 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00044">44</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{ <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#ae0fc8e9c4a9c6cfeaa78831d648f4c2e">console_log_type_</a> = type; }</div>
+<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00068">68</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a>-&gt;set_console_target(type);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -870,8 +563,15 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00040">40</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{ <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a50c21f938726e2438e8ecfc90cc23ed7">file_log_type_</a> = type; }</div>
+<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00048">48</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a>-&gt;set_file_target(type);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -899,8 +599,15 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00048">48</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{ <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a475cef97386a2c8f012559099b01c5d9">max_lines_</a> = max_lines; }</div>
+<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00088">88</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a>-&gt;set_max_lines(max_lines);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -923,14 +630,20 @@ Here is the call graph for this function:</div>
 <p>Sets the title for the logger. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">title</td><td>The title to set. </td></tr>
+    <tr><td class="paramname">title</td><td>The title to set for the logger. </td></tr>
   </table>
   </dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00038">38</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{ <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a343325bc1c428ee54db3b99fbec02ee9">title_</a> = title; }</div>
-<div class="ttc" id="aclasslog__module_1_1logger_html_a343325bc1c428ee54db3b99fbec02ee9"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#a343325bc1c428ee54db3b99fbec02ee9">log_module::logger::title_</a></div><div class="ttdeci">std::string title_</div><div class="ttdoc">Title of the logger.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/logger_8h_source.html#l00176">logger.h:176</a></div></div>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a>-&gt;set_title(title);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -958,8 +671,145 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00052">52</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{ <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a48dbe867a518d1e8ab1046410c62788f">use_backup_</a> = use_backup; }</div>
+<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00108">108</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a>-&gt;set_use_backup(use_backup);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aae29e963c28cfd55a22794c6510ee2e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae29e963c28cfd55a22794c6510ee2e7">&#9670;&nbsp;</a></span>set_wake_interval()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto log_module::logger::set_wake_interval </td>
+          <td>(</td>
+          <td class="paramtype">std::chrono::milliseconds&#160;</td>
+          <td class="paramname"><em>interval</em></td><td>)</td>
+          <td> -&gt; void</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the wake interval for the logger. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">interval</td><td>The wake interval to set for the logger thread. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00128">128</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a>-&gt;set_wake_interval(interval);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a86352e92838c910c392fa6a7d38220e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86352e92838c910c392fa6a7d38220e5">&#9670;&nbsp;</a></span>start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto log_module::logger::start </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; std::tuple&lt;bool, std::optional&lt;std::string&gt;&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Starts the logger. </p>
+<dl class="section return"><dt>Returns</dt><dd>A tuple containing:<ul>
+<li>bool: Indicates whether the logger was started successfully (true) or not (false).</li>
+<li>std::optional&lt;std::string&gt;: An optional string message, typically used for error descriptions. </li>
+</ul>
+</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00138">138</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">false</span>, <span class="stringliteral">&quot;there is no collector&quot;</span> };</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a>-&gt;set_console_queue(<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a892c32bb437af21fd3c24feeb5f65768">console_writer_</a>-&gt;get_job_queue());</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a>-&gt;set_file_queue(<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aeefa1132bbb3173bd6dde081031df13a">file_writer_</a>-&gt;get_job_queue());</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keyword">auto</span> [started, start_error] = <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a>-&gt;start();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">if</span> (!started)</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">false</span>, start_error };</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keyword">auto</span> [console_started, console_start_error] = <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a892c32bb437af21fd3c24feeb5f65768">console_writer_</a>-&gt;start();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">if</span> (!console_started)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">false</span>, console_start_error };</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keyword">auto</span> [file_started, file_start_error] = <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aeefa1132bbb3173bd6dde081031df13a">file_writer_</a>-&gt;start();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordflow">if</span> (!file_started)</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">false</span>, file_start_error };</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordflow">return</span> { <span class="keyword">true</span>, std::nullopt };</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a008c6b7b1763970cdeb26e12b2f13794"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a008c6b7b1763970cdeb26e12b2f13794">&#9670;&nbsp;</a></span>stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto log_module::logger::stop </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; void</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stops the logger. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00169">169</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    {</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a> != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a>-&gt;stop();</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a892c32bb437af21fd3c24feeb5f65768">console_writer_</a> != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a892c32bb437af21fd3c24feeb5f65768">console_writer_</a>-&gt;stop();</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aeefa1132bbb3173bd6dde081031df13a">file_writer_</a> != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aeefa1132bbb3173bd6dde081031df13a">file_writer_</a>-&gt;stop();</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        }</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -980,12 +830,12 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Gets the current time point. </p>
-<dl class="section return"><dt>Returns</dt><dd>std::chrono::time_point&lt;std::chrono::high_resolution_clock&gt; The current time point. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The current time point using high resolution clock. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00056">56</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">return</span> std::chrono::high_resolution_clock::now();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00187">187</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">return</span> std::chrono::high_resolution_clock::now();</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1031,196 +881,21 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00061">61</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        std::unique_ptr&lt;log_job&gt; new_log_job;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            new_log_job = std::make_unique&lt;log_job&gt;(message, type, start_time);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::bad_alloc&amp; e)</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            std::cerr &lt;&lt; <span class="stringliteral">&quot;error allocating log job: &quot;</span> &lt;&lt; e.what() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keyword">auto</span> [enqueued, enqueue_error] = <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#ab7cf620d8d00d2f0875696f1150f7be7">log_queue_</a>-&gt;enqueue(std::move(new_log_job));</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">if</span> (!enqueued)</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            std::cerr &lt;&lt; <span class="stringliteral">&quot;error enqueuing log job: &quot;</span> &lt;&lt; enqueue_error.value_or(<span class="stringliteral">&quot;unknown error&quot;</span>)</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                      &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a70fb919280913856664efed6c52aa5df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70fb919280913856664efed6c52aa5df">&#9670;&nbsp;</a></span>write_to_console()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto log_module::logger::write_to_console </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>message</em></td><td>)</td>
-          <td> -&gt; void</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Writes a message to the console. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">message</td><td>The message to write to the console. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00274">274</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    {</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">if</span> (message.empty())</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        {</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        }</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="preprocessor">#ifdef USE_STD_FORMAT</span></div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        std::cout &lt;&lt; message;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        fmt::print(<span class="stringliteral">&quot;{}&quot;</span>, message);</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a71f32da9a6d7529ab6bbe506a98c990a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71f32da9a6d7529ab6bbe506a98c990a">&#9670;&nbsp;</a></span>write_to_file()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto log_module::logger::write_to_file </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>message</em></td><td>)</td>
-          <td> -&gt; void</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Writes a message to a file. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">message</td><td>The message to write to the file. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00194">194</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    {</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="keywordflow">if</span> (message.empty())</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        {</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        }</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> now = std::chrono::system_clock::now();</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> today = std::chrono::floor&lt;std::chrono::days&gt;(now);</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> year_month_day = std::chrono::year_month_day{ today };</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> year = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(year_month_day.year());</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">unsigned</span> month = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(year_month_day.month());</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">unsigned</span> day = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(year_month_day.day());</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keyword">const</span> std::string file_name =</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="preprocessor">#ifdef USE_STD_FORMAT</span></div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            std::format</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            fmt::format</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            (<span class="stringliteral">&quot;{}_{:04d}-{:02d}-{:02d}.log&quot;</span>, <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a343325bc1c428ee54db3b99fbec02ee9">title_</a>, year, month, day);</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keyword">const</span> std::string backup_name =</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="preprocessor">#ifdef USE_STD_FORMAT</span></div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            std::format</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            fmt::format</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            (<span class="stringliteral">&quot;{}_{:04d}-{:02d}-{:02d}.backup&quot;</span>, <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a343325bc1c428ee54db3b99fbec02ee9">title_</a>, year, month, day);</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a475cef97386a2c8f012559099b01c5d9">max_lines_</a> == 0)</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        {</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            std::ofstream outfile;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            outfile.open(file_name, std::ios_base::app);</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keywordflow">if</span> (!outfile.is_open())</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            {</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            }</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            outfile &lt;&lt; message;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            outfile.close();</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        }</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a33957af8a233a58be602767c12362012">log_buffer_</a>.push_back(message);</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        std::ofstream backup_file;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a48dbe867a518d1e8ab1046410c62788f">use_backup_</a>)</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        {</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            backup_file.open(backup_name, std::ios_base::app);</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        }</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keyword">auto</span> current_lines = <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a33957af8a233a58be602767c12362012">log_buffer_</a>.size();</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i = current_lines; i &gt; <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a475cef97386a2c8f012559099b01c5d9">max_lines_</a>; --i)</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        {</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a48dbe867a518d1e8ab1046410c62788f">use_backup_</a> &amp;&amp; backup_file.is_open())</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            {</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                backup_file &lt;&lt; <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a33957af8a233a58be602767c12362012">log_buffer_</a>.front();</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            }</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a33957af8a233a58be602767c12362012">log_buffer_</a>.pop_front();</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        }</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="keywordflow">if</span> (backup_file.is_open())</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        {</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            backup_file.close();</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        }</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        std::ofstream outfile;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        outfile.open(file_name, std::ios_base::trunc);</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keywordflow">if</span> (!outfile.is_open())</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        {</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        }</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; line : <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#a33957af8a233a58be602767c12362012">log_buffer_</a>)</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        {</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            outfile &lt;&lt; line;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        }</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        outfile.close();</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    }</div>
-<div class="ttc" id="aclasslog__module_1_1logger_html_a33957af8a233a58be602767c12362012"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#a33957af8a233a58be602767c12362012">log_module::logger::log_buffer_</a></div><div class="ttdeci">std::deque&lt; std::string &gt; log_buffer_</div><div class="ttdoc">Buffer for log dequeuing related max lines.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/logger_8h_source.html#l00185">logger.h:185</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00192">192</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        {</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a>-&gt;write(type, message, start_time);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ae0fc8e9c4a9c6cfeaa78831d648f4c2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0fc8e9c4a9c6cfeaa78831d648f4c2e">&#9670;&nbsp;</a></span>console_log_type_</h2>
+<a id="aec7a729f62dd4be9ef9b35a05a69d5bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec7a729f62dd4be9ef9b35a05a69d5bb">&#9670;&nbsp;</a></span>collector_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1229,7 +904,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709">log_types</a> log_module::logger::console_log_type_</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="../../d7/da3/classlog__module_1_1log__collector.html">log_collector</a>&gt; log_module::logger::collector_</td>
         </tr>
       </table>
   </td>
@@ -1239,14 +914,12 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Types of logs to write to console. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00182">182</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00146">146</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
 
 </div>
 </div>
-<a id="a50c21f938726e2438e8ecfc90cc23ed7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50c21f938726e2438e8ecfc90cc23ed7">&#9670;&nbsp;</a></span>file_log_type_</h2>
+<a id="a892c32bb437af21fd3c24feeb5f65768"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a892c32bb437af21fd3c24feeb5f65768">&#9670;&nbsp;</a></span>console_writer_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1255,7 +928,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709">log_types</a> log_module::logger::file_log_type_</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="../../d9/de4/classlog__module_1_1console__writer.html">console_writer</a>&gt; log_module::logger::console_writer_</td>
         </tr>
       </table>
   </td>
@@ -1265,9 +938,31 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Types of logs to write to file. </p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00147">147</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00179">179</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
+</div>
+</div>
+<a id="aeefa1132bbb3173bd6dde081031df13a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeefa1132bbb3173bd6dde081031df13a">&#9670;&nbsp;</a></span>file_writer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="../../dc/d2b/classlog__module_1_1file__writer.html">file_writer</a>&gt; log_module::logger::file_writer_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00148">148</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
 
 </div>
 </div>
@@ -1293,85 +988,7 @@ Here is the call graph for this function:</div>
 
 <p>Singleton instance of the logger. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00205">205</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
-
-</div>
-</div>
-<a id="a33957af8a233a58be602767c12362012"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33957af8a233a58be602767c12362012">&#9670;&nbsp;</a></span>log_buffer_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::deque&lt;std::string&gt; log_module::logger::log_buffer_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Buffer for log dequeuing related max lines. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00185">185</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
-
-</div>
-</div>
-<a id="ab7cf620d8d00d2f0875696f1150f7be7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7cf620d8d00d2f0875696f1150f7be7">&#9670;&nbsp;</a></span>log_queue_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="../../df/d6d/classthread__module_1_1job__queue.html">job_queue</a>&gt; log_module::logger::log_queue_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Queue for log jobs. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00188">188</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
-
-</div>
-</div>
-<a id="a475cef97386a2c8f012559099b01c5d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a475cef97386a2c8f012559099b01c5d9">&#9670;&nbsp;</a></span>max_lines_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t log_module::logger::max_lines_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Maximum number of lines to keep in the log. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00173">173</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00165">165</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
 
 </div>
 </div>
@@ -1397,59 +1014,7 @@ Here is the call graph for this function:</div>
 
 <p>Flag to ensure singleton is initialized only once. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00208">208</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
-
-</div>
-</div>
-<a id="a343325bc1c428ee54db3b99fbec02ee9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a343325bc1c428ee54db3b99fbec02ee9">&#9670;&nbsp;</a></span>title_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string log_module::logger::title_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Title of the logger. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00176">176</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
-
-</div>
-</div>
-<a id="a48dbe867a518d1e8ab1046410c62788f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48dbe867a518d1e8ab1046410c62788f">&#9670;&nbsp;</a></span>use_backup_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool log_module::logger::use_backup_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Flag indicating whether to use a backup log file. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00170">170</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00168">168</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
 
 </div>
 </div>

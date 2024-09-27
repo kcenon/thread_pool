@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['file_5flog_5ftype_5f_263',['file_log_type_',['../d1/d46/classlog__module_1_1logger.html#a50c21f938726e2438e8ecfc90cc23ed7',1,'log_module::logger']]]
+  ['file_5flog_5ftype_5f_307',['file_log_type_',['../d7/da3/classlog__module_1_1log__collector.html#ab57512e92c20b5c5ad52191799003e40',1,'log_module::log_collector']]],
+  ['file_5fqueue_5f_308',['file_queue_',['../d7/da3/classlog__module_1_1log__collector.html#ab7fecba14eb03947827db31a46476eb3',1,'log_module::log_collector']]],
+  ['file_5fwriter_5f_309',['file_writer_',['../d1/d46/classlog__module_1_1logger.html#aeefa1132bbb3173bd6dde081031df13a',1,'log_module::logger']]]
 ];

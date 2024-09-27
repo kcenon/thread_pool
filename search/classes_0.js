@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['formatter_3c_20log_5fmodule_3a_3alog_5ftypes_20_3e_149',['formatter&lt; log_module::log_types &gt;',['../d6/d5b/structfmt_1_1formatter_3_01log__module_1_1log__types_01_4.html',1,'fmt']]],
-  ['formatter_3c_20priority_5fthread_5fpool_5fmodule_3a_3ajob_5fpriorities_20_3e_150',['formatter&lt; priority_thread_pool_module::job_priorities &gt;',['../db/dc8/structfmt_1_1formatter_3_01priority__thread__pool__module_1_1job__priorities_01_4.html',1,'fmt']]]
+  ['console_5fjob_169',['console_job',['../db/def/classlog__module_1_1console__job.html',1,'log_module']]],
+  ['console_5fwriter_170',['console_writer',['../d9/de4/classlog__module_1_1console__writer.html',1,'log_module']]]
 ];

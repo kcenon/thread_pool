@@ -1,11 +1,10 @@
 var searchData=
 [
-  ['priority_5fjob_2eh_180',['priority_job.h',['../da/d1e/priority__job_8h.html',1,'']]],
-  ['priority_5fjob_2etpp_181',['priority_job.tpp',['../db/da2/priority__job_8tpp.html',1,'']]],
-  ['priority_5fjob_5fqueue_2eh_182',['priority_job_queue.h',['../d1/d8b/priority__job__queue_8h.html',1,'']]],
-  ['priority_5fjob_5fqueue_2etpp_183',['priority_job_queue.tpp',['../df/d51/priority__job__queue_8tpp.html',1,'']]],
-  ['priority_5fthread_5fpool_2eh_184',['priority_thread_pool.h',['../dd/d10/priority__thread__pool_8h.html',1,'']]],
-  ['priority_5fthread_5fpool_2etpp_185',['priority_thread_pool.tpp',['../df/d1d/priority__thread__pool_8tpp.html',1,'']]],
-  ['priority_5fthread_5fworker_2eh_186',['priority_thread_worker.h',['../db/dc2/priority__thread__worker_8h.html',1,'']]],
-  ['priority_5fthread_5fworker_2etpp_187',['priority_thread_worker.tpp',['../d0/dea/priority__thread__worker_8tpp.html',1,'']]]
+  ['log_5fcollector_2ecpp_207',['log_collector.cpp',['../d7/d3c/log__collector_8cpp.html',1,'']]],
+  ['log_5fcollector_2eh_208',['log_collector.h',['../d8/d77/log__collector_8h.html',1,'']]],
+  ['log_5fjob_2ecpp_209',['log_job.cpp',['../d8/de3/log__job_8cpp.html',1,'']]],
+  ['log_5fjob_2eh_210',['log_job.h',['../d1/dc2/log__job_8h.html',1,'']]],
+  ['log_5ftypes_2eh_211',['log_types.h',['../d1/d18/log__types_8h.html',1,'']]],
+  ['logger_2ecpp_212',['logger.cpp',['../d3/d30/logger_8cpp.html',1,'']]],
+  ['logger_2eh_213',['logger.h',['../d1/d8c/logger_8h.html',1,'']]]
 ];
