@@ -129,43 +129,49 @@ $(function() {
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">true</span>, std::nullopt };</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        std::optional&lt;std::chrono::time_point&lt;std::chrono::high_resolution_clock&gt;&gt; time_point</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            = std::nullopt;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">if</span> (use_time_tag_)</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            time_point = std::chrono::high_resolution_clock::now();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        job_opt.value()-&gt;set_job_queue(job_queue_);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">auto</span> [worked, work_error] = job_opt.value()-&gt;do_work();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">if</span> (!worked)</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">false</span>,</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#ifdef USE_STD_FORMAT</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                     std::format</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                     fmt::format</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                     (<span class="stringliteral">&quot;error executing job: {}&quot;</span>, work_error.value_or(<span class="stringliteral">&quot;unknown error&quot;</span>)) };</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">if</span> (logger::handle().get_file_target() &gt;= log_types::Sequence</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            || logger::handle().get_console_target() &gt;= log_types::Sequence)</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            logger::handle().write(</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                log_types::Sequence,</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;#ifdef USE_STD_FORMAT</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                std::format</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;#<span class="keywordflow">else</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                fmt::format</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;#endif</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                (<span class="stringliteral">&quot;job executed successfully: {} on thread_worker&quot;</span>, job_opt.value()-&gt;get_name()),</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                time_point);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">return</span> { <span class="keyword">true</span>, std::nullopt };</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;} <span class="comment">// namespace thread_pool_module</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">auto</span> current_job = std::move(job_opt.value());</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">if</span> (current_job == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">false</span>, <span class="stringliteral">&quot;error executing job: nullptr&quot;</span> };</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        std::optional&lt;std::chrono::time_point&lt;std::chrono::high_resolution_clock&gt;&gt; time_point</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            = std::nullopt;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">if</span> (use_time_tag_)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            time_point = std::chrono::high_resolution_clock::now();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        current_job-&gt;set_job_queue(job_queue_);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keyword">auto</span> [worked, work_error] = current_job-&gt;do_work();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">if</span> (!worked)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">false</span>,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#ifdef USE_STD_FORMAT</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                     std::format</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                     fmt::format</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                     (<span class="stringliteral">&quot;error executing job: {}&quot;</span>, work_error.value_or(<span class="stringliteral">&quot;unknown error&quot;</span>)) };</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">if</span> (logger::handle().get_file_target() &gt;= log_types::Sequence</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            || logger::handle().get_console_target() &gt;= log_types::Sequence)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            logger::handle().write(</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                log_types::Sequence,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;#ifdef USE_STD_FORMAT</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                std::format</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;#<span class="keywordflow">else</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                fmt::format</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;#endif</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                (<span class="stringliteral">&quot;job executed successfully: {} on thread_worker&quot;</span>, current_job-&gt;get_name()),</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                time_point);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">return</span> { <span class="keyword">true</span>, std::nullopt };</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;} <span class="comment">// namespace thread_pool_module</span></div>
 <div class="ttc" id="aclassthread__module_1_1job__queue_html"><div class="ttname"><a href="../../df/d6d/classthread__module_1_1job__queue.html">thread_module::job_queue</a></div><div class="ttdoc">Represents a thread-safe queue for managing jobs.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d9d/job__queue_8h_source.html#l00021">job_queue.h:22</a></div></div>
 <div class="ttc" id="aclassthread__pool__module_1_1thread__worker_html_a018f6af23fe202df7ed7bff9107ca9c1"><div class="ttname"><a href="../../d7/d1b/classthread__pool__module_1_1thread__worker.html#a018f6af23fe202df7ed7bff9107ca9c1">thread_pool_module::thread_worker::has_work</a></div><div class="ttdeci">auto has_work() const -&gt; bool override</div><div class="ttdoc">Checks if there is work available in the job queue.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d61/thread__worker_8cpp_source.html#l00027">thread_worker.cpp:27</a></div></div>
 <div class="ttc" id="aclassthread__pool__module_1_1thread__worker_html_aa59a0a31ba753314c3283828ca21cf97"><div class="ttname"><a href="../../d7/d1b/classthread__pool__module_1_1thread__worker.html#aa59a0a31ba753314c3283828ca21cf97">thread_pool_module::thread_worker::~thread_worker</a></div><div class="ttdeci">virtual ~thread_worker(void)</div><div class="ttdoc">Virtual destructor for the thread_worker class.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d61/thread__worker_8cpp_source.html#l00020">thread_worker.cpp:20</a></div></div>
