@@ -6,7 +6,7 @@
 <area shape="rect" id="node10" href="$da/d94/classthread__module_1_1thread__base.html" title="Base class for implementing thread&#45;based workers." alt="" coords="199,384,407,411"/>
 <area shape="rect" id="node16" href="$d9/da1/classthread__pool__module_1_1thread__pool.html" title="A thread pool class that manages a collection of worker threads." alt="" coords="225,435,380,477"/>
 <area shape="rect" id="node4" href="$db/def/classlog__module_1_1console__job.html" title="Represents a console logging job derived from the base job class." alt="" coords="458,5,641,32"/>
-<area shape="rect" id="node5" href="$dc/d3c/classlog__module_1_1file__job.html" title="Represents a logging job derived from the base job class." alt="" coords="473,56,626,83"/>
+<area shape="rect" id="node5" href="$dc/d3c/classlog__module_1_1file__job.html" title="Represents a file logging job derived from the base job class." alt="" coords="473,56,626,83"/>
 <area shape="rect" id="node6" href="$df/df4/classlog__module_1_1log__job.html" title="Represents a logging job derived from the base job class." alt="" coords="473,107,626,133"/>
 <area shape="rect" id="node7" href="$d6/da0/classpriority__thread__pool__module_1_1priority__job.html" title="Represents a job with a priority level." alt="" coords="469,157,629,213"/>
 <area shape="rect" id="node9" href="$d1/d10/classpriority__thread__pool__module_1_1priority__job__queue.html" title="A queue for managing priority jobs." alt="" coords="458,237,641,293"/>

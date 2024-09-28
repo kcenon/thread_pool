@@ -1,5 +1,5 @@
 <map id="log_module::file_job" name="log_module::file_job">
-<area shape="rect" id="node1" title="Represents a logging job derived from the base job class." alt="" coords="301,516,455,623"/>
+<area shape="rect" id="node1" title="Represents a file logging job derived from the base job class." alt="" coords="290,516,466,667"/>
 <area shape="rect" id="node2" href="$d8/d42/classthread__module_1_1job.html" title="Represents a job that can be executed by a job queue." alt="" coords="224,301,372,467"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,147,151,239"/>
 <area shape="rect" id="node4" title=" " alt="" coords="175,147,343,239"/>
