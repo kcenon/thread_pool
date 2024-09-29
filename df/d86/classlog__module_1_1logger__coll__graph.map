@@ -1,5 +1,5 @@
 <map id="log_module::logger" name="log_module::logger">
-<area shape="rect" id="node1" title="A singleton class for logging operations." alt="" coords="289,160,459,516"/>
+<area shape="rect" id="node1" title="A singleton class for managing logging operations." alt="" coords="289,160,459,516"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,5,172,97"/>
 <area shape="rect" id="node3" title=" " alt="" coords="197,5,351,97"/>
 <area shape="rect" id="node4" title=" " alt="" coords="376,5,572,97"/>

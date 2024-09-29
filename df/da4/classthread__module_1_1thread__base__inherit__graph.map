@@ -1,9 +1,9 @@
 <map id="thread_module::thread_base" name="thread_module::thread_base">
-<area shape="rect" id="node1" title="Base class for implementing thread&#45;based workers." alt="" coords="371,145,579,413"/>
-<area shape="rect" id="node3" href="$d9/de4/classlog__module_1_1console__writer.html" title="A class for writing log messages to the console." alt="" coords="5,557,161,693"/>
-<area shape="rect" id="node4" href="$dc/d2b/classlog__module_1_1file__writer.html" title="A class for writing log messages to a file." alt="" coords="186,564,357,685"/>
-<area shape="rect" id="node5" href="$d7/da3/classlog__module_1_1log__collector.html" title="A class for collecting and managing log messages." alt="" coords="381,461,570,788"/>
-<area shape="rect" id="node6" href="$dd/df7/classpriority__thread__pool__module_1_1priority__thread__worker.html" title="A worker thread class that processes jobs from a priority job queue." alt="" coords="594,520,799,729"/>
-<area shape="rect" id="node7" href="$d7/d1b/classthread__pool__module_1_1thread__worker.html" title="A worker thread class that processes jobs from a job queue." alt="" coords="823,542,978,707"/>
-<area shape="rect" id="node2" title=" " alt="" coords="375,5,576,97"/>
+<area shape="rect" id="node1" title="Base class for implementing thread&#45;based workers." alt="" coords="377,145,585,413"/>
+<area shape="rect" id="node3" href="$d9/de4/classlog__module_1_1console__writer.html" title="A class for writing log messages to the console." alt="" coords="5,593,161,744"/>
+<area shape="rect" id="node4" href="$dc/d2b/classlog__module_1_1file__writer.html" title="A class for writing log messages to a file." alt="" coords="186,461,362,876"/>
+<area shape="rect" id="node5" href="$d7/da3/classlog__module_1_1log__collector.html" title="A class for collecting and managing log messages." alt="" coords="386,520,575,817"/>
+<area shape="rect" id="node6" href="$dd/df7/classpriority__thread__pool__module_1_1priority__thread__worker.html" title="A worker thread class that processes jobs from a priority job queue." alt="" coords="599,564,805,773"/>
+<area shape="rect" id="node7" href="$d7/d1b/classthread__pool__module_1_1thread__worker.html" title="A worker thread class that processes jobs from a job queue." alt="" coords="829,586,983,751"/>
+<area shape="rect" id="node2" title=" " alt="" coords="380,5,581,97"/>
 </map>

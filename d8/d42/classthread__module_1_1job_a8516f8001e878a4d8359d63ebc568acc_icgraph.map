@@ -1,5 +1,5 @@
 <map id="thread_module::job::do_work" name="thread_module::job::do_work">
 <area shape="rect" id="node1" title="Execute the job&#39;s work." alt="" coords="243,39,391,80"/>
-<area shape="rect" id="node2" href="$d7/da3/classlog__module_1_1log__collector.html#a08f9f464de3ebaf31898f61563fb7fa5" title="Performs cleanup after stopping the thread." alt="" coords="5,5,195,47"/>
-<area shape="rect" id="node3" href="$d7/da3/classlog__module_1_1log__collector.html#ad0effaa4b068ea820e828b5ac2eb0c14" title="Performs initialization before starting the thread." alt="" coords="5,71,195,112"/>
+<area shape="rect" id="node2" href="$d7/da3/classlog__module_1_1log__collector.html#a08f9f464de3ebaf31898f61563fb7fa5" title="Performs cleanup after stopping the log collector thread." alt="" coords="5,5,195,47"/>
+<area shape="rect" id="node3" href="$d7/da3/classlog__module_1_1log__collector.html#ad0effaa4b068ea820e828b5ac2eb0c14" title="Performs initialization before starting the log collector thread." alt="" coords="5,71,195,112"/>
 </map>
