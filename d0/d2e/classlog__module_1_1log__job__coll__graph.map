@@ -1,8 +1,11 @@
 <map id="log_module::log_job" name="log_module::log_job">
-<area shape="rect" id="node1" title="Represents a logging job derived from the base job class." alt="" coords="301,516,455,667"/>
-<area shape="rect" id="node2" href="$d8/d42/classthread__module_1_1job.html" title="Represents a job that can be executed by a job queue." alt="" coords="224,301,372,467"/>
+<area shape="rect" id="node1" title="Represents a logging job derived from the base job class." alt="" coords="529,592,691,860"/>
+<area shape="rect" id="node2" href="$d8/d42/classthread__module_1_1job.html" title="Represents a job that can be executed by a job queue." alt="" coords="224,364,372,529"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,147,151,239"/>
 <area shape="rect" id="node4" title=" " alt="" coords="175,147,343,239"/>
-<area shape="rect" id="node5" title=" " alt="" coords="392,154,479,231"/>
-<area shape="rect" id="node6" title=" " alt="" coords="366,5,505,97"/>
+<area shape="rect" id="node5" title=" " alt="" coords="416,154,503,231"/>
+<area shape="rect" id="node6" title=" " alt="" coords="614,5,753,97"/>
+<area shape="rect" id="node7" title=" " alt="" coords="563,263,673,340"/>
+<area shape="rect" id="node8" title=" " alt="" coords="695,263,805,340"/>
+<area shape="rect" id="node9" title=" " alt="" coords="882,408,981,485"/>
 </map>

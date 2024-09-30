@@ -86,7 +86,7 @@ Collaboration diagram for log_module::logger:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/d86/classlog__module_1_1logger__coll__graph.png" border="0" usemap="#alog__module_1_1logger_coll__map" alt="Collaboration graph"/></div>
 <map name="alog__module_1_1logger_coll__map" id="alog__module_1_1logger_coll__map">
-<area shape="rect" title="A singleton class for managing logging operations." alt="" coords="289,160,459,516"/>
+<area shape="rect" title="A singleton class for managing logging operations." alt="" coords="289,160,459,457"/>
 <area shape="rect" title=" " alt="" coords="5,5,172,97"/>
 <area shape="rect" title=" " alt="" coords="197,5,351,97"/>
 <area shape="rect" title=" " alt="" coords="376,5,572,97"/>
@@ -96,9 +96,9 @@ Collaboration diagram for log_module::logger:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a81fb42ee005fec2bf9bc82a070ffe51d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#a81fb42ee005fec2bf9bc82a070ffe51d">~logger</a> (void)=default</td></tr>
-<tr class="memdesc:a81fb42ee005fec2bf9bc82a070ffe51d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for the logger class.  <a href="../../d1/d46/classlog__module_1_1logger.html#a81fb42ee005fec2bf9bc82a070ffe51d">More...</a><br /></td></tr>
-<tr class="separator:a81fb42ee005fec2bf9bc82a070ffe51d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bc0597cfbdd3ceedb279e3ec8682804"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#a6bc0597cfbdd3ceedb279e3ec8682804">~logger</a> (void)=default</td></tr>
+<tr class="memdesc:a6bc0597cfbdd3ceedb279e3ec8682804"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for the logger class.  <a href="../../d1/d46/classlog__module_1_1logger.html#a6bc0597cfbdd3ceedb279e3ec8682804">More...</a><br /></td></tr>
+<tr class="separator:a6bc0597cfbdd3ceedb279e3ec8682804"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a864030321457d34df5d0ac5a9d7fd871"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#a864030321457d34df5d0ac5a9d7fd871">set_title</a> (const std::string &amp;title) -&gt; void</td></tr>
 <tr class="memdesc:a864030321457d34df5d0ac5a9d7fd871"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the title for the logger.  <a href="../../d1/d46/classlog__module_1_1logger.html#a864030321457d34df5d0ac5a9d7fd871">More...</a><br /></td></tr>
 <tr class="separator:a864030321457d34df5d0ac5a9d7fd871"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,6 +141,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab18c8d0615834489251a7e71b52e41d4"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#ab18c8d0615834489251a7e71b52e41d4">write</a> (<a class="el" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709">log_types</a> type, const std::string &amp;message, std::optional&lt; std::chrono::time_point&lt; std::chrono::high_resolution_clock &gt;&gt; start_time=std::nullopt) -&gt; void</td></tr>
 <tr class="memdesc:ab18c8d0615834489251a7e71b52e41d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a log message.  <a href="../../d1/d46/classlog__module_1_1logger.html#ab18c8d0615834489251a7e71b52e41d4">More...</a><br /></td></tr>
 <tr class="separator:ab18c8d0615834489251a7e71b52e41d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61450e47c18484d0b6a2557285bedebd"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#a61450e47c18484d0b6a2557285bedebd">write</a> (<a class="el" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709">log_types</a> type, const std::wstring &amp;message, std::optional&lt; std::chrono::time_point&lt; std::chrono::high_resolution_clock &gt;&gt; start_time=std::nullopt) -&gt; void</td></tr>
+<tr class="memdesc:a61450e47c18484d0b6a2557285bedebd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a log message.  <a href="../../d1/d46/classlog__module_1_1logger.html#a61450e47c18484d0b6a2557285bedebd">More...</a><br /></td></tr>
+<tr class="separator:a61450e47c18484d0b6a2557285bedebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4664e14d45def88a11320129245a641c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#a4664e14d45def88a11320129245a641c">write</a> (<a class="el" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709">log_types</a> type, const std::u16string &amp;message, std::optional&lt; std::chrono::time_point&lt; std::chrono::high_resolution_clock &gt;&gt; start_time=std::nullopt) -&gt; void</td></tr>
+<tr class="memdesc:a4664e14d45def88a11320129245a641c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a log message.  <a href="../../d1/d46/classlog__module_1_1logger.html#a4664e14d45def88a11320129245a641c">More...</a><br /></td></tr>
+<tr class="separator:a4664e14d45def88a11320129245a641c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca3ad982fbac5ff06bdd5537b66c0745"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#aca3ad982fbac5ff06bdd5537b66c0745">write</a> (<a class="el" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709">log_types</a> type, const std::u32string &amp;message, std::optional&lt; std::chrono::time_point&lt; std::chrono::high_resolution_clock &gt;&gt; start_time=std::nullopt) -&gt; void</td></tr>
+<tr class="memdesc:aca3ad982fbac5ff06bdd5537b66c0745"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a log message.  <a href="../../d1/d46/classlog__module_1_1logger.html#aca3ad982fbac5ff06bdd5537b66c0745">More...</a><br /></td></tr>
+<tr class="separator:aca3ad982fbac5ff06bdd5537b66c0745"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -148,13 +157,13 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:af6fd12257f1e8f2bad8408080f4f6e06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the singleton instance of the logger.  <a href="../../d1/d46/classlog__module_1_1logger.html#af6fd12257f1e8f2bad8408080f4f6e06">More...</a><br /></td></tr>
 <tr class="separator:af6fd12257f1e8f2bad8408080f4f6e06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab731544957a7d592628b74c19d4f20d0"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#ab731544957a7d592628b74c19d4f20d0">destroy</a> () -&gt; void</td></tr>
-<tr class="memdesc:ab731544957a7d592628b74c19d4f20d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the singleton instance of the logger. This method should be called when the logger is no longer needed.  <a href="../../d1/d46/classlog__module_1_1logger.html#ab731544957a7d592628b74c19d4f20d0">More...</a><br /></td></tr>
+<tr class="memdesc:ab731544957a7d592628b74c19d4f20d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the singleton instance of the logger.  <a href="../../d1/d46/classlog__module_1_1logger.html#ab731544957a7d592628b74c19d4f20d0">More...</a><br /></td></tr>
 <tr class="separator:ab731544957a7d592628b74c19d4f20d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:aaef094cf13302a627daf08e70fa66825"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#aaef094cf13302a627daf08e70fa66825">logger</a> ()</td></tr>
-<tr class="memdesc:aaef094cf13302a627daf08e70fa66825"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private constructor for the logger class (singleton pattern). Initializes the log collector, console writer, and file writer.  <a href="../../d1/d46/classlog__module_1_1logger.html#aaef094cf13302a627daf08e70fa66825">More...</a><br /></td></tr>
+<tr class="memdesc:aaef094cf13302a627daf08e70fa66825"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private constructor for the logger class (singleton pattern).  <a href="../../d1/d46/classlog__module_1_1logger.html#aaef094cf13302a627daf08e70fa66825">More...</a><br /></td></tr>
 <tr class="separator:aaef094cf13302a627daf08e70fa66825"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0372ec15f5a83a10f67af6b2fa2dfac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/classlog__module_1_1logger.html#ad0372ec15f5a83a10f67af6b2fa2dfac">logger</a> (const <a class="el" href="../../d1/d46/classlog__module_1_1logger.html">logger</a> &amp;)=delete</td></tr>
 <tr class="memdesc:ad0372ec15f5a83a10f67af6b2fa2dfac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleted copy constructor to enforce singleton pattern.  <a href="../../d1/d46/classlog__module_1_1logger.html#ad0372ec15f5a83a10f67af6b2fa2dfac">More...</a><br /></td></tr>
@@ -186,12 +195,12 @@ Static Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A singleton class for managing logging operations. </p>
-<p>This class provides comprehensive logging functionality with support for both console and file output. It manages log collectors, console writers, and file writers to handle various logging tasks. The singleton pattern ensures a single point of control for all logging operations. </p>
+<p>This class provides comprehensive logging functionality with support for both console and file output. It manages log collectors, console writers, and file writers to handle various logging tasks. The singleton pattern ensures a single point of control for all logging operations throughout the application. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00030">30</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a81fb42ee005fec2bf9bc82a070ffe51d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81fb42ee005fec2bf9bc82a070ffe51d">&#9670;&nbsp;</a></span>~logger()</h2>
+<a id="a6bc0597cfbdd3ceedb279e3ec8682804"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bc0597cfbdd3ceedb279e3ec8682804">&#9670;&nbsp;</a></span>~logger()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -200,7 +209,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">log_module::logger::~logger </td>
+          <td class="memname">virtual log_module::logger::~logger </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -209,12 +218,13 @@ Static Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destructor for the logger class. </p>
+<p>Virtual destructor for the logger class. </p>
+<p>Ensures proper cleanup of derived classes if any. </p>
 
 </div>
 </div>
@@ -241,7 +251,8 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Private constructor for the logger class (singleton pattern). Initializes the log collector, console writer, and file writer. </p>
+<p>Private constructor for the logger class (singleton pattern). </p>
+<p>Initializes the log collector, console writer, and file writer. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00031">31</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        : <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a>(std::make_shared&lt;log_collector&gt;())</div>
@@ -249,9 +260,9 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        , <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aeefa1132bbb3173bd6dde081031df13a">file_writer_</a>(std::make_shared&lt;file_writer&gt;())</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
-<div class="ttc" id="aclasslog__module_1_1logger_html_a892c32bb437af21fd3c24feeb5f65768"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#a892c32bb437af21fd3c24feeb5f65768">log_module::logger::console_writer_</a></div><div class="ttdeci">std::shared_ptr&lt; console_writer &gt; console_writer_</div><div class="ttdoc">Shared pointer to the console writer.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/logger_8h_source.html#l00153">logger.h:153</a></div></div>
-<div class="ttc" id="aclasslog__module_1_1logger_html_aec7a729f62dd4be9ef9b35a05a69d5bb"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">log_module::logger::collector_</a></div><div class="ttdeci">std::shared_ptr&lt; log_collector &gt; collector_</div><div class="ttdoc">Shared pointer to the log collector.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/logger_8h_source.html#l00150">logger.h:150</a></div></div>
-<div class="ttc" id="aclasslog__module_1_1logger_html_aeefa1132bbb3173bd6dde081031df13a"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#aeefa1132bbb3173bd6dde081031df13a">log_module::logger::file_writer_</a></div><div class="ttdeci">std::shared_ptr&lt; file_writer &gt; file_writer_</div><div class="ttdoc">Shared pointer to the file writer.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/logger_8h_source.html#l00156">logger.h:156</a></div></div>
+<div class="ttc" id="aclasslog__module_1_1logger_html_a892c32bb437af21fd3c24feeb5f65768"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#a892c32bb437af21fd3c24feeb5f65768">log_module::logger::console_writer_</a></div><div class="ttdeci">std::shared_ptr&lt; console_writer &gt; console_writer_</div><div class="ttdoc">Shared pointer to the console writer.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/logger_8h_source.html#l00222">logger.h:222</a></div></div>
+<div class="ttc" id="aclasslog__module_1_1logger_html_aec7a729f62dd4be9ef9b35a05a69d5bb"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">log_module::logger::collector_</a></div><div class="ttdeci">std::shared_ptr&lt; log_collector &gt; collector_</div><div class="ttdoc">Shared pointer to the log collector.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/logger_8h_source.html#l00219">logger.h:219</a></div></div>
+<div class="ttc" id="aclasslog__module_1_1logger_html_aeefa1132bbb3173bd6dde081031df13a"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#aeefa1132bbb3173bd6dde081031df13a">log_module::logger::file_writer_</a></div><div class="ttdeci">std::shared_ptr&lt; file_writer &gt; file_writer_</div><div class="ttdoc">Shared pointer to the file writer.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/logger_8h_source.html#l00225">logger.h:225</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -307,11 +318,12 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destroys the singleton instance of the logger. This method should be called when the logger is no longer needed. </p>
+<p>Destroys the singleton instance of the logger. </p>
+<p>This method should be called when the logger is no longer needed, typically at application shutdown. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00027">27</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{ <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#ae29ffdbcc988b388064939276a2acdca">handle_</a>.reset(); }</div>
-<div class="ttc" id="aclasslog__module_1_1logger_html_ae29ffdbcc988b388064939276a2acdca"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#ae29ffdbcc988b388064939276a2acdca">log_module::logger::handle_</a></div><div class="ttdeci">static std::unique_ptr&lt; logger &gt; handle_</div><div class="ttdoc">Singleton instance of the logger.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/logger_8h_source.html#l00174">logger.h:174</a></div></div>
+<div class="ttc" id="aclasslog__module_1_1logger_html_ae29ffdbcc988b388064939276a2acdca"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#ae29ffdbcc988b388064939276a2acdca">log_module::logger::handle_</a></div><div class="ttdeci">static std::unique_ptr&lt; logger &gt; handle_</div><div class="ttdoc">Singleton instance of the logger.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/logger_8h_source.html#l00248">logger.h:248</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -465,7 +477,8 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets the singleton instance of the logger. </p>
-<dl class="section return"><dt>Returns</dt><dd>Reference to the singleton logger instance. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the singleton logger instance.</dd></dl>
+<p>This method ensures that only one instance of the logger exists throughout the application. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00020">20</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
@@ -473,8 +486,8 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">return</span> *<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#ae29ffdbcc988b388064939276a2acdca">handle_</a>.get();</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
-<div class="ttc" id="aclasslog__module_1_1logger_html_a2a5d45a0ad53f54c91e35836cdf6a47a"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#a2a5d45a0ad53f54c91e35836cdf6a47a">log_module::logger::once_</a></div><div class="ttdeci">static std::once_flag once_</div><div class="ttdoc">Flag to ensure singleton is initialized only once.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/logger_8h_source.html#l00177">logger.h:177</a></div></div>
-<div class="ttc" id="aclasslog__module_1_1logger_html_aaef094cf13302a627daf08e70fa66825"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#aaef094cf13302a627daf08e70fa66825">log_module::logger::logger</a></div><div class="ttdeci">logger()</div><div class="ttdoc">Private constructor for the logger class (singleton pattern). Initializes the log collector,...</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d30/logger_8cpp_source.html#l00031">logger.cpp:31</a></div></div>
+<div class="ttc" id="aclasslog__module_1_1logger_html_a2a5d45a0ad53f54c91e35836cdf6a47a"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#a2a5d45a0ad53f54c91e35836cdf6a47a">log_module::logger::once_</a></div><div class="ttdeci">static std::once_flag once_</div><div class="ttdoc">Flag to ensure singleton is initialized only once.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d8c/logger_8h_source.html#l00251">logger.h:251</a></div></div>
+<div class="ttc" id="aclasslog__module_1_1logger_html_aaef094cf13302a627daf08e70fa66825"><div class="ttname"><a href="../../d1/d46/classlog__module_1_1logger.html#aaef094cf13302a627daf08e70fa66825">log_module::logger::logger</a></div><div class="ttdeci">logger()</div><div class="ttdoc">Private constructor for the logger class (singleton pattern).</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d30/logger_8cpp_source.html#l00031">logger.cpp:31</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -525,10 +538,11 @@ Static Private Attributes</h2></td></tr>
 <p>Sets the log types that should be written to the console. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">type</td><td>The log types to be written to the console. </td></tr>
+    <tr><td class="paramname">type</td><td>The log types to be written to the console.</td></tr>
   </table>
   </dd>
 </dl>
+<p>This method allows you to specify which types of log messages should be displayed in the console. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00068">68</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
@@ -561,10 +575,11 @@ Static Private Attributes</h2></td></tr>
 <p>Sets the log types that should be written to a file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">type</td><td>The log types to be written to a file. </td></tr>
+    <tr><td class="paramname">type</td><td>The log types to be written to a file.</td></tr>
   </table>
   </dd>
 </dl>
+<p>This method allows you to specify which types of log messages should be saved to a file. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00048">48</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
@@ -597,10 +612,11 @@ Static Private Attributes</h2></td></tr>
 <p>Sets the maximum number of lines to keep in the log. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">max_lines</td><td>The maximum number of lines to keep in the log. </td></tr>
+    <tr><td class="paramname">max_lines</td><td>The maximum number of lines to keep in the log.</td></tr>
   </table>
   </dd>
 </dl>
+<p>This helps in managing the size of log files and prevents them from growing indefinitely. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00088">88</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    {</div>
@@ -633,10 +649,11 @@ Static Private Attributes</h2></td></tr>
 <p>Sets the title for the logger. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">title</td><td>The title to set for the logger. </td></tr>
+    <tr><td class="paramname">title</td><td>The title to set for the logger.</td></tr>
   </table>
   </dd>
 </dl>
+<p>This title may be used in log file names or console output headers. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00038">38</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
@@ -669,10 +686,11 @@ Static Private Attributes</h2></td></tr>
 <p>Sets whether to use a backup log file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">use_backup</td><td>Flag indicating whether to use a backup log file. </td></tr>
+    <tr><td class="paramname">use_backup</td><td>Flag indicating whether to use a backup log file.</td></tr>
   </table>
   </dd>
 </dl>
+<p>When enabled, this feature creates a backup of the log file, which can be useful for archiving or recovery purposes. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00108">108</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    {</div>
@@ -705,10 +723,11 @@ Static Private Attributes</h2></td></tr>
 <p>Sets the wake interval for the logger. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">interval</td><td>The wake interval to set for the logger thread. </td></tr>
+    <tr><td class="paramname">interval</td><td>The wake interval to set for the logger thread.</td></tr>
   </table>
   </dd>
 </dl>
+<p>This interval determines how often the logger thread wakes up to process queued log messages. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00128">128</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    {</div>
@@ -744,9 +763,10 @@ Static Private Attributes</h2></td></tr>
 <p>Starts the logger. </p>
 <dl class="section return"><dt>Returns</dt><dd>A tuple containing:<ul>
 <li>bool: Indicates whether the logger was started successfully (true) or not (false).</li>
-<li>std::optional&lt;std::string&gt;: An optional string message, typically used for error descriptions. </li>
+<li>std::optional&lt;std::string&gt;: An optional string message, typically used for error descriptions.</li>
 </ul>
 </dd></dl>
+<p>This method initializes and starts the logging process. It should be called before any logging operations. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00141">141</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    {</div>
@@ -798,6 +818,7 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Stops the logger. </p>
+<p>This method halts all logging operations and performs necessary cleanup. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00172">172</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    {</div>
@@ -836,7 +857,8 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets the current time point. </p>
-<dl class="section return"><dt>Returns</dt><dd>The current time point using high resolution clock. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The current time point using high resolution clock.</dd></dl>
+<p>This method is useful for precise timing of log events. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00190">190</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    {</div>
@@ -846,7 +868,7 @@ Static Private Attributes</h2></td></tr>
 </div>
 </div>
 <a id="ab18c8d0615834489251a7e71b52e41d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab18c8d0615834489251a7e71b52e41d4">&#9670;&nbsp;</a></span>write()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab18c8d0615834489251a7e71b52e41d4">&#9670;&nbsp;</a></span>write() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -882,10 +904,11 @@ Static Private Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">type</td><td>The type of the log message. </td></tr>
     <tr><td class="paramname">message</td><td>The content of the log message. </td></tr>
-    <tr><td class="paramname">start_time</td><td>An optional start time for the log message. </td></tr>
+    <tr><td class="paramname">start_time</td><td>An optional start time for the log message.</td></tr>
   </table>
   </dd>
 </dl>
+<p>This overload handles std::string messages. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00195">195</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    {</div>
@@ -896,6 +919,171 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a>-&gt;write(type, message, start_time);</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4664e14d45def88a11320129245a641c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4664e14d45def88a11320129245a641c">&#9670;&nbsp;</a></span>write() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto log_module::logger::write </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709">log_types</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::u16string &amp;&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; std::chrono::time_point&lt; std::chrono::high_resolution_clock &gt;&gt;&#160;</td>
+          <td class="paramname"><em>start_time</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; void</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Writes a log message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The type of the log message. </td></tr>
+    <tr><td class="paramname">message</td><td>The content of the log message. </td></tr>
+    <tr><td class="paramname">start_time</td><td>An optional start time for the log message.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This overload handles std::u16string messages. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00221">221</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        {</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a>-&gt;write(type, message, start_time);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aca3ad982fbac5ff06bdd5537b66c0745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca3ad982fbac5ff06bdd5537b66c0745">&#9670;&nbsp;</a></span>write() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto log_module::logger::write </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709">log_types</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::u32string &amp;&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; std::chrono::time_point&lt; std::chrono::high_resolution_clock &gt;&gt;&#160;</td>
+          <td class="paramname"><em>start_time</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; void</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Writes a log message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The type of the log message. </td></tr>
+    <tr><td class="paramname">message</td><td>The content of the log message. </td></tr>
+    <tr><td class="paramname">start_time</td><td>An optional start time for the log message.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This overload handles std::u32string messages. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00234">234</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    {</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        {</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        }</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a>-&gt;write(type, message, start_time);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a61450e47c18484d0b6a2557285bedebd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61450e47c18484d0b6a2557285bedebd">&#9670;&nbsp;</a></span>write() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto log_module::logger::write </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709">log_types</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::wstring &amp;&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; std::chrono::time_point&lt; std::chrono::high_resolution_clock &gt;&gt;&#160;</td>
+          <td class="paramname"><em>start_time</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; void</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Writes a log message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The type of the log message. </td></tr>
+    <tr><td class="paramname">message</td><td>The content of the log message. </td></tr>
+    <tr><td class="paramname">start_time</td><td>An optional start time for the log message.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This overload handles std::wstring messages. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d30/logger_8cpp_source.html#l00208">208</a> of file <a class="el" href="../../d3/d30/logger_8cpp_source.html">logger.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <a class="code" href="../../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb">collector_</a>-&gt;write(type, message, start_time);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -922,7 +1110,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Shared pointer to the log collector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00150">150</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00219">219</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
 
 </div>
 </div>
@@ -948,7 +1136,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Shared pointer to the console writer. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00153">153</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00222">222</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
 
 </div>
 </div>
@@ -974,7 +1162,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Shared pointer to the file writer. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00156">156</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00225">225</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
 
 </div>
 </div>
@@ -1000,7 +1188,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Singleton instance of the logger. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00174">174</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00248">248</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
 
 </div>
 </div>
@@ -1026,7 +1214,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Flag to ensure singleton is initialized only once. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00177">177</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00251">251</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
 
 </div>
 </div>

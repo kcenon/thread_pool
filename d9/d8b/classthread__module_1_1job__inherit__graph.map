@@ -1,7 +1,7 @@
 <map id="thread_module::job" name="thread_module::job">
-<area shape="rect" id="node1" title="Represents a job that can be executed by a job queue." alt="" coords="205,145,353,340"/>
-<area shape="rect" id="node3" href="$df/df4/classlog__module_1_1log__job.html" title="Represents a logging job derived from the base job class." alt="" coords="5,388,159,568"/>
-<area shape="rect" id="node4" href="$db/daf/classlog__module_1_1message__job.html" title="Represents a console logging job derived from the base job class." alt="" coords="183,425,375,531"/>
-<area shape="rect" id="node5" href="$d6/da0/classpriority__thread__pool__module_1_1priority__job.html" title="Represents a job with a priority level." alt="" coords="399,388,559,568"/>
-<area shape="rect" id="node2" title=" " alt="" coords="207,5,352,97"/>
+<area shape="rect" id="node1" title="Represents a job that can be executed by a job queue." alt="" coords="214,145,362,340"/>
+<area shape="rect" id="node3" href="$df/df4/classlog__module_1_1log__job.html" title="Represents a logging job derived from the base job class." alt="" coords="5,388,168,729"/>
+<area shape="rect" id="node4" href="$db/daf/classlog__module_1_1message__job.html" title="Represents a console logging job derived from the base job class." alt="" coords="192,505,384,612"/>
+<area shape="rect" id="node5" href="$d6/da0/classpriority__thread__pool__module_1_1priority__job.html" title="Represents a job with a priority level." alt="" coords="408,469,568,649"/>
+<area shape="rect" id="node2" title=" " alt="" coords="215,5,361,97"/>
 </map>
