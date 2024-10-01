@@ -158,7 +158,7 @@ Protected Attributes</h2></td></tr>
 <div class="textblock"><p>Represents a thread-safe queue for managing jobs. </p>
 <p>This class provides a mechanism for enqueueing and dequeueing jobs in a thread-safe manner. It inherits from std::enable_shared_from_this to allow creating shared_ptr from this. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/d9d/job__queue_8h_source.html#l00021">21</a> of file <a class="el" href="../../db/d9d/job__queue_8h_source.html">job_queue.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/d9d/job__queue_8h_source.html#l00053">53</a> of file <a class="el" href="../../db/d9d/job__queue_8h_source.html">job_queue.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8d3002b24a03a4cf43d416d60fe200fe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8d3002b24a03a4cf43d416d60fe200fe">&#9670;&nbsp;</a></span>job_queue()</h2>
@@ -177,13 +177,13 @@ Protected Attributes</h2></td></tr>
 
 <p>Constructs a new <a class="el" href="../../df/d6d/classthread__module_1_1job__queue.html" title="Represents a thread-safe queue for managing jobs.">job_queue</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html#l00005">5</a> of file <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html">job_queue.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;: <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a3d291457b201a92d3ed9b0761b00c133">notify_</a>(<span class="keyword">true</span>), <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a092523f285ed29d9e7db6b5f665c984b">stop_</a>(<span class="keyword">false</span>), <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a5655e208476810a1b4437bab0f57045c">mutex_</a>(), <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a862c8cfa56448b7db38792ed3ff56e1c">condition_</a>(), <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a788bd417c5477fed4edcf1445bb9402a">queue_</a>() {}</div>
-<div class="ttc" id="aclassthread__module_1_1job__queue_html_a092523f285ed29d9e7db6b5f665c984b"><div class="ttname"><a href="../../df/d6d/classthread__module_1_1job__queue.html#a092523f285ed29d9e7db6b5f665c984b">thread_module::job_queue::stop_</a></div><div class="ttdeci">std::atomic_bool stop_</div><div class="ttdoc">Flag indicating whether the queue is stopped.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d9d/job__queue_8h_source.html#l00104">job_queue.h:104</a></div></div>
-<div class="ttc" id="aclassthread__module_1_1job__queue_html_a3d291457b201a92d3ed9b0761b00c133"><div class="ttname"><a href="../../df/d6d/classthread__module_1_1job__queue.html#a3d291457b201a92d3ed9b0761b00c133">thread_module::job_queue::notify_</a></div><div class="ttdeci">std::atomic_bool notify_</div><div class="ttdoc">Flag indicating whether to notify when enqueuing.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d9d/job__queue_8h_source.html#l00101">job_queue.h:101</a></div></div>
-<div class="ttc" id="aclassthread__module_1_1job__queue_html_a5655e208476810a1b4437bab0f57045c"><div class="ttname"><a href="../../df/d6d/classthread__module_1_1job__queue.html#a5655e208476810a1b4437bab0f57045c">thread_module::job_queue::mutex_</a></div><div class="ttdeci">std::mutex mutex_</div><div class="ttdoc">Mutex for thread-safe operations.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d9d/job__queue_8h_source.html#l00107">job_queue.h:107</a></div></div>
-<div class="ttc" id="aclassthread__module_1_1job__queue_html_a788bd417c5477fed4edcf1445bb9402a"><div class="ttname"><a href="../../df/d6d/classthread__module_1_1job__queue.html#a788bd417c5477fed4edcf1445bb9402a">thread_module::job_queue::queue_</a></div><div class="ttdeci">std::queue&lt; std::unique_ptr&lt; job &gt; &gt; queue_</div><div class="ttdoc">The underlying queue of jobs.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d9d/job__queue_8h_source.html#l00113">job_queue.h:113</a></div></div>
-<div class="ttc" id="aclassthread__module_1_1job__queue_html_a862c8cfa56448b7db38792ed3ff56e1c"><div class="ttname"><a href="../../df/d6d/classthread__module_1_1job__queue.html#a862c8cfa56448b7db38792ed3ff56e1c">thread_module::job_queue::condition_</a></div><div class="ttdeci">std::condition_variable condition_</div><div class="ttdoc">Condition variable for signaling between threads.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d9d/job__queue_8h_source.html#l00110">job_queue.h:110</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html#l00037">37</a> of file <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html">job_queue.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;: <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a3d291457b201a92d3ed9b0761b00c133">notify_</a>(<span class="keyword">true</span>), <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a092523f285ed29d9e7db6b5f665c984b">stop_</a>(<span class="keyword">false</span>), <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a5655e208476810a1b4437bab0f57045c">mutex_</a>(), <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a862c8cfa56448b7db38792ed3ff56e1c">condition_</a>(), <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a788bd417c5477fed4edcf1445bb9402a">queue_</a>() {}</div>
+<div class="ttc" id="aclassthread__module_1_1job__queue_html_a092523f285ed29d9e7db6b5f665c984b"><div class="ttname"><a href="../../df/d6d/classthread__module_1_1job__queue.html#a092523f285ed29d9e7db6b5f665c984b">thread_module::job_queue::stop_</a></div><div class="ttdeci">std::atomic_bool stop_</div><div class="ttdoc">Flag indicating whether the queue is stopped.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d9d/job__queue_8h_source.html#l00136">job_queue.h:136</a></div></div>
+<div class="ttc" id="aclassthread__module_1_1job__queue_html_a3d291457b201a92d3ed9b0761b00c133"><div class="ttname"><a href="../../df/d6d/classthread__module_1_1job__queue.html#a3d291457b201a92d3ed9b0761b00c133">thread_module::job_queue::notify_</a></div><div class="ttdeci">std::atomic_bool notify_</div><div class="ttdoc">Flag indicating whether to notify when enqueuing.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d9d/job__queue_8h_source.html#l00133">job_queue.h:133</a></div></div>
+<div class="ttc" id="aclassthread__module_1_1job__queue_html_a5655e208476810a1b4437bab0f57045c"><div class="ttname"><a href="../../df/d6d/classthread__module_1_1job__queue.html#a5655e208476810a1b4437bab0f57045c">thread_module::job_queue::mutex_</a></div><div class="ttdeci">std::mutex mutex_</div><div class="ttdoc">Mutex for thread-safe operations.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d9d/job__queue_8h_source.html#l00139">job_queue.h:139</a></div></div>
+<div class="ttc" id="aclassthread__module_1_1job__queue_html_a788bd417c5477fed4edcf1445bb9402a"><div class="ttname"><a href="../../df/d6d/classthread__module_1_1job__queue.html#a788bd417c5477fed4edcf1445bb9402a">thread_module::job_queue::queue_</a></div><div class="ttdeci">std::queue&lt; std::unique_ptr&lt; job &gt; &gt; queue_</div><div class="ttdoc">The underlying queue of jobs.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d9d/job__queue_8h_source.html#l00145">job_queue.h:145</a></div></div>
+<div class="ttc" id="aclassthread__module_1_1job__queue_html_a862c8cfa56448b7db38792ed3ff56e1c"><div class="ttname"><a href="../../df/d6d/classthread__module_1_1job__queue.html#a862c8cfa56448b7db38792ed3ff56e1c">thread_module::job_queue::condition_</a></div><div class="ttdeci">std::condition_variable condition_</div><div class="ttdoc">Condition variable for signaling between threads.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d9d/job__queue_8h_source.html#l00142">job_queue.h:142</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -213,8 +213,8 @@ Protected Attributes</h2></td></tr>
 
 <p>Virtual destructor for the <a class="el" href="../../df/d6d/classthread__module_1_1job__queue.html" title="Represents a thread-safe queue for managing jobs.">job_queue</a> class. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html#l00007">7</a> of file <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html">job_queue.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{}</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html#l00039">39</a> of file <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html">job_queue.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -247,16 +247,16 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../d1/d10/classpriority__thread__pool__module_1_1priority__job__queue.html#a932d356d1abd19dc7c31b63699168884">priority_thread_pool_module::priority_job_queue&lt; priority_type &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html#l00057">57</a> of file <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html">job_queue.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        std::scoped_lock&lt;std::mutex&gt; lock(<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a5655e208476810a1b4437bab0f57045c">mutex_</a>);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        std::queue&lt;std::unique_ptr&lt;job&gt;&gt; <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a01a57bbafa000d3f8515784e1b9e67f5">empty</a>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        std::swap(<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a788bd417c5477fed4edcf1445bb9402a">queue_</a>, <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a01a57bbafa000d3f8515784e1b9e67f5">empty</a>);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a862c8cfa56448b7db38792ed3ff56e1c">condition_</a>.notify_all();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
-<div class="ttc" id="aclassthread__module_1_1job__queue_html_a01a57bbafa000d3f8515784e1b9e67f5"><div class="ttname"><a href="../../df/d6d/classthread__module_1_1job__queue.html#a01a57bbafa000d3f8515784e1b9e67f5">thread_module::job_queue::empty</a></div><div class="ttdeci">auto empty(void) const -&gt; bool</div><div class="ttdoc">Checks if the queue is empty.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d4c/job__queue_8cpp_source.html#l00067">job_queue.cpp:67</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html#l00089">89</a> of file <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html">job_queue.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        std::scoped_lock&lt;std::mutex&gt; lock(<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a5655e208476810a1b4437bab0f57045c">mutex_</a>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        std::queue&lt;std::unique_ptr&lt;job&gt;&gt; <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a01a57bbafa000d3f8515784e1b9e67f5">empty</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        std::swap(<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a788bd417c5477fed4edcf1445bb9402a">queue_</a>, <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a01a57bbafa000d3f8515784e1b9e67f5">empty</a>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a862c8cfa56448b7db38792ed3ff56e1c">condition_</a>.notify_all();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="ttc" id="aclassthread__module_1_1job__queue_html_a01a57bbafa000d3f8515784e1b9e67f5"><div class="ttname"><a href="../../df/d6d/classthread__module_1_1job__queue.html#a01a57bbafa000d3f8515784e1b9e67f5">thread_module::job_queue::empty</a></div><div class="ttdeci">auto empty(void) const -&gt; bool</div><div class="ttdoc">Checks if the queue is empty.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d4c/job__queue_8cpp_source.html#l00099">job_queue.cpp:99</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -293,21 +293,21 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../d1/d10/classpriority__thread__pool__module_1_1priority__job__queue.html#ae860e3d9376e8481fe540cf6f16b9483">priority_thread_pool_module::priority_job_queue&lt; priority_type &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html#l00040">40</a> of file <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html">job_queue.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        std::unique_lock&lt;std::mutex&gt; lock(<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a5655e208476810a1b4437bab0f57045c">mutex_</a>);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a862c8cfa56448b7db38792ed3ff56e1c">condition_</a>.wait(lock, [<span class="keyword">this</span>]() { <span class="keywordflow">return</span> !<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a788bd417c5477fed4edcf1445bb9402a">queue_</a>.empty() || <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a092523f285ed29d9e7db6b5f665c984b">stop_</a>.load(); });</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a788bd417c5477fed4edcf1445bb9402a">queue_</a>.empty())</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">return</span> { std::nullopt, <span class="stringliteral">&quot;there are no jobs to dequeue&quot;</span> };</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">auto</span> value = std::move(<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a788bd417c5477fed4edcf1445bb9402a">queue_</a>.front());</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a788bd417c5477fed4edcf1445bb9402a">queue_</a>.pop();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">return</span> { std::move(value), std::nullopt };</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html#l00072">72</a> of file <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html">job_queue.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        std::unique_lock&lt;std::mutex&gt; lock(<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a5655e208476810a1b4437bab0f57045c">mutex_</a>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a862c8cfa56448b7db38792ed3ff56e1c">condition_</a>.wait(lock, [<span class="keyword">this</span>]() { <span class="keywordflow">return</span> !<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a788bd417c5477fed4edcf1445bb9402a">queue_</a>.empty() || <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a092523f285ed29d9e7db6b5f665c984b">stop_</a>.load(); });</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a788bd417c5477fed4edcf1445bb9402a">queue_</a>.empty())</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">return</span> { std::nullopt, <span class="stringliteral">&quot;there are no jobs to dequeue&quot;</span> };</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keyword">auto</span> value = std::move(<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a788bd417c5477fed4edcf1445bb9402a">queue_</a>.front());</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a788bd417c5477fed4edcf1445bb9402a">queue_</a>.pop();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">return</span> { std::move(value), std::nullopt };</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -330,19 +330,19 @@ Protected Attributes</h2></td></tr>
 <p>Dequeues all jobs from the queue. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::queue&lt;std::unique_ptr&lt;job&gt;&gt; A queue containing all the jobs that were in the <a class="el" href="../../df/d6d/classthread__module_1_1job__queue.html" title="Represents a thread-safe queue for managing jobs.">job_queue</a>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html#l00083">83</a> of file <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html">job_queue.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        std::queue&lt;std::unique_ptr&lt;job&gt;&gt; all_items;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            std::scoped_lock&lt;std::mutex&gt; lock(<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a5655e208476810a1b4437bab0f57045c">mutex_</a>);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            std::swap(<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a788bd417c5477fed4edcf1445bb9402a">queue_</a>, all_items);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a862c8cfa56448b7db38792ed3ff56e1c">condition_</a>.notify_all();</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">return</span> all_items;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html#l00115">115</a> of file <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html">job_queue.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        std::queue&lt;std::unique_ptr&lt;job&gt;&gt; all_items;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            std::scoped_lock&lt;std::mutex&gt; lock(<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a5655e208476810a1b4437bab0f57045c">mutex_</a>);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            std::swap(<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a788bd417c5477fed4edcf1445bb9402a">queue_</a>, all_items);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a862c8cfa56448b7db38792ed3ff56e1c">condition_</a>.notify_all();</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">return</span> all_items;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -365,12 +365,12 @@ Protected Attributes</h2></td></tr>
 <p>Checks if the queue is empty. </p>
 <dl class="section return"><dt>Returns</dt><dd>bool True if the queue is empty, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html#l00067">67</a> of file <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html">job_queue.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        std::scoped_lock&lt;std::mutex&gt; lock(<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a5655e208476810a1b4437bab0f57045c">mutex_</a>);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a788bd417c5477fed4edcf1445bb9402a">queue_</a>.empty();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html#l00099">99</a> of file <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html">job_queue.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        std::scoped_lock&lt;std::mutex&gt; lock(<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a5655e208476810a1b4437bab0f57045c">mutex_</a>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a788bd417c5477fed4edcf1445bb9402a">queue_</a>.empty();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -413,29 +413,29 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../d1/d10/classpriority__thread__pool__module_1_1priority__job__queue.html#a03eed91513478d841b37ff97d95aaa81">priority_thread_pool_module::priority_job_queue&lt; priority_type &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html#l00013">13</a> of file <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html">job_queue.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a092523f285ed29d9e7db6b5f665c984b">stop_</a>.load())</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">false</span>, <span class="stringliteral">&quot;Job queue is stopped&quot;</span> };</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        }</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">if</span> (value == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">false</span>, <span class="stringliteral">&quot;cannot enqueue null job&quot;</span> };</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        std::scoped_lock&lt;std::mutex&gt; lock(<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a5655e208476810a1b4437bab0f57045c">mutex_</a>);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a788bd417c5477fed4edcf1445bb9402a">queue_</a>.push(std::move(value));</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a3d291457b201a92d3ed9b0761b00c133">notify_</a>)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a862c8cfa56448b7db38792ed3ff56e1c">condition_</a>.notify_one();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">return</span> { <span class="keyword">true</span>, std::nullopt };</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html#l00045">45</a> of file <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html">job_queue.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a092523f285ed29d9e7db6b5f665c984b">stop_</a>.load())</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">false</span>, <span class="stringliteral">&quot;Job queue is stopped&quot;</span> };</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">if</span> (value == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">false</span>, <span class="stringliteral">&quot;cannot enqueue null job&quot;</span> };</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        std::scoped_lock&lt;std::mutex&gt; lock(<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a5655e208476810a1b4437bab0f57045c">mutex_</a>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a788bd417c5477fed4edcf1445bb9402a">queue_</a>.push(std::move(value));</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a3d291457b201a92d3ed9b0761b00c133">notify_</a>)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a862c8cfa56448b7db38792ed3ff56e1c">condition_</a>.notify_one();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">return</span> { <span class="keyword">true</span>, std::nullopt };</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -458,8 +458,8 @@ Protected Attributes</h2></td></tr>
 <p>Get a shared pointer to this <a class="el" href="../../df/d6d/classthread__module_1_1job__queue.html" title="Represents a thread-safe queue for managing jobs.">job_queue</a> object. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;job_queue&gt; A shared pointer to this <a class="el" href="../../df/d6d/classthread__module_1_1job__queue.html" title="Represents a thread-safe queue for managing jobs.">job_queue</a>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html#l00038">38</a> of file <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html">job_queue.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{ <span class="keywordflow">return</span> shared_from_this(); }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html#l00070">70</a> of file <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html">job_queue.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{ <span class="keywordflow">return</span> shared_from_this(); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -481,8 +481,8 @@ Protected Attributes</h2></td></tr>
 <p>Checks if the job queue is stopped. </p>
 <dl class="section return"><dt>Returns</dt><dd>bool True if the job queue is stopped, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html#l00009">9</a> of file <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html">job_queue.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a092523f285ed29d9e7db6b5f665c984b">stop_</a>.load(); }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html#l00041">41</a> of file <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html">job_queue.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a092523f285ed29d9e7db6b5f665c984b">stop_</a>.load(); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -510,8 +510,8 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html#l00011">11</a> of file <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html">job_queue.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{ <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a3d291457b201a92d3ed9b0761b00c133">notify_</a>.store(notify); }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html#l00043">43</a> of file <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html">job_queue.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{ <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a3d291457b201a92d3ed9b0761b00c133">notify_</a>.store(notify); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -533,14 +533,14 @@ Protected Attributes</h2></td></tr>
 
 <p>Stops the job queue from waiting for new jobs. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html#l00074">74</a> of file <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html">job_queue.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        std::scoped_lock&lt;std::mutex&gt; lock(<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a5655e208476810a1b4437bab0f57045c">mutex_</a>);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a092523f285ed29d9e7db6b5f665c984b">stop_</a>.store(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a862c8cfa56448b7db38792ed3ff56e1c">condition_</a>.notify_all();</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html#l00106">106</a> of file <a class="el" href="../../dd/d4c/job__queue_8cpp_source.html">job_queue.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        std::scoped_lock&lt;std::mutex&gt; lock(<a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a5655e208476810a1b4437bab0f57045c">mutex_</a>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a092523f285ed29d9e7db6b5f665c984b">stop_</a>.store(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <a class="code" href="../../df/d6d/classthread__module_1_1job__queue.html#a862c8cfa56448b7db38792ed3ff56e1c">condition_</a>.notify_all();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -567,7 +567,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Condition variable for signaling between threads. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/d9d/job__queue_8h_source.html#l00110">110</a> of file <a class="el" href="../../db/d9d/job__queue_8h_source.html">job_queue.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/d9d/job__queue_8h_source.html#l00142">142</a> of file <a class="el" href="../../db/d9d/job__queue_8h_source.html">job_queue.h</a>.</p>
 
 </div>
 </div>
@@ -593,7 +593,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Mutex for thread-safe operations. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/d9d/job__queue_8h_source.html#l00107">107</a> of file <a class="el" href="../../db/d9d/job__queue_8h_source.html">job_queue.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/d9d/job__queue_8h_source.html#l00139">139</a> of file <a class="el" href="../../db/d9d/job__queue_8h_source.html">job_queue.h</a>.</p>
 
 </div>
 </div>
@@ -619,7 +619,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Flag indicating whether to notify when enqueuing. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/d9d/job__queue_8h_source.html#l00101">101</a> of file <a class="el" href="../../db/d9d/job__queue_8h_source.html">job_queue.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/d9d/job__queue_8h_source.html#l00133">133</a> of file <a class="el" href="../../db/d9d/job__queue_8h_source.html">job_queue.h</a>.</p>
 
 </div>
 </div>
@@ -645,7 +645,7 @@ Protected Attributes</h2></td></tr>
 
 <p>The underlying queue of jobs. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/d9d/job__queue_8h_source.html#l00113">113</a> of file <a class="el" href="../../db/d9d/job__queue_8h_source.html">job_queue.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/d9d/job__queue_8h_source.html#l00145">145</a> of file <a class="el" href="../../db/d9d/job__queue_8h_source.html">job_queue.h</a>.</p>
 
 </div>
 </div>
@@ -671,7 +671,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Flag indicating whether the queue is stopped. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/d9d/job__queue_8h_source.html#l00104">104</a> of file <a class="el" href="../../db/d9d/job__queue_8h_source.html">job_queue.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/d9d/job__queue_8h_source.html#l00136">136</a> of file <a class="el" href="../../db/d9d/job__queue_8h_source.html">job_queue.h</a>.</p>
 
 </div>
 </div>

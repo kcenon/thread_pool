@@ -98,7 +98,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Specialization of fmt::formatter for <a class="el" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709" title="Enumeration of different log types.">log_module::log_types</a>. </p>
 <p>This formatter allows log_types to be used with fmt::format. It converts the log_types enum values to their string representations. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d18/log__types_8h_source.html#l00088">88</a> of file <a class="el" href="../../d1/d18/log__types_8h_source.html">log_types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d18/log__types_8h_source.html#l00120">120</a> of file <a class="el" href="../../d1/d18/log__types_8h_source.html">log_types.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a37fcab0a0a2f929e3faa7744be1b292c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a37fcab0a0a2f929e3faa7744be1b292c">&#9670;&nbsp;</a></span>format()</h2>
@@ -136,11 +136,11 @@ template&lt;typename FormatContext &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d18/log__types_8h_source.html#l00093">93</a> of file <a class="el" href="../../d1/d18/log__types_8h_source.html">log_types.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;{}&quot;</span>, <a class="code" href="../../d9/de0/namespacelog__module.html#a4f66017a4ded34b2b7d3754b1ad9fe8b">log_module::to_string</a>(log_type));</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        }</div>
-<div class="ttc" id="anamespacelog__module_html_a4f66017a4ded34b2b7d3754b1ad9fe8b"><div class="ttname"><a href="../../d9/de0/namespacelog__module.html#a4f66017a4ded34b2b7d3754b1ad9fe8b">log_module::to_string</a></div><div class="ttdeci">constexpr std::string_view to_string(log_types log_type)</div><div class="ttdoc">Converts a log_types value to its string representation.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/log__types_8h_source.html#l00052">log_types.h:52</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d18/log__types_8h_source.html#l00125">125</a> of file <a class="el" href="../../d1/d18/log__types_8h_source.html">log_types.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;{}&quot;</span>, <a class="code" href="../../d9/de0/namespacelog__module.html#a4f66017a4ded34b2b7d3754b1ad9fe8b">log_module::to_string</a>(log_type));</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        }</div>
+<div class="ttc" id="anamespacelog__module_html_a4f66017a4ded34b2b7d3754b1ad9fe8b"><div class="ttname"><a href="../../d9/de0/namespacelog__module.html#a4f66017a4ded34b2b7d3754b1ad9fe8b">log_module::to_string</a></div><div class="ttdeci">constexpr std::string_view to_string(log_types log_type)</div><div class="ttdoc">Converts a log_types value to its string representation.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/log__types_8h_source.html#l00084">log_types.h:84</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -177,8 +177,8 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d18/log__types_8h_source.html#l00090">90</a> of file <a class="el" href="../../d1/d18/log__types_8h_source.html">log_types.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{ <span class="keywordflow">return</span> ctx.begin(); }</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d18/log__types_8h_source.html#l00122">122</a> of file <a class="el" href="../../d1/d18/log__types_8h_source.html">log_types.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;{ <span class="keywordflow">return</span> ctx.begin(); }</div>
 </div><!-- fragment -->
 </div>
 </div>

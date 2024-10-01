@@ -143,7 +143,7 @@ Protected Attributes</h2></td></tr>
 <div class="textblock"><p>Represents a job that can be executed by a job queue. </p>
 <p>This class is a base class for all jobs that can be executed by a job queue. It provides a callback function that is executed when the job is executed. The callback function must return a tuple with a boolean value indicating whether the job was executed successfully and an optional string with an error message in case the job failed. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d6a/job_8h_source.html#l00023">23</a> of file <a class="el" href="../../d3/d6a/job_8h_source.html">job.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d6a/job_8h_source.html#l00055">55</a> of file <a class="el" href="../../d3/d6a/job_8h_source.html">job.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2b1d0ad3dc7b26addd56500efba35782"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2b1d0ad3dc7b26addd56500efba35782">&#9670;&nbsp;</a></span>job()</h2>
@@ -180,12 +180,12 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d83/job_8cpp_source.html#l00007">7</a> of file <a class="el" href="../../de/d83/job_8cpp_source.html">job.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        : <a class="code" href="../../d8/d42/classthread__module_1_1job.html#ac01785f3d30005f2ad40f840504c5e6f">name_</a>(name), <a class="code" href="../../d8/d42/classthread__module_1_1job.html#ae0ef1835cf270216344f9e47d4474be0">callback_</a>(callback)</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    }</div>
-<div class="ttc" id="aclassthread__module_1_1job_html_ac01785f3d30005f2ad40f840504c5e6f"><div class="ttname"><a href="../../d8/d42/classthread__module_1_1job.html#ac01785f3d30005f2ad40f840504c5e6f">thread_module::job::name_</a></div><div class="ttdeci">std::string name_</div><div class="ttdoc">The name of the job.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d6a/job_8h_source.html#l00077">job.h:77</a></div></div>
-<div class="ttc" id="aclassthread__module_1_1job_html_ae0ef1835cf270216344f9e47d4474be0"><div class="ttname"><a href="../../d8/d42/classthread__module_1_1job.html#ae0ef1835cf270216344f9e47d4474be0">thread_module::job::callback_</a></div><div class="ttdeci">std::function&lt; std::tuple&lt; bool, std::optional&lt; std::string &gt; &gt;void)&gt; callback_</div><div class="ttdoc">The callback function to be executed when the job is processed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d6a/job_8h_source.html#l00083">job.h:83</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../de/d83/job_8cpp_source.html#l00039">39</a> of file <a class="el" href="../../de/d83/job_8cpp_source.html">job.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        : <a class="code" href="../../d8/d42/classthread__module_1_1job.html#ac01785f3d30005f2ad40f840504c5e6f">name_</a>(name), <a class="code" href="../../d8/d42/classthread__module_1_1job.html#ae0ef1835cf270216344f9e47d4474be0">callback_</a>(callback)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="ttc" id="aclassthread__module_1_1job_html_ac01785f3d30005f2ad40f840504c5e6f"><div class="ttname"><a href="../../d8/d42/classthread__module_1_1job.html#ac01785f3d30005f2ad40f840504c5e6f">thread_module::job::name_</a></div><div class="ttdeci">std::string name_</div><div class="ttdoc">The name of the job.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d6a/job_8h_source.html#l00109">job.h:109</a></div></div>
+<div class="ttc" id="aclassthread__module_1_1job_html_ae0ef1835cf270216344f9e47d4474be0"><div class="ttname"><a href="../../d8/d42/classthread__module_1_1job.html#ae0ef1835cf270216344f9e47d4474be0">thread_module::job::callback_</a></div><div class="ttdeci">std::function&lt; std::tuple&lt; bool, std::optional&lt; std::string &gt; &gt;void)&gt; callback_</div><div class="ttdoc">The callback function to be executed when the job is processed.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d6a/job_8h_source.html#l00115">job.h:115</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -215,8 +215,8 @@ Protected Attributes</h2></td></tr>
 
 <p>Virtual destructor for the job class. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d83/job_8cpp_source.html#l00013">13</a> of file <a class="el" href="../../de/d83/job_8cpp_source.html">job.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{}</div>
+<p class="definition">Definition at line <a class="el" href="../../de/d83/job_8cpp_source.html#l00045">45</a> of file <a class="el" href="../../de/d83/job_8cpp_source.html">job.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -254,26 +254,26 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../db/daf/classlog__module_1_1message__job.html#af0d5e2cd125e7ea3a3cfcd4550c28d91">log_module::message_job</a>, and <a class="el" href="../../df/df4/classlog__module_1_1log__job.html#af548a3766d879ee07b2935bd859faa30">log_module::log_job</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d83/job_8cpp_source.html#l00019">19</a> of file <a class="el" href="../../de/d83/job_8cpp_source.html">job.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d8/d42/classthread__module_1_1job.html#ae0ef1835cf270216344f9e47d4474be0">callback_</a> == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">false</span>, <span class="stringliteral">&quot;cannot execute job without callback&quot;</span> };</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../d8/d42/classthread__module_1_1job.html#ae0ef1835cf270216344f9e47d4474be0">callback_</a>();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; e)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">false</span>, std::string(e.what()) };</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">catch</span> (...)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">false</span>, <span class="stringliteral">&quot;unknown error&quot;</span> };</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="../../de/d83/job_8cpp_source.html#l00051">51</a> of file <a class="el" href="../../de/d83/job_8cpp_source.html">job.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d8/d42/classthread__module_1_1job.html#ae0ef1835cf270216344f9e47d4474be0">callback_</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">false</span>, <span class="stringliteral">&quot;cannot execute job without callback&quot;</span> };</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../d8/d42/classthread__module_1_1job.html#ae0ef1835cf270216344f9e47d4474be0">callback_</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; e)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">false</span>, std::string(e.what()) };</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">catch</span> (...)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">false</span>, <span class="stringliteral">&quot;unknown error&quot;</span> };</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -316,9 +316,9 @@ Here is the caller graph for this function:</div>
 
 <p>Reimplemented in <a class="el" href="../../d6/da0/classpriority__thread__pool__module_1_1priority__job.html#aeaf0b2ac34635ff80660e44a09e5be8c">priority_thread_pool_module::priority_job&lt; priority_type &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d83/job_8cpp_source.html#l00045">45</a> of file <a class="el" href="../../de/d83/job_8cpp_source.html">job.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d8/d42/classthread__module_1_1job.html#aed0248a449f4e341057aa29c0369e625">job_queue_</a>.lock(); }</div>
-<div class="ttc" id="aclassthread__module_1_1job_html_aed0248a449f4e341057aa29c0369e625"><div class="ttname"><a href="../../d8/d42/classthread__module_1_1job.html#aed0248a449f4e341057aa29c0369e625">thread_module::job::job_queue_</a></div><div class="ttdeci">std::weak_ptr&lt; job_queue &gt; job_queue_</div><div class="ttdoc">Weak pointer to the associated job queue.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d6a/job_8h_source.html#l00080">job.h:80</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../de/d83/job_8cpp_source.html#l00077">77</a> of file <a class="el" href="../../de/d83/job_8cpp_source.html">job.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d8/d42/classthread__module_1_1job.html#aed0248a449f4e341057aa29c0369e625">job_queue_</a>.lock(); }</div>
+<div class="ttc" id="aclassthread__module_1_1job_html_aed0248a449f4e341057aa29c0369e625"><div class="ttname"><a href="../../d8/d42/classthread__module_1_1job.html#aed0248a449f4e341057aa29c0369e625">thread_module::job::job_queue_</a></div><div class="ttdeci">std::weak_ptr&lt; job_queue &gt; job_queue_</div><div class="ttdoc">Weak pointer to the associated job queue.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d6a/job_8h_source.html#l00112">job.h:112</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -341,8 +341,8 @@ Here is the caller graph for this function:</div>
 <p>Get the name of the job. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::string The name of the job. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d83/job_8cpp_source.html#l00017">17</a> of file <a class="el" href="../../de/d83/job_8cpp_source.html">job.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d8/d42/classthread__module_1_1job.html#ac01785f3d30005f2ad40f840504c5e6f">name_</a>; }</div>
+<p class="definition">Definition at line <a class="el" href="../../de/d83/job_8cpp_source.html#l00049">49</a> of file <a class="el" href="../../de/d83/job_8cpp_source.html">job.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d8/d42/classthread__module_1_1job.html#ac01785f3d30005f2ad40f840504c5e6f">name_</a>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -365,8 +365,8 @@ Here is the caller graph for this function:</div>
 <p>Get a shared pointer to this job object. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;job&gt; A shared pointer to this job. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d83/job_8cpp_source.html#l00015">15</a> of file <a class="el" href="../../de/d83/job_8cpp_source.html">job.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{ <span class="keywordflow">return</span> shared_from_this(); }</div>
+<p class="definition">Definition at line <a class="el" href="../../de/d83/job_8cpp_source.html#l00047">47</a> of file <a class="el" href="../../de/d83/job_8cpp_source.html">job.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{ <span class="keywordflow">return</span> shared_from_this(); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -404,10 +404,10 @@ Here is the caller graph for this function:</div>
 
 <p>Reimplemented in <a class="el" href="../../d6/da0/classpriority__thread__pool__module_1_1priority__job.html#aa23c4f66925f4ad8e38f7c8da9a624ee">priority_thread_pool_module::priority_job&lt; priority_type &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d83/job_8cpp_source.html#l00040">40</a> of file <a class="el" href="../../de/d83/job_8cpp_source.html">job.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="../../d8/d42/classthread__module_1_1job.html#aed0248a449f4e341057aa29c0369e625">job_queue_</a> = job_queue;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="../../de/d83/job_8cpp_source.html#l00072">72</a> of file <a class="el" href="../../de/d83/job_8cpp_source.html">job.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="../../d8/d42/classthread__module_1_1job.html#aed0248a449f4e341057aa29c0369e625">job_queue_</a> = job_queue;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -434,7 +434,7 @@ Here is the caller graph for this function:</div>
 
 <p>The callback function to be executed when the job is processed. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d6a/job_8h_source.html#l00083">83</a> of file <a class="el" href="../../d3/d6a/job_8h_source.html">job.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d6a/job_8h_source.html#l00115">115</a> of file <a class="el" href="../../d3/d6a/job_8h_source.html">job.h</a>.</p>
 
 </div>
 </div>
@@ -460,7 +460,7 @@ Here is the caller graph for this function:</div>
 
 <p>Weak pointer to the associated job queue. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d6a/job_8h_source.html#l00080">80</a> of file <a class="el" href="../../d3/d6a/job_8h_source.html">job.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d6a/job_8h_source.html#l00112">112</a> of file <a class="el" href="../../d3/d6a/job_8h_source.html">job.h</a>.</p>
 
 </div>
 </div>
@@ -486,7 +486,7 @@ Here is the caller graph for this function:</div>
 
 <p>The name of the job. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d6a/job_8h_source.html#l00077">77</a> of file <a class="el" href="../../d3/d6a/job_8h_source.html">job.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d6a/job_8h_source.html#l00109">109</a> of file <a class="el" href="../../d3/d6a/job_8h_source.html">job.h</a>.</p>
 
 </div>
 </div>
