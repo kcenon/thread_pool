@@ -1,4 +1,0 @@
-<map id="log_module::log_job::to_string" name="log_module::log_job::to_string">
-<area shape="rect" id="node1" title="Converts a wide string to a std::string." alt="" coords="207,5,360,47"/>
-<area shape="rect" id="node2" href="$df/df4/classlog__module_1_1log__job.html#adcbe6490ed0744089ac7e9cb891488bc" title="Converts the stored message to a std::string." alt="" coords="5,5,159,47"/>
-</map>
