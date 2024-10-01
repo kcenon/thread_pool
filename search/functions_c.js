@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['operator_3d_279',['operator=',['../d1/d46/classlog__module_1_1logger.html#a895fc06ee1ea1eb3230b502b272bdb2c',1,'log_module::logger']]]
+  ['nanoseconds_298',['nanoseconds',['../d0/de0/classdatetime__module_1_1datetime__tool.html#a135f724ae31349ad3b73b87bad02c877',1,'datetime_module::datetime_tool']]]
 ];

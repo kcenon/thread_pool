@@ -103,270 +103,271 @@ $(function() {
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/dc2/log__job_8h.html">log_job.h</a>&quot;</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#ifdef USE_STD_FORMAT</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;format&gt;</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;fmt/chrono.h&quot;</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &quot;fmt/format.h&quot;</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;codecvt&gt;</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;iomanip&gt;</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d9/de0/namespacelog__module.html">log_module</a></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../df/df4/classlog__module_1_1log__job.html#a375e0c097374f266d6901f747c4bcc99">   48</a></span>&#160;    <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a375e0c097374f266d6901f747c4bcc99">log_job::log_job</a>(</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">const</span> std::string&amp; message,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        std::optional&lt;log_types&gt; type,</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        std::optional&lt;std::chrono::time_point&lt;std::chrono::high_resolution_clock&gt;&gt; start_time)</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        : <a class="code" href="../../d8/d42/classthread__module_1_1job.html">job</a>(nullptr, <span class="stringliteral">&quot;log_job&quot;</span>)</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        , type_(type)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        , message_type_(<a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a9659665b71a5b0beb2a851fe6fbabecb">message_types</a>::String)</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        , message_(message)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        , timestamp_(std::chrono::system_clock::now())</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        , start_time_(start_time)</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        , log_message_(<span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../df/df4/classlog__module_1_1log__job.html#a84ebdae3d8e8dda607f299d78e5dffaa">   61</a></span>&#160;    <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a375e0c097374f266d6901f747c4bcc99">log_job::log_job</a>(</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keyword">const</span> std::wstring&amp; message,</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        std::optional&lt;log_types&gt; type,</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        std::optional&lt;std::chrono::time_point&lt;std::chrono::high_resolution_clock&gt;&gt; start_time)</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        : <a class="code" href="../../d8/d42/classthread__module_1_1job.html">job</a>(nullptr, <span class="stringliteral">&quot;log_job&quot;</span>)</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        , type_(type)</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        , message_type_(<a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a9659665b71a5b0beb2a851fe6fbabecb">message_types</a>::WString)</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        , wmessage_(message)</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        , timestamp_(std::chrono::system_clock::now())</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        , start_time_(start_time)</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        , log_message_(<span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="../../df/df4/classlog__module_1_1log__job.html#adfa07c16fa6a3d24f6f0053599a4825c">   74</a></span>&#160;    <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a375e0c097374f266d6901f747c4bcc99">log_job::log_job</a>(</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keyword">const</span> std::u16string&amp; message,</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        std::optional&lt;log_types&gt; type,</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        std::optional&lt;std::chrono::time_point&lt;std::chrono::high_resolution_clock&gt;&gt; start_time)</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        : <a class="code" href="../../d8/d42/classthread__module_1_1job.html">job</a>(nullptr, <span class="stringliteral">&quot;log_job&quot;</span>)</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        , type_(type)</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        , message_type_(<a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a9659665b71a5b0beb2a851fe6fbabecb">message_types</a>::U16String)</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        , u16message_(message)</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        , timestamp_(std::chrono::system_clock::now())</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        , start_time_(start_time)</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        , log_message_(<span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="../../df/df4/classlog__module_1_1log__job.html#acdbec7d8b0e90a19c712a9601c015022">   87</a></span>&#160;    <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a375e0c097374f266d6901f747c4bcc99">log_job::log_job</a>(</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keyword">const</span> std::u32string&amp; message,</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        std::optional&lt;log_types&gt; type,</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        std::optional&lt;std::chrono::time_point&lt;std::chrono::high_resolution_clock&gt;&gt; start_time)</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        : <a class="code" href="../../d8/d42/classthread__module_1_1job.html">job</a>(nullptr, <span class="stringliteral">&quot;log_job&quot;</span>)</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        , type_(type)</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        , message_type_(<a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a9659665b71a5b0beb2a851fe6fbabecb">message_types</a>::U32String)</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        , u32message_(message)</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        , timestamp_(std::chrono::system_clock::now())</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        , start_time_(start_time)</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        , log_message_(<span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="../../df/df4/classlog__module_1_1log__job.html#a535eca744b07e75d35ecc3928a924292">  101</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a535eca744b07e75d35ecc3928a924292">log_job::get_type</a>() const -&gt; <a class="code" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709">log_types</a></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d9/da1/datetime__tool_8h.html">datetime_tool.h</a>&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#ifdef USE_STD_FORMAT</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;format&gt;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &quot;fmt/chrono.h&quot;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &quot;fmt/format.h&quot;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;codecvt&gt;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">using namespace </span><a class="code" href="../../d5/de4/namespacedatetime__module.html">datetime_module</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d9/de0/namespacelog__module.html">log_module</a></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../df/df4/classlog__module_1_1log__job.html#a375e0c097374f266d6901f747c4bcc99">   52</a></span>&#160;    log_job::log_job(</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">const</span> std::string&amp; message,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        std::optional&lt;log_types&gt; type,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        std::optional&lt;std::chrono::time_point&lt;std::chrono::high_resolution_clock&gt;&gt; start_time)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        : <a class="code" href="../../d8/d42/classthread__module_1_1job.html">job</a>(nullptr, <span class="stringliteral">&quot;log_job&quot;</span>)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        , type_(type)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        , message_type_(<a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a9659665b71a5b0beb2a851fe6fbabecb">message_types</a>::String)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        , message_(message)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        , timestamp_(std::chrono::system_clock::now())</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        , start_time_(start_time)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        , log_message_(<span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="../../df/df4/classlog__module_1_1log__job.html#a84ebdae3d8e8dda607f299d78e5dffaa">   65</a></span>&#160;    <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a375e0c097374f266d6901f747c4bcc99">log_job::log_job</a>(</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keyword">const</span> std::wstring&amp; message,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        std::optional&lt;log_types&gt; type,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        std::optional&lt;std::chrono::time_point&lt;std::chrono::high_resolution_clock&gt;&gt; start_time)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        : <a class="code" href="../../d8/d42/classthread__module_1_1job.html">job</a>(nullptr, <span class="stringliteral">&quot;log_job&quot;</span>)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        , type_(type)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        , message_type_(<a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a9659665b71a5b0beb2a851fe6fbabecb">message_types</a>::WString)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        , wmessage_(message)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        , timestamp_(std::chrono::system_clock::now())</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        , start_time_(start_time)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        , log_message_(<span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="../../df/df4/classlog__module_1_1log__job.html#adfa07c16fa6a3d24f6f0053599a4825c">   78</a></span>&#160;    <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a375e0c097374f266d6901f747c4bcc99">log_job::log_job</a>(</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keyword">const</span> std::u16string&amp; message,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        std::optional&lt;log_types&gt; type,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        std::optional&lt;std::chrono::time_point&lt;std::chrono::high_resolution_clock&gt;&gt; start_time)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        : <a class="code" href="../../d8/d42/classthread__module_1_1job.html">job</a>(nullptr, <span class="stringliteral">&quot;log_job&quot;</span>)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        , type_(type)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        , message_type_(<a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a9659665b71a5b0beb2a851fe6fbabecb">message_types</a>::U16String)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        , u16message_(message)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        , timestamp_(std::chrono::system_clock::now())</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        , start_time_(start_time)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        , log_message_(<span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="../../df/df4/classlog__module_1_1log__job.html#acdbec7d8b0e90a19c712a9601c015022">   91</a></span>&#160;    <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a375e0c097374f266d6901f747c4bcc99">log_job::log_job</a>(</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keyword">const</span> std::u32string&amp; message,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        std::optional&lt;log_types&gt; type,</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        std::optional&lt;std::chrono::time_point&lt;std::chrono::high_resolution_clock&gt;&gt; start_time)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        : <a class="code" href="../../d8/d42/classthread__module_1_1job.html">job</a>(nullptr, <span class="stringliteral">&quot;log_job&quot;</span>)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        , type_(type)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        , message_type_(<a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a9659665b71a5b0beb2a851fe6fbabecb">message_types</a>::U32String)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        , u32message_(message)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        , timestamp_(std::chrono::system_clock::now())</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        , start_time_(start_time)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        , log_message_(<span class="stringliteral">&quot;&quot;</span>)</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a8b91fa9219e6b4b8778468cb5efc566b">type_</a>.has_value())</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709a6adf97f83acf6453d4a6a4b1070f3754">log_types::None</a>;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a8b91fa9219e6b4b8778468cb5efc566b">type_</a>.value_or(<a class="code" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709a6adf97f83acf6453d4a6a4b1070f3754">log_types::None</a>);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="../../df/df4/classlog__module_1_1log__job.html#a95c92b17e80bbe73efcc957e498c524c">  111</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a95c92b17e80bbe73efcc957e498c524c">log_job::message</a>() const -&gt; std::<span class="keywordtype">string</span> { <span class="keywordflow">return</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a7e330ecf9e2277ead70ed16762f8037f">log_message_</a>; }</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="../../df/df4/classlog__module_1_1log__job.html#af548a3766d879ee07b2935bd859faa30">  113</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#af548a3766d879ee07b2935bd859faa30">log_job::do_work</a>() -&gt; std::tuple&lt;bool, std::optional&lt;std::string&gt;&gt;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keyword">auto</span> in_time_t = std::chrono::system_clock::to_time_t(timestamp_);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keyword">auto</span> timeinfo = std::localtime(&amp;in_time_t);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keyword">auto</span> duration = timestamp_.time_since_epoch();</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keyword">auto</span> milliseconds</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                = std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(duration).count() % 1000;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keyword">auto</span> microseconds</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                = std::chrono::duration_cast&lt;std::chrono::microseconds&gt;(duration).count() % 1000;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            std::ostringstream time_stream;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            time_stream &lt;&lt; std::put_time(timeinfo, <span class="stringliteral">&quot;%Y-%m-%d %H:%M:%S&quot;</span>) &lt;&lt; <span class="charliteral">&#39;.&#39;</span> &lt;&lt; std::setw(3)</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                        &lt;&lt; std::setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; milliseconds &lt;&lt; std::setw(3) &lt;&lt; std::setfill(<span class="charliteral">&#39;0&#39;</span>)</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                        &lt;&lt; microseconds;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="../../df/df4/classlog__module_1_1log__job.html#a535eca744b07e75d35ecc3928a924292">  105</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a535eca744b07e75d35ecc3928a924292">log_job::get_type</a>() const -&gt; <a class="code" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709">log_types</a></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a8b91fa9219e6b4b8778468cb5efc566b">type_</a>.has_value())</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709a6adf97f83acf6453d4a6a4b1070f3754">log_types::None</a>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a8b91fa9219e6b4b8778468cb5efc566b">type_</a>.value_or(<a class="code" href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709a6adf97f83acf6453d4a6a4b1070f3754">log_types::None</a>);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="../../df/df4/classlog__module_1_1log__job.html#a95c92b17e80bbe73efcc957e498c524c">  115</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a95c92b17e80bbe73efcc957e498c524c">log_job::message</a>() const -&gt; std::<span class="keywordtype">string</span> { <span class="keywordflow">return</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a7e330ecf9e2277ead70ed16762f8037f">log_message_</a>; }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="../../df/df4/classlog__module_1_1log__job.html#af548a3766d879ee07b2935bd859faa30">  117</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#af548a3766d879ee07b2935bd859faa30">log_job::do_work</a>() -&gt; std::tuple&lt;bool, std::optional&lt;std::string&gt;&gt;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            std::string formatted_time =</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">#ifdef USE_STD_FORMAT</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                std::format</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                fmt::format</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                (<span class="stringliteral">&quot;{} {}.{}{}&quot;</span>, datetime_tool::date(timestamp_), datetime_tool::time(timestamp_),</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                 datetime_tool::milliseconds(timestamp_), datetime_tool::microseconds(timestamp_));</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            std::string formatted_time = time_stream.str();</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="keywordflow">if</span> (start_time_.has_value())</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            {</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                std::chrono::duration&lt;double, std::milli&gt; elapsed</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                    = std::chrono::high_resolution_clock::now() - start_time_.value();</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                <span class="keywordflow">if</span> (!type_.has_value())</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                {</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                    log_message_ =</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="preprocessor">#ifdef USE_STD_FORMAT</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                        std::format</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                        fmt::format</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                        (<span class="stringliteral">&quot;[{}][{}] [{} ms]&quot;</span>, formatted_time, convert_message(), elapsed.count());</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                }</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                {</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                    log_message_ =</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="preprocessor">#ifdef USE_STD_FORMAT</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                        std::format</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                        fmt::format</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                        (<span class="stringliteral">&quot;[{}][{}]: {} [{} ms]&quot;</span>, formatted_time, type_.value(), convert_message(),</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                         elapsed.count());</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                }</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            }</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            {</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                <span class="keywordflow">if</span> (!type_.has_value())</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                {</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                    log_message_ =</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="keywordflow">if</span> (start_time_.has_value())</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                <span class="keyword">auto</span> time_gap = datetime_tool::time_difference&lt;std::chrono::milliseconds,</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                                                               std::chrono::high_resolution_clock&gt;(</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                    start_time_.value());</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                <span class="keywordflow">if</span> (!type_.has_value())</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                    log_message_ =</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#ifdef USE_STD_FORMAT</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                        std::format</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                        fmt::format</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                        (<span class="stringliteral">&quot;[{}][{}] [{} ms]&quot;</span>, formatted_time, convert_message(), time_gap);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                    log_message_ =</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor">#ifdef USE_STD_FORMAT</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                        std::format</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                        fmt::format</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                        (<span class="stringliteral">&quot;[{}][{}]: {} [{} ms]&quot;</span>, formatted_time, type_.value(), convert_message(),</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                         time_gap);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                <span class="keywordflow">return</span> { <span class="keyword">true</span>, std::nullopt };</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <span class="keywordflow">if</span> (!type_.has_value())</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                log_message_ =</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="preprocessor">#ifdef USE_STD_FORMAT</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                        std::format</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                    std::format</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                        fmt::format</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                    fmt::format</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                        (<span class="stringliteral">&quot;[{}][{}]&quot;</span>, formatted_time, convert_message());</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                }</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                {</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                    log_message_ =</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                    (<span class="stringliteral">&quot;[{}][{}]&quot;</span>, formatted_time, convert_message());</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                log_message_ =</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="preprocessor">#ifdef USE_STD_FORMAT</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                        std::format</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                    std::format</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                        fmt::format</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                    fmt::format</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                        (<span class="stringliteral">&quot;[{}][{}]: {}&quot;</span>, formatted_time, type_.value(), convert_message());</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                }</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            }</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">true</span>, std::nullopt };</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        }</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; e)</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        {</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">false</span>, std::string(e.what()) };</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        }</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">catch</span> (...)</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        {</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">false</span>, <span class="stringliteral">&quot;unknown error&quot;</span> };</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        }</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
-<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="../../df/df4/classlog__module_1_1log__job.html#adcbe6490ed0744089ac7e9cb891488bc">  195</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#adcbe6490ed0744089ac7e9cb891488bc">log_job::convert_message</a>() const -&gt; std::<span class="keywordtype">string</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    {</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">switch</span> (<a class="code" href="../../df/df4/classlog__module_1_1log__job.html#af2c0eeabdbfd3353c1186bb325504d3f">message_type_</a>)</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        {</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a9659665b71a5b0beb2a851fe6fbabecba27118326006d3829667a400ad23d5d98">message_types::String</a>:</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a1858492fb1f8b5f28cab9a3786467559">message_</a>;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a9659665b71a5b0beb2a851fe6fbabecbae3d86a47c69ae35c3cce3c1e950075df">message_types::WString</a>:</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#ae0a2ccecbad36cae636acbb8cab96f56">to_string</a>(<a class="code" href="../../df/df4/classlog__module_1_1log__job.html#adb3dcb395c1dd87ddf0be70e3d214a81">wmessage_</a>);</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a9659665b71a5b0beb2a851fe6fbabecba6b352ec039f3c13da567703866271fb6">message_types::U16String</a>:</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#ae0a2ccecbad36cae636acbb8cab96f56">to_string</a>(<a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a7630a71b2bdc87a32a5e670acdd7285e">u16message_</a>);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a9659665b71a5b0beb2a851fe6fbabecba6260469c9293bbfde2398c6971915ce8">message_types::U32String</a>:</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#ae0a2ccecbad36cae636acbb8cab96f56">to_string</a>(<a class="code" href="../../df/df4/classlog__module_1_1log__job.html#ae8d7faf6de789ec74fd1cf55f722fc3b">u32message_</a>);</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        }</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    }</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
-<div class="line"><a name="l00212"></a><span class="lineno"><a class="line" href="../../df/df4/classlog__module_1_1log__job.html#ae0a2ccecbad36cae636acbb8cab96f56">  212</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#ae0a2ccecbad36cae636acbb8cab96f56">log_job::to_string</a>(<span class="keyword">const</span> std::wstring&amp; message) <span class="keyword">const</span> -&gt; std::string</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    {</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="keywordflow">if</span> (message.empty())</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        {</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <span class="keywordflow">return</span> std::string();</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        }</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keyword">typedef</span> std::codecvt&lt;wchar_t, char, mbstate_t&gt; codecvt_t;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        codecvt_t <span class="keyword">const</span>&amp; codecvt = std::use_facet&lt;codecvt_t&gt;(std::locale());</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        mbstate_t state = mbstate_t();</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        std::vector&lt;char&gt; result((message.size() + 1) * codecvt.max_length());</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordtype">wchar_t</span> <span class="keyword">const</span>* in_text = message.data();</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="keywordtype">char</span>* out_text = &amp;result[0];</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        codecvt_t::result condition</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            = codecvt.out(state, message.data(), message.data() + message.size(), in_text,</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                          &amp;result[0], &amp;result[0] + result.size(), out_text);</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordflow">return</span> std::string(&amp;result[0], out_text);</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    }</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
-<div class="line"><a name="l00235"></a><span class="lineno"><a class="line" href="../../df/df4/classlog__module_1_1log__job.html#a0c4c5e20769a9a449badf4d6a91df02f">  235</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#ae0a2ccecbad36cae636acbb8cab96f56">log_job::to_string</a>(<span class="keyword">const</span> std::u16string&amp; message) <span class="keyword">const</span> -&gt; std::string</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    {</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="keywordflow">if</span> (message.empty())</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        {</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <span class="keywordflow">return</span> std::string();</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        }</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="keyword">typedef</span> std::codecvt&lt;char16_t, char, mbstate_t&gt; codecvt_t;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        codecvt_t <span class="keyword">const</span>&amp; codecvt = std::use_facet&lt;codecvt_t&gt;(std::locale());</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        mbstate_t state = mbstate_t();</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        std::vector&lt;char&gt; result((message.size() + 1) * codecvt.max_length());</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        char16_t <span class="keyword">const</span>* in_text = message.data();</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordtype">char</span>* out_text = &amp;result[0];</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        codecvt_t::result condition = codecvt.out(state, in_text, in_text + message.size(), in_text,</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                                                  out_text, out_text + result.size(), out_text);</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordflow">return</span> std::string(result.data());</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    }</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
-<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="../../df/df4/classlog__module_1_1log__job.html#a1571f5d00a6f6f854edee222cf461a14">  257</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#ae0a2ccecbad36cae636acbb8cab96f56">log_job::to_string</a>(<span class="keyword">const</span> std::u32string&amp; message) <span class="keyword">const</span> -&gt; std::string</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    {</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keywordflow">if</span> (message.empty())</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        {</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            <span class="keywordflow">return</span> std::string();</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        }</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keyword">typedef</span> std::codecvt&lt;char32_t, char, mbstate_t&gt; codecvt_t;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        codecvt_t <span class="keyword">const</span>&amp; codecvt = std::use_facet&lt;codecvt_t&gt;(std::locale());</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        mbstate_t state = mbstate_t();</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        std::vector&lt;char&gt; result((message.size() + 1) * codecvt.max_length());</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        char32_t <span class="keyword">const</span>* in_text = message.data();</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordtype">char</span>* out_text = &amp;result[0];</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        codecvt_t::result condition = codecvt.out(state, in_text, in_text + message.size(), in_text,</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                                                  out_text, out_text + message.size(), out_text);</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">return</span> std::string(result.data());</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    }</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;} <span class="comment">// namespace log_module</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                    (<span class="stringliteral">&quot;[{}][{}]: {}&quot;</span>, formatted_time, type_.value(), convert_message());</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">true</span>, std::nullopt };</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; e)</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">false</span>, std::string(e.what()) };</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">catch</span> (...)</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">false</span>, <span class="stringliteral">&quot;unknown error&quot;</span> };</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        }</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="../../df/df4/classlog__module_1_1log__job.html#adcbe6490ed0744089ac7e9cb891488bc">  194</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#adcbe6490ed0744089ac7e9cb891488bc">log_job::convert_message</a>() const -&gt; std::<span class="keywordtype">string</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="keywordflow">switch</span> (<a class="code" href="../../df/df4/classlog__module_1_1log__job.html#af2c0eeabdbfd3353c1186bb325504d3f">message_type_</a>)</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a9659665b71a5b0beb2a851fe6fbabecba27118326006d3829667a400ad23d5d98">message_types::String</a>:</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a1858492fb1f8b5f28cab9a3786467559">message_</a>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a9659665b71a5b0beb2a851fe6fbabecbae3d86a47c69ae35c3cce3c1e950075df">message_types::WString</a>:</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#ae0a2ccecbad36cae636acbb8cab96f56">to_string</a>(<a class="code" href="../../df/df4/classlog__module_1_1log__job.html#adb3dcb395c1dd87ddf0be70e3d214a81">wmessage_</a>);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a9659665b71a5b0beb2a851fe6fbabecba6b352ec039f3c13da567703866271fb6">message_types::U16String</a>:</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#ae0a2ccecbad36cae636acbb8cab96f56">to_string</a>(<a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a7630a71b2bdc87a32a5e670acdd7285e">u16message_</a>);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#a9659665b71a5b0beb2a851fe6fbabecba6260469c9293bbfde2398c6971915ce8">message_types::U32String</a>:</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#ae0a2ccecbad36cae636acbb8cab96f56">to_string</a>(<a class="code" href="../../df/df4/classlog__module_1_1log__job.html#ae8d7faf6de789ec74fd1cf55f722fc3b">u32message_</a>);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        }</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno"><a class="line" href="../../df/df4/classlog__module_1_1log__job.html#ae0a2ccecbad36cae636acbb8cab96f56">  211</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#ae0a2ccecbad36cae636acbb8cab96f56">log_job::to_string</a>(<span class="keyword">const</span> std::wstring&amp; message) <span class="keyword">const</span> -&gt; std::string</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="keywordflow">if</span> (message.empty())</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            <span class="keywordflow">return</span> std::string();</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="keyword">typedef</span> std::codecvt&lt;wchar_t, char, mbstate_t&gt; codecvt_t;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        codecvt_t <span class="keyword">const</span>&amp; codecvt = std::use_facet&lt;codecvt_t&gt;(std::locale());</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        mbstate_t state = mbstate_t();</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        std::vector&lt;char&gt; result((message.size() + 1) * codecvt.max_length());</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordtype">wchar_t</span> <span class="keyword">const</span>* in_text = message.data();</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordtype">char</span>* out_text = &amp;result[0];</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        codecvt_t::result condition</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            = codecvt.out(state, message.data(), message.data() + message.size(), in_text,</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                          &amp;result[0], &amp;result[0] + result.size(), out_text);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordflow">return</span> std::string(&amp;result[0], out_text);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="../../df/df4/classlog__module_1_1log__job.html#a0c4c5e20769a9a449badf4d6a91df02f">  234</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#ae0a2ccecbad36cae636acbb8cab96f56">log_job::to_string</a>(<span class="keyword">const</span> std::u16string&amp; message) <span class="keyword">const</span> -&gt; std::string</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    {</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="keywordflow">if</span> (message.empty())</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            <span class="keywordflow">return</span> std::string();</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keyword">typedef</span> std::codecvt&lt;char16_t, char, mbstate_t&gt; codecvt_t;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        codecvt_t <span class="keyword">const</span>&amp; codecvt = std::use_facet&lt;codecvt_t&gt;(std::locale());</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        mbstate_t state = mbstate_t();</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        std::vector&lt;char&gt; result((message.size() + 1) * codecvt.max_length());</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        char16_t <span class="keyword">const</span>* in_text = message.data();</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keywordtype">char</span>* out_text = &amp;result[0];</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        codecvt_t::result condition = codecvt.out(state, in_text, in_text + message.size(), in_text,</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                                                  out_text, out_text + result.size(), out_text);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordflow">return</span> std::string(result.data());</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    }</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
+<div class="line"><a name="l00256"></a><span class="lineno"><a class="line" href="../../df/df4/classlog__module_1_1log__job.html#a1571f5d00a6f6f854edee222cf461a14">  256</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../df/df4/classlog__module_1_1log__job.html#ae0a2ccecbad36cae636acbb8cab96f56">log_job::to_string</a>(<span class="keyword">const</span> std::u32string&amp; message) <span class="keyword">const</span> -&gt; std::string</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    {</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="keywordflow">if</span> (message.empty())</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        {</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            <span class="keywordflow">return</span> std::string();</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        }</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keyword">typedef</span> std::codecvt&lt;char32_t, char, mbstate_t&gt; codecvt_t;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        codecvt_t <span class="keyword">const</span>&amp; codecvt = std::use_facet&lt;codecvt_t&gt;(std::locale());</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        mbstate_t state = mbstate_t();</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        std::vector&lt;char&gt; result((message.size() + 1) * codecvt.max_length());</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        char32_t <span class="keyword">const</span>* in_text = message.data();</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="keywordtype">char</span>* out_text = &amp;result[0];</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        codecvt_t::result condition = codecvt.out(state, in_text, in_text + message.size(), in_text,</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                                                  out_text, out_text + message.size(), out_text);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="keywordflow">return</span> std::string(result.data());</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    }</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;} <span class="comment">// namespace log_module</span></div>
 <div class="ttc" id="aclasslog__module_1_1log__job_html_a1858492fb1f8b5f28cab9a3786467559"><div class="ttname"><a href="../../df/df4/classlog__module_1_1log__job.html#a1858492fb1f8b5f28cab9a3786467559">log_module::log_job::message_</a></div><div class="ttdeci">std::string message_</div><div class="ttdoc">The original unformatted log message (for std::string)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/log__job_8h_source.html#l00178">log_job.h:178</a></div></div>
-<div class="ttc" id="aclasslog__module_1_1log__job_html_a375e0c097374f266d6901f747c4bcc99"><div class="ttname"><a href="../../df/df4/classlog__module_1_1log__job.html#a375e0c097374f266d6901f747c4bcc99">log_module::log_job::log_job</a></div><div class="ttdeci">log_job(const std::string &amp;message, std::optional&lt; log_types &gt; type=std::nullopt, std::optional&lt; std::chrono::time_point&lt; std::chrono::high_resolution_clock &gt;&gt; start_time=std::nullopt)</div><div class="ttdoc">Constructs a new log_job object.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de3/log__job_8cpp_source.html#l00048">log_job.cpp:48</a></div></div>
-<div class="ttc" id="aclasslog__module_1_1log__job_html_a535eca744b07e75d35ecc3928a924292"><div class="ttname"><a href="../../df/df4/classlog__module_1_1log__job.html#a535eca744b07e75d35ecc3928a924292">log_module::log_job::get_type</a></div><div class="ttdeci">auto get_type() const -&gt; log_types</div><div class="ttdoc">Gets the type of the log entry.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de3/log__job_8cpp_source.html#l00101">log_job.cpp:101</a></div></div>
+<div class="ttc" id="aclasslog__module_1_1log__job_html_a375e0c097374f266d6901f747c4bcc99"><div class="ttname"><a href="../../df/df4/classlog__module_1_1log__job.html#a375e0c097374f266d6901f747c4bcc99">log_module::log_job::log_job</a></div><div class="ttdeci">log_job(const std::string &amp;message, std::optional&lt; log_types &gt; type=std::nullopt, std::optional&lt; std::chrono::time_point&lt; std::chrono::high_resolution_clock &gt;&gt; start_time=std::nullopt)</div><div class="ttdoc">Constructs a new log_job object.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de3/log__job_8cpp_source.html#l00052">log_job.cpp:52</a></div></div>
+<div class="ttc" id="aclasslog__module_1_1log__job_html_a535eca744b07e75d35ecc3928a924292"><div class="ttname"><a href="../../df/df4/classlog__module_1_1log__job.html#a535eca744b07e75d35ecc3928a924292">log_module::log_job::get_type</a></div><div class="ttdeci">auto get_type() const -&gt; log_types</div><div class="ttdoc">Gets the type of the log entry.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de3/log__job_8cpp_source.html#l00105">log_job.cpp:105</a></div></div>
 <div class="ttc" id="aclasslog__module_1_1log__job_html_a7630a71b2bdc87a32a5e670acdd7285e"><div class="ttname"><a href="../../df/df4/classlog__module_1_1log__job.html#a7630a71b2bdc87a32a5e670acdd7285e">log_module::log_job::u16message_</a></div><div class="ttdeci">std::u16string u16message_</div><div class="ttdoc">The original unformatted log message (for std::u16string)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/log__job_8h_source.html#l00180">log_job.h:180</a></div></div>
 <div class="ttc" id="aclasslog__module_1_1log__job_html_a7e330ecf9e2277ead70ed16762f8037f"><div class="ttname"><a href="../../df/df4/classlog__module_1_1log__job.html#a7e330ecf9e2277ead70ed16762f8037f">log_module::log_job::log_message_</a></div><div class="ttdeci">std::string log_message_</div><div class="ttdoc">The formatted log message ready for output.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/log__job_8h_source.html#l00183">log_job.h:183</a></div></div>
 <div class="ttc" id="aclasslog__module_1_1log__job_html_a8b91fa9219e6b4b8778468cb5efc566b"><div class="ttname"><a href="../../df/df4/classlog__module_1_1log__job.html#a8b91fa9219e6b4b8778468cb5efc566b">log_module::log_job::type_</a></div><div class="ttdeci">std::optional&lt; log_types &gt; type_</div><div class="ttdoc">The type of the log entry (e.g., info, warning, error)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/log__job_8h_source.html#l00185">log_job.h:185</a></div></div>
-<div class="ttc" id="aclasslog__module_1_1log__job_html_a95c92b17e80bbe73efcc957e498c524c"><div class="ttname"><a href="../../df/df4/classlog__module_1_1log__job.html#a95c92b17e80bbe73efcc957e498c524c">log_module::log_job::message</a></div><div class="ttdeci">auto message() const -&gt; std::string</div><div class="ttdoc">Gets the formatted log message.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de3/log__job_8cpp_source.html#l00111">log_job.cpp:111</a></div></div>
+<div class="ttc" id="aclasslog__module_1_1log__job_html_a95c92b17e80bbe73efcc957e498c524c"><div class="ttname"><a href="../../df/df4/classlog__module_1_1log__job.html#a95c92b17e80bbe73efcc957e498c524c">log_module::log_job::message</a></div><div class="ttdeci">auto message() const -&gt; std::string</div><div class="ttdoc">Gets the formatted log message.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de3/log__job_8cpp_source.html#l00115">log_job.cpp:115</a></div></div>
 <div class="ttc" id="aclasslog__module_1_1log__job_html_a9659665b71a5b0beb2a851fe6fbabecb"><div class="ttname"><a href="../../df/df4/classlog__module_1_1log__job.html#a9659665b71a5b0beb2a851fe6fbabecb">log_module::log_job::message_types</a></div><div class="ttdeci">message_types</div><div class="ttdoc">Enumeration of supported message string types.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/log__job_8h_source.html#l00168">log_job.h:169</a></div></div>
 <div class="ttc" id="aclasslog__module_1_1log__job_html_a9659665b71a5b0beb2a851fe6fbabecba27118326006d3829667a400ad23d5d98"><div class="ttname"><a href="../../df/df4/classlog__module_1_1log__job.html#a9659665b71a5b0beb2a851fe6fbabecba27118326006d3829667a400ad23d5d98">log_module::log_job::message_types::String</a></div><div class="ttdeci">@ String</div><div class="ttdoc">std::string log type</div></div>
 <div class="ttc" id="aclasslog__module_1_1log__job_html_a9659665b71a5b0beb2a851fe6fbabecba6260469c9293bbfde2398c6971915ce8"><div class="ttname"><a href="../../df/df4/classlog__module_1_1log__job.html#a9659665b71a5b0beb2a851fe6fbabecba6260469c9293bbfde2398c6971915ce8">log_module::log_job::message_types::U32String</a></div><div class="ttdeci">@ U32String</div><div class="ttdoc">std::u32string log type</div></div>
 <div class="ttc" id="aclasslog__module_1_1log__job_html_a9659665b71a5b0beb2a851fe6fbabecba6b352ec039f3c13da567703866271fb6"><div class="ttname"><a href="../../df/df4/classlog__module_1_1log__job.html#a9659665b71a5b0beb2a851fe6fbabecba6b352ec039f3c13da567703866271fb6">log_module::log_job::message_types::U16String</a></div><div class="ttdeci">@ U16String</div><div class="ttdoc">std::u16string log type</div></div>
 <div class="ttc" id="aclasslog__module_1_1log__job_html_a9659665b71a5b0beb2a851fe6fbabecbae3d86a47c69ae35c3cce3c1e950075df"><div class="ttname"><a href="../../df/df4/classlog__module_1_1log__job.html#a9659665b71a5b0beb2a851fe6fbabecbae3d86a47c69ae35c3cce3c1e950075df">log_module::log_job::message_types::WString</a></div><div class="ttdeci">@ WString</div><div class="ttdoc">std::wstring log type</div></div>
 <div class="ttc" id="aclasslog__module_1_1log__job_html_adb3dcb395c1dd87ddf0be70e3d214a81"><div class="ttname"><a href="../../df/df4/classlog__module_1_1log__job.html#adb3dcb395c1dd87ddf0be70e3d214a81">log_module::log_job::wmessage_</a></div><div class="ttdeci">std::wstring wmessage_</div><div class="ttdoc">The original unformatted log message (for std::wstring)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/log__job_8h_source.html#l00179">log_job.h:179</a></div></div>
-<div class="ttc" id="aclasslog__module_1_1log__job_html_adcbe6490ed0744089ac7e9cb891488bc"><div class="ttname"><a href="../../df/df4/classlog__module_1_1log__job.html#adcbe6490ed0744089ac7e9cb891488bc">log_module::log_job::convert_message</a></div><div class="ttdeci">auto convert_message() const -&gt; std::string</div><div class="ttdoc">Converts the stored message to a std::string.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de3/log__job_8cpp_source.html#l00195">log_job.cpp:195</a></div></div>
-<div class="ttc" id="aclasslog__module_1_1log__job_html_ae0a2ccecbad36cae636acbb8cab96f56"><div class="ttname"><a href="../../df/df4/classlog__module_1_1log__job.html#ae0a2ccecbad36cae636acbb8cab96f56">log_module::log_job::to_string</a></div><div class="ttdeci">auto to_string(const std::wstring &amp;message) const -&gt; std::string</div><div class="ttdoc">Converts a wide string to a std::string.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de3/log__job_8cpp_source.html#l00212">log_job.cpp:212</a></div></div>
+<div class="ttc" id="aclasslog__module_1_1log__job_html_adcbe6490ed0744089ac7e9cb891488bc"><div class="ttname"><a href="../../df/df4/classlog__module_1_1log__job.html#adcbe6490ed0744089ac7e9cb891488bc">log_module::log_job::convert_message</a></div><div class="ttdeci">auto convert_message() const -&gt; std::string</div><div class="ttdoc">Converts the stored message to a std::string.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de3/log__job_8cpp_source.html#l00194">log_job.cpp:194</a></div></div>
+<div class="ttc" id="aclasslog__module_1_1log__job_html_ae0a2ccecbad36cae636acbb8cab96f56"><div class="ttname"><a href="../../df/df4/classlog__module_1_1log__job.html#ae0a2ccecbad36cae636acbb8cab96f56">log_module::log_job::to_string</a></div><div class="ttdeci">auto to_string(const std::wstring &amp;message) const -&gt; std::string</div><div class="ttdoc">Converts a wide string to a std::string.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de3/log__job_8cpp_source.html#l00211">log_job.cpp:211</a></div></div>
 <div class="ttc" id="aclasslog__module_1_1log__job_html_ae8d7faf6de789ec74fd1cf55f722fc3b"><div class="ttname"><a href="../../df/df4/classlog__module_1_1log__job.html#ae8d7faf6de789ec74fd1cf55f722fc3b">log_module::log_job::u32message_</a></div><div class="ttdeci">std::u32string u32message_</div><div class="ttdoc">The original unformatted log message (for std::u32string)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/log__job_8h_source.html#l00181">log_job.h:181</a></div></div>
 <div class="ttc" id="aclasslog__module_1_1log__job_html_af2c0eeabdbfd3353c1186bb325504d3f"><div class="ttname"><a href="../../df/df4/classlog__module_1_1log__job.html#af2c0eeabdbfd3353c1186bb325504d3f">log_module::log_job::message_type_</a></div><div class="ttdeci">message_types message_type_</div><div class="ttdoc">The type of the stored message.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc2/log__job_8h_source.html#l00176">log_job.h:176</a></div></div>
-<div class="ttc" id="aclasslog__module_1_1log__job_html_af548a3766d879ee07b2935bd859faa30"><div class="ttname"><a href="../../df/df4/classlog__module_1_1log__job.html#af548a3766d879ee07b2935bd859faa30">log_module::log_job::do_work</a></div><div class="ttdeci">auto do_work() -&gt; std::tuple&lt; bool, std::optional&lt; std::string &gt;&gt; override</div><div class="ttdoc">Executes the logging operation.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de3/log__job_8cpp_source.html#l00113">log_job.cpp:113</a></div></div>
+<div class="ttc" id="aclasslog__module_1_1log__job_html_af548a3766d879ee07b2935bd859faa30"><div class="ttname"><a href="../../df/df4/classlog__module_1_1log__job.html#af548a3766d879ee07b2935bd859faa30">log_module::log_job::do_work</a></div><div class="ttdeci">auto do_work() -&gt; std::tuple&lt; bool, std::optional&lt; std::string &gt;&gt; override</div><div class="ttdoc">Executes the logging operation.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de3/log__job_8cpp_source.html#l00117">log_job.cpp:117</a></div></div>
 <div class="ttc" id="aclassthread__module_1_1job_html"><div class="ttname"><a href="../../d8/d42/classthread__module_1_1job.html">thread_module::job</a></div><div class="ttdoc">Represents a job that can be executed by a job queue.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d6a/job_8h_source.html#l00055">job.h:56</a></div></div>
+<div class="ttc" id="adatetime__tool_8h_html"><div class="ttname"><a href="../../d9/da1/datetime__tool_8h.html">datetime_tool.h</a></div></div>
 <div class="ttc" id="alog__job_8h_html"><div class="ttname"><a href="../../d1/dc2/log__job_8h.html">log_job.h</a></div></div>
+<div class="ttc" id="anamespacedatetime__module_html"><div class="ttname"><a href="../../d5/de4/namespacedatetime__module.html">datetime_module</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/da9/datetime__tool_8cpp_source.html#l00041">datetime_tool.cpp:42</a></div></div>
 <div class="ttc" id="anamespacelog__module_html"><div class="ttname"><a href="../../d9/de0/namespacelog__module.html">log_module</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d4f/console__writer_8cpp_source.html#l00043">console_writer.cpp:44</a></div></div>
 <div class="ttc" id="anamespacelog__module_html_ac59af6ec9704b7fd0d73e7becbc54709"><div class="ttname"><a href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709">log_module::log_types</a></div><div class="ttdeci">log_types</div><div class="ttdoc">Enumeration of different log types.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/log__types_8h_source.html#l00054">log_types.h:55</a></div></div>
 <div class="ttc" id="anamespacelog__module_html_ac59af6ec9704b7fd0d73e7becbc54709a6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="../../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709a6adf97f83acf6453d4a6a4b1070f3754">log_module::log_types::None</a></div><div class="ttdeci">@ None</div><div class="ttdoc">No specific log type.</div></div>
