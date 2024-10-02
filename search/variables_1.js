@@ -1,10 +1,5 @@
 var searchData=
 [
-  ['callback_5f_376',['callback_',['../d8/d42/classthread__module_1_1job.html#ae0ef1835cf270216344f9e47d4474be0',1,'thread_module::job']]],
-  ['collector_5f_377',['collector_',['../d1/d46/classlog__module_1_1logger.html#aec7a729f62dd4be9ef9b35a05a69d5bb',1,'log_module::logger']]],
-  ['condition_5f_378',['condition_',['../df/d6d/classthread__module_1_1job__queue.html#a862c8cfa56448b7db38792ed3ff56e1c',1,'thread_module::job_queue']]],
-  ['console_5flog_5ftype_5f_379',['console_log_type_',['../d7/da3/classlog__module_1_1log__collector.html#a276fd980e9546d0884d4e094f844fa9d',1,'log_module::log_collector']]],
-  ['console_5fqueue_5f_380',['console_queue_',['../d7/da3/classlog__module_1_1log__collector.html#a86ba5e26338ca6d9d48941b26eb5d98c',1,'log_module::log_collector']]],
-  ['console_5fwriter_5f_381',['console_writer_',['../d1/d46/classlog__module_1_1logger.html#a892c32bb437af21fd3c24feeb5f65768',1,'log_module::logger']]],
-  ['cv_5fmutex_5f_382',['cv_mutex_',['../da/d94/classthread__module_1_1thread__base.html#a68e452ea7136f242b1e1b8e84758cd5c',1,'thread_module::thread_base']]]
+  ['backup_5ffile_5f_399',['backup_file_',['../dc/d2b/classlog__module_1_1file__writer.html#a7f456083280cd44cd8886e0e216c39e5',1,'log_module::file_writer']]],
+  ['backup_5fname_5f_400',['backup_name_',['../dc/d2b/classlog__module_1_1file__writer.html#aa73a117192d83f77b941b205b34f142c',1,'log_module::file_writer']]]
 ];

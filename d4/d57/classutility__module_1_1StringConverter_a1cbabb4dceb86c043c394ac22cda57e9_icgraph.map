@@ -1,7 +1,0 @@
-<map id="utility_module::StringConverter::convert" name="utility_module::StringConverter::convert">
-<area shape="rect" id="node1" title="Performs the string conversion." alt="" coords="227,104,453,145"/>
-<area shape="rect" id="node2" href="$d1/d53/classutility__module_1_1convert__string.html#acbe6436243bc1fec3d87f914a2cef321" title="Converts a wide string to a UTF&#45;8 string." alt="" coords="5,5,179,47"/>
-<area shape="rect" id="node3" href="$d1/d53/classutility__module_1_1convert__string.html#a588aacb6f0f1e0510eb13abd0e1ae0e7" title="Converts a UTF&#45;8 string to a UTF&#45;16 string." alt="" coords="5,71,179,112"/>
-<area shape="rect" id="node4" href="$d1/d53/classutility__module_1_1convert__string.html#acb608e0ba2390f675a62c303914a798b" title="Converts a UTF&#45;8 string to a UTF&#45;32 string." alt="" coords="5,136,179,177"/>
-<area shape="rect" id="node5" href="$d1/d53/classutility__module_1_1convert__string.html#a1b1c3e5caa136d7800402338f181846e" title="Converts a UTF&#45;8 string to a wide string." alt="" coords="5,201,179,243"/>
-</map>

@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['information_66',['Information',['../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709aa82be0f551b8708bc08eb33cd9ded0cf',1,'log_module']]],
-  ['is_5fstopped_67',['is_stopped',['../df/d6d/classthread__module_1_1job__queue.html#adcf67868224f1c07285b6e0ce50b493f',1,'thread_module::job_queue']]],
-  ['is_5fvalid_5fmulti_5fbyte_5fsequence_68',['is_valid_multi_byte_sequence',['../d1/d53/classutility__module_1_1convert__string.html#acbd67641e7492097e898c85e36be4aaf',1,'utility_module::convert_string']]],
-  ['is_5fvalid_5futf8_69',['is_valid_utf8',['../d1/d53/classutility__module_1_1convert__string.html#adee30de0745822dd8e0ed8c731193d08',1,'utility_module::convert_string']]]
+  ['handle_66',['handle',['../d1/d46/classlog__module_1_1logger.html#af6fd12257f1e8f2bad8408080f4f6e06',1,'log_module::logger']]],
+  ['handle_5f_67',['handle_',['../d1/d46/classlog__module_1_1logger.html#ae29ffdbcc988b388064939276a2acdca',1,'log_module::logger']]],
+  ['has_5futf8_5fbom_68',['has_utf8_bom',['../dd/d2a/namespaceutility__module.html#a216fa48bc8dd28211c121281045d6cdc',1,'utility_module']]],
+  ['has_5fwork_69',['has_work',['../d9/de4/classlog__module_1_1console__writer.html#aa43e6d96f56a6b43a0c11f5a26d98ad3',1,'log_module::console_writer::has_work()'],['../dc/d2b/classlog__module_1_1file__writer.html#a83ea271b67541979600eeaa6c51f3137',1,'log_module::file_writer::has_work()'],['../d7/da3/classlog__module_1_1log__collector.html#aba174ea40cafc4d7527ea00e3aabdd4e',1,'log_module::log_collector::has_work()'],['../dd/df7/classpriority__thread__pool__module_1_1priority__thread__worker.html#af6969c9a05efea33c2ed50c432f2a398',1,'priority_thread_pool_module::priority_thread_worker::has_work()'],['../da/d94/classthread__module_1_1thread__base.html#a140e82407657ce0ef761b55fc51aa1a5',1,'thread_module::thread_base::has_work()'],['../d7/d1b/classthread__pool__module_1_1thread__worker.html#a018f6af23fe202df7ed7bff9107ca9c1',1,'thread_pool_module::thread_worker::has_work()']]],
+  ['high_70',['High',['../d8/da5/namespacepriority__thread__pool__module.html#ad02023113ce2026fd0599170b3aad090a655d20c1ca69519ca647684edbb2db35',1,'priority_thread_pool_module']]]
 ];

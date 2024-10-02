@@ -74,7 +74,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>A utility class for string conversions between different character encodings.  
+<p>A utility class for string conversions and manipulations.  
  <a href="../../d1/d53/classutility__module_1_1convert__string.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d1/d46/convert__string_8h_source.html">convert_string.h</a>&gt;</code></p>
@@ -83,12 +83,15 @@ Collaboration diagram for utility_module::convert_string:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/d70/classutility__module_1_1convert__string__coll__graph.png" border="0" usemap="#autility__module_1_1convert__string_coll__map" alt="Collaboration graph"/></div>
 <map name="autility__module_1_1convert__string_coll__map" id="autility__module_1_1convert__string_coll__map">
-<area shape="rect" title="A utility class for string conversions between different character encodings." alt="" coords="5,5,179,332"/>
+<area shape="rect" title="A utility class for string conversions and manipulations." alt="" coords="5,5,179,347"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a4fe86a06d0930f0f722c57265c64298a"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d53/classutility__module_1_1convert__string.html#a4fe86a06d0930f0f722c57265c64298a">split</a> (const std::string &amp;source, const std::string &amp;token) -&gt; std::tuple&lt; std::optional&lt; std::vector&lt; std::string &gt;&gt;, std::optional&lt; std::string &gt;&gt;</td></tr>
+<tr class="memdesc:a4fe86a06d0930f0f722c57265c64298a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Splits a string into substrings based on a delimiter token.  <a href="../../d1/d53/classutility__module_1_1convert__string.html#a4fe86a06d0930f0f722c57265c64298a">More...</a><br /></td></tr>
+<tr class="separator:a4fe86a06d0930f0f722c57265c64298a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbe6436243bc1fec3d87f914a2cef321"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d53/classutility__module_1_1convert__string.html#acbe6436243bc1fec3d87f914a2cef321">to_string</a> (const std::wstring &amp;message) -&gt; std::string</td></tr>
 <tr class="memdesc:acbe6436243bc1fec3d87f914a2cef321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a wide string to a UTF-8 string.  <a href="../../d1/d53/classutility__module_1_1convert__string.html#acbe6436243bc1fec3d87f914a2cef321">More...</a><br /></td></tr>
 <tr class="separator:acbe6436243bc1fec3d87f914a2cef321"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,10 +146,10 @@ Static Private Member Functions</h2></td></tr>
 <tr class="separator:adee30de0745822dd8e0ed8c731193d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A utility class for string conversions between different character encodings. </p>
-<p>This class provides static methods to convert between std::string, std::wstring, std::u16string, and std::u32string. It also includes methods for converting between strings and byte arrays. </p>
+<div class="textblock"><p>A utility class for string conversions and manipulations. </p>
+<p>This class provides static methods to convert between std::string, std::wstring, std::u16string, and std::u32string. It also includes methods for converting between strings and byte arrays, and for string splitting operations. Additionally, it provides a constant for the UTF-8 BOM. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d46/convert__string_8h_source.html#l00103">103</a> of file <a class="el" href="../../d1/d46/convert__string_8h_source.html">convert_string.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d46/convert__string_8h_source.html#l00106">106</a> of file <a class="el" href="../../d1/d46/convert__string_8h_source.html">convert_string.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="acbd67641e7492097e898c85e36be4aaf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acbd67641e7492097e898c85e36be4aaf">&#9670;&nbsp;</a></span>is_valid_multi_byte_sequence()</h2>
@@ -200,21 +203,21 @@ template&lt;size_t N&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the sequence is valid, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00157">157</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    {</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">if</span> (index + N &gt; view.size())</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        {</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        }</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordflow">if</span> constexpr (N &gt; 1)</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        {</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="keywordflow">return</span> (std::bit_cast&lt;uint8_t&gt;(view[index + 1]) &amp; 0xC0) == 0x80</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                   &amp;&amp; <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#acbd67641e7492097e898c85e36be4aaf">is_valid_multi_byte_sequence</a>&lt;N - 1&gt;(view, index + 1);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        }</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    }</div>
-<div class="ttc" id="aclassutility__module_1_1convert__string_html_acbd67641e7492097e898c85e36be4aaf"><div class="ttname"><a href="../../d1/d53/classutility__module_1_1convert__string.html#acbd67641e7492097e898c85e36be4aaf">utility_module::convert_string::is_valid_multi_byte_sequence</a></div><div class="ttdeci">static auto is_valid_multi_byte_sequence(std::string_view view, const size_t &amp;index) -&gt; bool</div><div class="ttdoc">Checks if a multi-byte sequence is valid UTF-8.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00157">convert_string.cpp:157</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00204">204</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordflow">if</span> (index + N &gt; view.size())</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="keywordflow">if</span> constexpr (N &gt; 1)</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        {</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="keywordflow">return</span> (std::bit_cast&lt;uint8_t&gt;(view[index + 1]) &amp; 0xC0) == 0x80</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                   &amp;&amp; <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#acbd67641e7492097e898c85e36be4aaf">is_valid_multi_byte_sequence</a>&lt;N - 1&gt;(view, index + 1);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    }</div>
+<div class="ttc" id="aclassutility__module_1_1convert__string_html_acbd67641e7492097e898c85e36be4aaf"><div class="ttname"><a href="../../d1/d53/classutility__module_1_1convert__string.html#acbd67641e7492097e898c85e36be4aaf">utility_module::convert_string::is_valid_multi_byte_sequence</a></div><div class="ttdeci">static auto is_valid_multi_byte_sequence(std::string_view view, const size_t &amp;index) -&gt; bool</div><div class="ttdoc">Checks if a multi-byte sequence is valid UTF-8.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00204">convert_string.cpp:204</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -262,51 +265,156 @@ template&lt;size_t N&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the string is valid UTF-8, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00173">173</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    {</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordflow">if</span> (index &gt;= view.size())</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        {</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        }</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keyword">auto</span> first_byte = std::bit_cast&lt;uint8_t&gt;(view[index]);</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordflow">if</span> (first_byte &lt;= 0x7F)</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        {</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            index++;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        }</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">if</span> ((first_byte &amp; 0xE0) == 0xC0)</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        {</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordflow">if</span> (is_valid_multi_byte_sequence&lt;2&gt;(view, index))</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            {</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                index += 2;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            }</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        }</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">if</span> ((first_byte &amp; 0xF0) == 0xE0)</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        {</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="keywordflow">if</span> (is_valid_multi_byte_sequence&lt;3&gt;(view, index))</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            {</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                index += 3;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            }</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        }</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordflow">if</span> ((first_byte &amp; 0xF8) == 0xF0)</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        {</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <span class="keywordflow">if</span> (is_valid_multi_byte_sequence&lt;4&gt;(view, index))</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            {</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                index += 4;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            }</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        }</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00220">220</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    {</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keywordflow">if</span> (index &gt;= view.size())</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        }</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keyword">auto</span> first_byte = std::bit_cast&lt;uint8_t&gt;(view[index]);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keywordflow">if</span> (first_byte &lt;= 0x7F)</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        {</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            index++;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keywordflow">if</span> ((first_byte &amp; 0xE0) == 0xC0)</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        {</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            <span class="keywordflow">if</span> (is_valid_multi_byte_sequence&lt;2&gt;(view, index))</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            {</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                index += 2;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            }</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        }</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordflow">if</span> ((first_byte &amp; 0xF0) == 0xE0)</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            <span class="keywordflow">if</span> (is_valid_multi_byte_sequence&lt;3&gt;(view, index))</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            {</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                index += 3;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        }</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordflow">if</span> ((first_byte &amp; 0xF8) == 0xF0)</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="keywordflow">if</span> (is_valid_multi_byte_sequence&lt;4&gt;(view, index))</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            {</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                index += 4;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            }</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    }</div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="a4fe86a06d0930f0f722c57265c64298a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fe86a06d0930f0f722c57265c64298a">&#9670;&nbsp;</a></span>split()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto utility_module::convert_string::split </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>token</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; std::tuple&lt;std::optional&lt;std::vector&lt;std::string&gt;&gt;, std::optional&lt;std::string&gt;&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Splits a string into substrings based on a delimiter token. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>The source string to split. </td></tr>
+    <tr><td class="paramname">token</td><td>The delimiter token to split by. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A tuple containing:<ul>
+<li>An optional vector of strings representing the split substrings, if successful.</li>
+<li>An optional string containing an error message, if an error occurred. </li>
+</ul>
+</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00053">53</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">if</span> (source.empty() == <span class="keyword">true</span>)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">return</span> { std::nullopt, <span class="stringliteral">&quot;source is empty&quot;</span> };</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">size_t</span> offset = 0;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">size_t</span> last_offset = 0;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        std::vector&lt;std::string&gt; result = {};</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        std::string temp;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            offset = source.find(token, last_offset);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">if</span> (offset == std::string::npos)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            temp = source.substr(last_offset, offset - last_offset);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">if</span> (!temp.empty())</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                result.push_back(std::move(temp));</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            last_offset = offset + token.size();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">if</span> (last_offset != 0 &amp;&amp; last_offset != std::string::npos)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            temp = source.substr(last_offset, offset - last_offset);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">if</span> (!temp.empty())</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                result.push_back(std::move(temp));</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">if</span> (last_offset == 0)</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordflow">return</span> { std::vector&lt;std::string&gt;{ source }, std::nullopt };</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">return</span> { result, std::nullopt };</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d53/classutility__module_1_1convert__string_a4fe86a06d0930f0f722c57265c64298a_icgraph.png" border="0" usemap="#ad1/d53/classutility__module_1_1convert__string_a4fe86a06d0930f0f722c57265c64298a_icgraph" alt=""/></div>
+<map name="ad1/d53/classutility__module_1_1convert__string_a4fe86a06d0930f0f722c57265c64298a_icgraph" id="ad1/d53/classutility__module_1_1convert__string_a4fe86a06d0930f0f722c57265c64298a_icgraph">
+<area shape="rect" title="Splits a string into substrings based on a delimiter token." alt="" coords="276,5,449,47"/>
+<area shape="rect" href="../../de/d30/classutility__module_1_1argument__manager.html#ac7705457f6634d48e5e62016f8cd5df1" title="Constructs the argument manager with a string of arguments." alt="" coords="5,5,228,47"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="aa093b41bae554d89c3630f9bf488472d"></a>
@@ -342,27 +450,27 @@ template&lt;size_t N&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A vector of bytes representing the string. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00113">113</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">if</span> (value.empty())</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">return</span> {};</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        std::vector&lt;uint8_t&gt; result;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        result.reserve(value.size());</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../dd/d2a/namespaceutility__module.html#a216fa48bc8dd28211c121281045d6cdc">has_utf8_bom</a>(value))</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            result.insert(result.end(), value.begin() + 3, value.end());</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        {</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            result.insert(result.end(), value.begin(), value.end());</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        }</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00160">160</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">if</span> (value.empty())</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="keywordflow">return</span> {};</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        }</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        std::vector&lt;uint8_t&gt; result;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        result.reserve(value.size());</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../dd/d2a/namespaceutility__module.html#a216fa48bc8dd28211c121281045d6cdc">has_utf8_bom</a>(value))</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            result.insert(result.end(), value.begin() + 3, value.end());</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            result.insert(result.end(), value.begin(), value.end());</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    }</div>
 <div class="ttc" id="anamespaceutility__module_html_a216fa48bc8dd28211c121281045d6cdc"><div class="ttname"><a href="../../dd/d2a/namespaceutility__module.html#a216fa48bc8dd28211c121281045d6cdc">utility_module::has_utf8_bom</a></div><div class="ttdeci">bool has_utf8_bom(const std::string &amp;value)</div><div class="ttdoc">Checks if a string starts with a UTF-8 BOM.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00009">convert_string.cpp:9</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -409,17 +517,17 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The converted UTF-8 string. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00058">58</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> StringConverter&lt;std::u16string, std::string&gt;(message).convert();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00105">105</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">return</span> converter&lt;std::u16string, std::string&gt;(message).convert();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/d53/classutility__module_1_1convert__string_a2ec9c45cbcaf1702f3204a0be5be56e9_cgraph.png" border="0" usemap="#ad1/d53/classutility__module_1_1convert__string_a2ec9c45cbcaf1702f3204a0be5be56e9_cgraph" alt=""/></div>
 <map name="ad1/d53/classutility__module_1_1convert__string_a2ec9c45cbcaf1702f3204a0be5be56e9_cgraph" id="ad1/d53/classutility__module_1_1convert__string_a2ec9c45cbcaf1702f3204a0be5be56e9_cgraph">
 <area shape="rect" title="Converts a UTF&#45;16 string to a UTF&#45;8 string." alt="" coords="5,5,179,47"/>
-<area shape="rect" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9" title="Performs the string conversion." alt="" coords="227,5,453,47"/>
+<area shape="rect" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d" title="Performs the string conversion." alt="" coords="227,5,413,47"/>
 </map>
 </div>
 
@@ -458,17 +566,17 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The converted UTF-8 string. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00063">63</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span> StringConverter&lt;std::u32string, std::string&gt;(message).convert();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00110">110</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">return</span> converter&lt;std::u32string, std::string&gt;(message).convert();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/d53/classutility__module_1_1convert__string_a22e0916c36de61db53b28803ee09c506_cgraph.png" border="0" usemap="#ad1/d53/classutility__module_1_1convert__string_a22e0916c36de61db53b28803ee09c506_cgraph" alt=""/></div>
 <map name="ad1/d53/classutility__module_1_1convert__string_a22e0916c36de61db53b28803ee09c506_cgraph" id="ad1/d53/classutility__module_1_1convert__string_a22e0916c36de61db53b28803ee09c506_cgraph">
 <area shape="rect" title="Converts a UTF&#45;32 string to a UTF&#45;8 string." alt="" coords="5,5,179,47"/>
-<area shape="rect" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9" title="Performs the string conversion." alt="" coords="227,5,453,47"/>
+<area shape="rect" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d" title="Performs the string conversion." alt="" coords="227,5,413,47"/>
 </map>
 </div>
 
@@ -507,27 +615,27 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The converted string. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00135">135</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    {</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">if</span> (value.empty())</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        {</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="keywordflow">return</span> std::string();</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        }</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        std::string_view view(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(value.data()), value.size());</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordtype">size_t</span> start_index = <a class="code" href="../../dd/d2a/namespaceutility__module.html#a42b38b8811bee6e59a9139854953134e">get_utf8_start_index</a>(view);</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = start_index; i &lt; view.size();)</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        {</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#adee30de0745822dd8e0ed8c731193d08">is_valid_utf8</a>(view, i))</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            {</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                <span class="keywordflow">return</span> std::string();</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            }</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        }</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">return</span> std::string(view.substr(start_index));</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    }</div>
-<div class="ttc" id="aclassutility__module_1_1convert__string_html_adee30de0745822dd8e0ed8c731193d08"><div class="ttname"><a href="../../d1/d53/classutility__module_1_1convert__string.html#adee30de0745822dd8e0ed8c731193d08">utility_module::convert_string::is_valid_utf8</a></div><div class="ttdeci">static auto is_valid_utf8(std::string_view value, size_t &amp;index) -&gt; bool</div><div class="ttdoc">Checks if a string is valid UTF-8.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00173">convert_string.cpp:173</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00182">182</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">if</span> (value.empty())</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="keywordflow">return</span> std::string();</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        std::string_view view(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(value.data()), value.size());</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordtype">size_t</span> start_index = <a class="code" href="../../dd/d2a/namespaceutility__module.html#a42b38b8811bee6e59a9139854953134e">get_utf8_start_index</a>(view);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = start_index; i &lt; view.size();)</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        {</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#adee30de0745822dd8e0ed8c731193d08">is_valid_utf8</a>(view, i))</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                <span class="keywordflow">return</span> std::string();</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keywordflow">return</span> std::string(view.substr(start_index));</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    }</div>
+<div class="ttc" id="aclassutility__module_1_1convert__string_html_adee30de0745822dd8e0ed8c731193d08"><div class="ttname"><a href="../../d1/d53/classutility__module_1_1convert__string.html#adee30de0745822dd8e0ed8c731193d08">utility_module::convert_string::is_valid_utf8</a></div><div class="ttdeci">static auto is_valid_utf8(std::string_view value, size_t &amp;index) -&gt; bool</div><div class="ttdoc">Checks if a string is valid UTF-8.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00220">convert_string.cpp:220</a></div></div>
 <div class="ttc" id="anamespaceutility__module_html_a42b38b8811bee6e59a9139854953134e"><div class="ttname"><a href="../../dd/d2a/namespaceutility__module.html#a42b38b8811bee6e59a9139854953134e">utility_module::get_utf8_start_index</a></div><div class="ttdeci">size_t get_utf8_start_index(std::string_view view)</div><div class="ttdoc">Gets the starting index after the UTF-8 BOM, if present.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00014">convert_string.cpp:14</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -574,17 +682,27 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The converted UTF-8 string. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00053">53</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span> StringConverter&lt;std::wstring, std::string&gt;(message).convert();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00100">100</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">return</span> converter&lt;std::wstring, std::string&gt;(message).convert();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/d53/classutility__module_1_1convert__string_acbe6436243bc1fec3d87f914a2cef321_cgraph.png" border="0" usemap="#ad1/d53/classutility__module_1_1convert__string_acbe6436243bc1fec3d87f914a2cef321_cgraph" alt=""/></div>
 <map name="ad1/d53/classutility__module_1_1convert__string_acbe6436243bc1fec3d87f914a2cef321_cgraph" id="ad1/d53/classutility__module_1_1convert__string_acbe6436243bc1fec3d87f914a2cef321_cgraph">
 <area shape="rect" title="Converts a wide string to a UTF&#45;8 string." alt="" coords="5,5,179,47"/>
-<area shape="rect" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9" title="Performs the string conversion." alt="" coords="227,5,453,47"/>
+<area shape="rect" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d" title="Performs the string conversion." alt="" coords="227,5,413,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d53/classutility__module_1_1convert__string_acbe6436243bc1fec3d87f914a2cef321_icgraph.png" border="0" usemap="#ad1/d53/classutility__module_1_1convert__string_acbe6436243bc1fec3d87f914a2cef321_icgraph" alt=""/></div>
+<map name="ad1/d53/classutility__module_1_1convert__string_acbe6436243bc1fec3d87f914a2cef321_icgraph" id="ad1/d53/classutility__module_1_1convert__string_acbe6436243bc1fec3d87f914a2cef321_icgraph">
+<area shape="rect" title="Converts a wide string to a UTF&#45;8 string." alt="" coords="276,39,449,80"/>
+<area shape="rect" href="../../de/d30/classutility__module_1_1argument__manager.html#abed149e9745cb46ca88faeb9739e4e8d" title="Constructs the argument manager with a wstring of arguments." alt="" coords="5,5,228,47"/>
+<area shape="rect" href="../../de/d30/classutility__module_1_1argument__manager.html#a39eba574b95c62b82358251fb1687f50" title="Parses command&#45;line arguments from argc and argv." alt="" coords="23,71,210,112"/>
 </map>
 </div>
 
@@ -623,17 +741,17 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The converted UTF-16 string. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00083">83</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">return</span> StringConverter&lt;std::string, std::u16string&gt;(message).convert();</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00130">130</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">return</span> converter&lt;std::string, std::u16string&gt;(message).convert();</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/d53/classutility__module_1_1convert__string_a588aacb6f0f1e0510eb13abd0e1ae0e7_cgraph.png" border="0" usemap="#ad1/d53/classutility__module_1_1convert__string_a588aacb6f0f1e0510eb13abd0e1ae0e7_cgraph" alt=""/></div>
 <map name="ad1/d53/classutility__module_1_1convert__string_a588aacb6f0f1e0510eb13abd0e1ae0e7_cgraph" id="ad1/d53/classutility__module_1_1convert__string_a588aacb6f0f1e0510eb13abd0e1ae0e7_cgraph">
 <area shape="rect" title="Converts a UTF&#45;8 string to a UTF&#45;16 string." alt="" coords="5,5,179,47"/>
-<area shape="rect" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9" title="Performs the string conversion." alt="" coords="227,5,453,47"/>
+<area shape="rect" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d" title="Performs the string conversion." alt="" coords="227,5,413,47"/>
 </map>
 </div>
 
@@ -672,17 +790,17 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The converted UTF-16 string. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00093">93</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">return</span> StringConverter&lt;std::u32string, std::u16string&gt;(message).convert();</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00140">140</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordflow">return</span> converter&lt;std::u32string, std::u16string&gt;(message).convert();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/d53/classutility__module_1_1convert__string_a35c2feafed63d38805d6b813679fb968_cgraph.png" border="0" usemap="#ad1/d53/classutility__module_1_1convert__string_a35c2feafed63d38805d6b813679fb968_cgraph" alt=""/></div>
 <map name="ad1/d53/classutility__module_1_1convert__string_a35c2feafed63d38805d6b813679fb968_cgraph" id="ad1/d53/classutility__module_1_1convert__string_a35c2feafed63d38805d6b813679fb968_cgraph">
 <area shape="rect" title="Converts a UTF&#45;32 string to a UTF&#45;16 string." alt="" coords="5,5,179,47"/>
-<area shape="rect" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9" title="Performs the string conversion." alt="" coords="227,5,453,47"/>
+<area shape="rect" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d" title="Performs the string conversion." alt="" coords="227,5,413,47"/>
 </map>
 </div>
 
@@ -721,17 +839,17 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The converted UTF-16 string. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00088">88</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">return</span> StringConverter&lt;std::wstring, std::u16string&gt;(message).convert();</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00135">135</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">return</span> converter&lt;std::wstring, std::u16string&gt;(message).convert();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/d53/classutility__module_1_1convert__string_ad9d8c3f15f7a08e0cd8972d26806accc_cgraph.png" border="0" usemap="#ad1/d53/classutility__module_1_1convert__string_ad9d8c3f15f7a08e0cd8972d26806accc_cgraph" alt=""/></div>
 <map name="ad1/d53/classutility__module_1_1convert__string_ad9d8c3f15f7a08e0cd8972d26806accc_cgraph" id="ad1/d53/classutility__module_1_1convert__string_ad9d8c3f15f7a08e0cd8972d26806accc_cgraph">
 <area shape="rect" title="Converts a wide string to a UTF&#45;16 string." alt="" coords="5,5,179,47"/>
-<area shape="rect" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9" title="Performs the string conversion." alt="" coords="227,5,453,47"/>
+<area shape="rect" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d" title="Performs the string conversion." alt="" coords="227,5,413,47"/>
 </map>
 </div>
 
@@ -770,17 +888,17 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The converted UTF-32 string. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00098">98</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">return</span> StringConverter&lt;std::string, std::u32string&gt;(message).convert();</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00145">145</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordflow">return</span> converter&lt;std::string, std::u32string&gt;(message).convert();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/d53/classutility__module_1_1convert__string_acb608e0ba2390f675a62c303914a798b_cgraph.png" border="0" usemap="#ad1/d53/classutility__module_1_1convert__string_acb608e0ba2390f675a62c303914a798b_cgraph" alt=""/></div>
 <map name="ad1/d53/classutility__module_1_1convert__string_acb608e0ba2390f675a62c303914a798b_cgraph" id="ad1/d53/classutility__module_1_1convert__string_acb608e0ba2390f675a62c303914a798b_cgraph">
 <area shape="rect" title="Converts a UTF&#45;8 string to a UTF&#45;32 string." alt="" coords="5,5,179,47"/>
-<area shape="rect" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9" title="Performs the string conversion." alt="" coords="227,5,453,47"/>
+<area shape="rect" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d" title="Performs the string conversion." alt="" coords="227,5,413,47"/>
 </map>
 </div>
 
@@ -819,17 +937,17 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The converted UTF-32 string. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00108">108</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">return</span> StringConverter&lt;std::u16string, std::u32string&gt;(message).convert();</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00155">155</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">return</span> converter&lt;std::u16string, std::u32string&gt;(message).convert();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/d53/classutility__module_1_1convert__string_a7b9481c08935c46cefe6e1efa1ad6683_cgraph.png" border="0" usemap="#ad1/d53/classutility__module_1_1convert__string_a7b9481c08935c46cefe6e1efa1ad6683_cgraph" alt=""/></div>
 <map name="ad1/d53/classutility__module_1_1convert__string_a7b9481c08935c46cefe6e1efa1ad6683_cgraph" id="ad1/d53/classutility__module_1_1convert__string_a7b9481c08935c46cefe6e1efa1ad6683_cgraph">
 <area shape="rect" title="Converts a UTF&#45;16 string to a UTF&#45;32 string." alt="" coords="5,5,179,47"/>
-<area shape="rect" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9" title="Performs the string conversion." alt="" coords="227,5,453,47"/>
+<area shape="rect" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d" title="Performs the string conversion." alt="" coords="227,5,413,47"/>
 </map>
 </div>
 
@@ -868,17 +986,17 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The converted UTF-32 string. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00103">103</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">return</span> StringConverter&lt;std::wstring, std::u32string&gt;(message).convert();</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00150">150</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">return</span> converter&lt;std::wstring, std::u32string&gt;(message).convert();</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/d53/classutility__module_1_1convert__string_ad2388006a9e4f3fb4b914299b279c667_cgraph.png" border="0" usemap="#ad1/d53/classutility__module_1_1convert__string_ad2388006a9e4f3fb4b914299b279c667_cgraph" alt=""/></div>
 <map name="ad1/d53/classutility__module_1_1convert__string_ad2388006a9e4f3fb4b914299b279c667_cgraph" id="ad1/d53/classutility__module_1_1convert__string_ad2388006a9e4f3fb4b914299b279c667_cgraph">
 <area shape="rect" title="Converts a wide string to a UTF&#45;32 string." alt="" coords="5,5,179,47"/>
-<area shape="rect" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9" title="Performs the string conversion." alt="" coords="227,5,453,47"/>
+<area shape="rect" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d" title="Performs the string conversion." alt="" coords="227,5,413,47"/>
 </map>
 </div>
 
@@ -917,17 +1035,17 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The converted wide string. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00068">68</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> StringConverter&lt;std::string, std::wstring&gt;(message).convert();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00115">115</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">return</span> converter&lt;std::string, std::wstring&gt;(message).convert();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/d53/classutility__module_1_1convert__string_a1b1c3e5caa136d7800402338f181846e_cgraph.png" border="0" usemap="#ad1/d53/classutility__module_1_1convert__string_a1b1c3e5caa136d7800402338f181846e_cgraph" alt=""/></div>
 <map name="ad1/d53/classutility__module_1_1convert__string_a1b1c3e5caa136d7800402338f181846e_cgraph" id="ad1/d53/classutility__module_1_1convert__string_a1b1c3e5caa136d7800402338f181846e_cgraph">
 <area shape="rect" title="Converts a UTF&#45;8 string to a wide string." alt="" coords="5,5,179,47"/>
-<area shape="rect" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9" title="Performs the string conversion." alt="" coords="227,5,453,47"/>
+<area shape="rect" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d" title="Performs the string conversion." alt="" coords="227,5,413,47"/>
 </map>
 </div>
 
@@ -966,17 +1084,17 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The converted wide string. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00073">73</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">return</span> StringConverter&lt;std::u16string, std::wstring&gt;(message).convert();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00120">120</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">return</span> converter&lt;std::u16string, std::wstring&gt;(message).convert();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/d53/classutility__module_1_1convert__string_a779c8a1a956c3007bc4dfe85c599d5ae_cgraph.png" border="0" usemap="#ad1/d53/classutility__module_1_1convert__string_a779c8a1a956c3007bc4dfe85c599d5ae_cgraph" alt=""/></div>
 <map name="ad1/d53/classutility__module_1_1convert__string_a779c8a1a956c3007bc4dfe85c599d5ae_cgraph" id="ad1/d53/classutility__module_1_1convert__string_a779c8a1a956c3007bc4dfe85c599d5ae_cgraph">
 <area shape="rect" title="Converts a UTF&#45;16 string to a wide string." alt="" coords="5,5,179,47"/>
-<area shape="rect" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9" title="Performs the string conversion." alt="" coords="227,5,453,47"/>
+<area shape="rect" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d" title="Performs the string conversion." alt="" coords="227,5,413,47"/>
 </map>
 </div>
 
@@ -1015,17 +1133,17 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The converted wide string. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00078">78</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">return</span> StringConverter&lt;std::u32string, std::wstring&gt;(message).convert();</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00125">125</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">return</span> converter&lt;std::u32string, std::wstring&gt;(message).convert();</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/d53/classutility__module_1_1convert__string_ac58f55b6a68886b40eeaaa424a28d872_cgraph.png" border="0" usemap="#ad1/d53/classutility__module_1_1convert__string_ac58f55b6a68886b40eeaaa424a28d872_cgraph" alt=""/></div>
 <map name="ad1/d53/classutility__module_1_1convert__string_ac58f55b6a68886b40eeaaa424a28d872_cgraph" id="ad1/d53/classutility__module_1_1convert__string_ac58f55b6a68886b40eeaaa424a28d872_cgraph">
 <area shape="rect" title="Converts a UTF&#45;32 string to a wide string." alt="" coords="5,5,179,47"/>
-<area shape="rect" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9" title="Performs the string conversion." alt="" coords="227,5,453,47"/>
+<area shape="rect" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d" title="Performs the string conversion." alt="" coords="227,5,413,47"/>
 </map>
 </div>
 

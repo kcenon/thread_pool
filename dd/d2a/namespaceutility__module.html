@@ -72,14 +72,17 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d36/structutility__module_1_1ConversionOptions.html">ConversionOptions</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for string conversion operations.  <a href="../../d5/d36/structutility__module_1_1ConversionOptions.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d30/classutility__module_1_1argument__manager.html">argument_manager</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages and parses command-line arguments.  <a href="../../de/d30/classutility__module_1_1argument__manager.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A utility class for converting between different string types.  <a href="../../d4/d57/classutility__module_1_1StringConverter.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db9/structutility__module_1_1conversion__options.html">conversion_options</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for string conversion operations.  <a href="../../dc/db9/structutility__module_1_1conversion__options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9d/classutility__module_1_1converter.html">converter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A utility class for converting between different string types.  <a href="../../da/d9d/classutility__module_1_1converter.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d53/classutility__module_1_1convert__string.html">convert_string</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A utility class for string conversions between different character encodings.  <a href="../../d1/d53/classutility__module_1_1convert__string.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A utility class for string conversions and manipulations.  <a href="../../d1/d53/classutility__module_1_1convert__string.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d61/classutility__module_1_1datetime__tool.html">datetime_tool</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A utility class for date and time operations.  <a href="../../db/d61/classutility__module_1_1datetime__tool.html#details">More...</a><br /></td></tr>
@@ -164,7 +167,7 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                   ? 3</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                   : 0;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
-<div class="ttc" id="anamespaceutility__module_html_a26855fecef2f4a43213ec00bc42425a7"><div class="ttname"><a href="../../dd/d2a/namespaceutility__module.html#a26855fecef2f4a43213ec00bc42425a7">utility_module::UTF8_BOM</a></div><div class="ttdeci">constexpr std::array&lt; uint8_t, 3 &gt; UTF8_BOM</div><div class="ttdoc">UTF-8 Byte Order Mark (BOM)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d46/convert__string_8h_source.html#l00049">convert_string.h:49</a></div></div>
+<div class="ttc" id="anamespaceutility__module_html_a26855fecef2f4a43213ec00bc42425a7"><div class="ttname"><a href="../../dd/d2a/namespaceutility__module.html#a26855fecef2f4a43213ec00bc42425a7">utility_module::UTF8_BOM</a></div><div class="ttdeci">constexpr std::array&lt; uint8_t, 3 &gt; UTF8_BOM</div><div class="ttdoc">UTF-8 Byte Order Mark (BOM)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d46/convert__string_8h_source.html#l00051">convert_string.h:51</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -242,7 +245,7 @@ Here is the caller graph for this function:</div>
 <p>UTF-8 Byte Order Mark (BOM) </p>
 <p>This constant represents the UTF-8 Byte Order Mark, which is a sequence of bytes (0xEF, 0xBB, 0xBF) that may appear at the beginning of a UTF-8 encoded file or stream. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d46/convert__string_8h_source.html#l00049">49</a> of file <a class="el" href="../../d1/d46/convert__string_8h_source.html">convert_string.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d46/convert__string_8h_source.html#l00051">51</a> of file <a class="el" href="../../d1/d46/convert__string_8h_source.html">convert_string.h</a>.</p>
 
 </div>
 </div>

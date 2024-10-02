@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['backup_5ffile_5f_374',['backup_file_',['../dc/d2b/classlog__module_1_1file__writer.html#a7f456083280cd44cd8886e0e216c39e5',1,'log_module::file_writer']]],
-  ['backup_5fname_5f_375',['backup_name_',['../dc/d2b/classlog__module_1_1file__writer.html#aa73a117192d83f77b941b205b34f142c',1,'log_module::file_writer']]]
+  ['_5farguments_398',['_arguments',['../de/d30/classutility__module_1_1argument__manager.html#ab04a0a4f98fa9a61e84bee0f122f426b',1,'utility_module::argument_manager']]]
 ];

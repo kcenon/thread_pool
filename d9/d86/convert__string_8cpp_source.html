@@ -75,7 +75,7 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;locale&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;codecvt&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="../../dd/d2a/namespaceutility__module.html">    7</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="../../dd/d2a/namespaceutility__module.html">utility_module</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../dd/d2a/namespaceutility__module.html">utility_module</a></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../dd/d2a/namespaceutility__module.html#a216fa48bc8dd28211c121281045d6cdc">    9</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../dd/d2a/namespaceutility__module.html#a216fa48bc8dd28211c121281045d6cdc">has_utf8_bom</a>(<span class="keyword">const</span> std::string&amp; value)</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
@@ -92,13 +92,13 @@ $(function() {
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> From, <span class="keyword">typename</span> To&gt;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../d4/d57/classutility__module_1_1StringConverter.html#aca42292ba4a69ce8e7073973e84cd63a">   24</a></span>&#160;    <a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html#aca42292ba4a69ce8e7073973e84cd63a">StringConverter&lt;From, To&gt;::StringConverter</a>(std::basic_string_view&lt;typename From::value_type&gt; f,</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                                               <span class="keyword">const</span> <a class="code" href="../../d5/d36/structutility__module_1_1ConversionOptions.html">ConversionOptions</a>&amp; opts)</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../da/d9d/classutility__module_1_1converter.html#ae992c695162656f03753536fff1febba">   24</a></span>&#160;    <a class="code" href="../../da/d9d/classutility__module_1_1converter.html#ae992c695162656f03753536fff1febba">converter&lt;From, To&gt;::converter</a>(std::basic_string_view&lt;typename From::value_type&gt; f,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                                   <span class="keyword">const</span> <a class="code" href="../../dc/db9/structutility__module_1_1conversion__options.html">conversion_options</a>&amp; opts)</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        : from(f), options(opts)</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9">   30</a></span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> From, <span class="keyword">typename</span> To&gt; To <a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9">StringConverter&lt;From, To&gt;::convert</a>()</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d">   30</a></span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> From, <span class="keyword">typename</span> To&gt; To <a class="code" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d">converter&lt;From, To&gt;::convert</a>()</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">auto</span>&amp; facet = std::use_facet&lt;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            std::codecvt&lt;typename To::value_type, typename From::value_type, std::mbstate_t&gt;&gt;(</div>
@@ -121,200 +121,248 @@ $(function() {
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> To(to.data(), to_next);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#acbe6436243bc1fec3d87f914a2cef321">   53</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#acbe6436243bc1fec3d87f914a2cef321">convert_string::to_string</a>(<span class="keyword">const</span> std::wstring&amp; message) -&gt; std::string</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter&lt;std::wstring, std::string&gt;</a>(message).<a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9">convert</a>();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#a2ec9c45cbcaf1702f3204a0be5be56e9">   58</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#acbe6436243bc1fec3d87f914a2cef321">convert_string::to_string</a>(<span class="keyword">const</span> std::u16string&amp; message) -&gt; std::string</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter&lt;std::u16string, std::string&gt;</a>(message).<a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9">convert</a>();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#a22e0916c36de61db53b28803ee09c506">   63</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#acbe6436243bc1fec3d87f914a2cef321">convert_string::to_string</a>(<span class="keyword">const</span> std::u32string&amp; message) -&gt; std::string</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter&lt;std::u32string, std::string&gt;</a>(message).<a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9">convert</a>();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#a1b1c3e5caa136d7800402338f181846e">   68</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#a1b1c3e5caa136d7800402338f181846e">convert_string::to_wstring</a>(<span class="keyword">const</span> std::string&amp; message) -&gt; std::wstring</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter&lt;std::string, std::wstring&gt;</a>(message).<a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9">convert</a>();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#a779c8a1a956c3007bc4dfe85c599d5ae">   73</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#a1b1c3e5caa136d7800402338f181846e">convert_string::to_wstring</a>(<span class="keyword">const</span> std::u16string&amp; message) -&gt; std::wstring</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter&lt;std::u16string, std::wstring&gt;</a>(message).<a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9">convert</a>();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#ac58f55b6a68886b40eeaaa424a28d872">   78</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#a1b1c3e5caa136d7800402338f181846e">convert_string::to_wstring</a>(<span class="keyword">const</span> std::u32string&amp; message) -&gt; std::wstring</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter&lt;std::u32string, std::wstring&gt;</a>(message).<a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9">convert</a>();</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#a4fe86a06d0930f0f722c57265c64298a">   53</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#a4fe86a06d0930f0f722c57265c64298a">convert_string::split</a>(<span class="keyword">const</span> std::string&amp; source, <span class="keyword">const</span> std::string&amp; token)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        -&gt; std::tuple&lt;std::optional&lt;std::vector&lt;std::string&gt;&gt;, std::optional&lt;std::string&gt;&gt;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">if</span> (source.empty() == <span class="keyword">true</span>)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">return</span> { std::nullopt, <span class="stringliteral">&quot;source is empty&quot;</span> };</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">size_t</span> offset = 0;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">size_t</span> last_offset = 0;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        std::vector&lt;std::string&gt; result = {};</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        std::string temp;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            offset = source.find(token, last_offset);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">if</span> (offset == std::string::npos)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            temp = source.substr(last_offset, offset - last_offset);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">if</span> (!temp.empty())</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                result.push_back(std::move(temp));</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            last_offset = offset + token.size();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#a588aacb6f0f1e0510eb13abd0e1ae0e7">   83</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#a588aacb6f0f1e0510eb13abd0e1ae0e7">convert_string::to_u16string</a>(<span class="keyword">const</span> std::string&amp; message) -&gt; std::u16string</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter&lt;std::string, std::u16string&gt;</a>(message).<a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9">convert</a>();</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#ad9d8c3f15f7a08e0cd8972d26806accc">   88</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#a588aacb6f0f1e0510eb13abd0e1ae0e7">convert_string::to_u16string</a>(<span class="keyword">const</span> std::wstring&amp; message) -&gt; std::u16string</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter&lt;std::wstring, std::u16string&gt;</a>(message).<a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9">convert</a>();</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#a35c2feafed63d38805d6b813679fb968">   93</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#a588aacb6f0f1e0510eb13abd0e1ae0e7">convert_string::to_u16string</a>(<span class="keyword">const</span> std::u32string&amp; message) -&gt; std::u16string</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter&lt;std::u32string, std::u16string&gt;</a>(message).<a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9">convert</a>();</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#acb608e0ba2390f675a62c303914a798b">   98</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#acb608e0ba2390f675a62c303914a798b">convert_string::to_u32string</a>(<span class="keyword">const</span> std::string&amp; message) -&gt; std::u32string</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter&lt;std::string, std::u32string&gt;</a>(message).<a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9">convert</a>();</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#ad2388006a9e4f3fb4b914299b279c667">  103</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#acb608e0ba2390f675a62c303914a798b">convert_string::to_u32string</a>(<span class="keyword">const</span> std::wstring&amp; message) -&gt; std::u32string</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter&lt;std::wstring, std::u32string&gt;</a>(message).<a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9">convert</a>();</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#a7b9481c08935c46cefe6e1efa1ad6683">  108</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#acb608e0ba2390f675a62c303914a798b">convert_string::to_u32string</a>(<span class="keyword">const</span> std::u16string&amp; message) -&gt; std::u32string</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter&lt;std::u16string, std::u32string&gt;</a>(message).<a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9">convert</a>();</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#aa093b41bae554d89c3630f9bf488472d">  113</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#aa093b41bae554d89c3630f9bf488472d">convert_string::to_array</a>(<span class="keyword">const</span> std::string&amp; value) -&gt; std::vector&lt;uint8_t&gt;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">if</span> (value.empty())</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">return</span> {};</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">if</span> (last_offset != 0 &amp;&amp; last_offset != std::string::npos)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            temp = source.substr(last_offset, offset - last_offset);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">if</span> (!temp.empty())</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                result.push_back(std::move(temp));</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">if</span> (last_offset == 0)</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordflow">return</span> { std::vector&lt;std::string&gt;{ source }, std::nullopt };</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">return</span> { result, std::nullopt };</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#acbe6436243bc1fec3d87f914a2cef321">  100</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#acbe6436243bc1fec3d87f914a2cef321">convert_string::to_string</a>(<span class="keyword">const</span> std::wstring&amp; message) -&gt; std::string</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../da/d9d/classutility__module_1_1converter.html">converter&lt;std::wstring, std::string&gt;</a>(message).<a class="code" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d">convert</a>();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#a2ec9c45cbcaf1702f3204a0be5be56e9">  105</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#acbe6436243bc1fec3d87f914a2cef321">convert_string::to_string</a>(<span class="keyword">const</span> std::u16string&amp; message) -&gt; std::string</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../da/d9d/classutility__module_1_1converter.html">converter&lt;std::u16string, std::string&gt;</a>(message).<a class="code" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d">convert</a>();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#a22e0916c36de61db53b28803ee09c506">  110</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#acbe6436243bc1fec3d87f914a2cef321">convert_string::to_string</a>(<span class="keyword">const</span> std::u32string&amp; message) -&gt; std::string</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../da/d9d/classutility__module_1_1converter.html">converter&lt;std::u32string, std::string&gt;</a>(message).<a class="code" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d">convert</a>();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#a1b1c3e5caa136d7800402338f181846e">  115</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#a1b1c3e5caa136d7800402338f181846e">convert_string::to_wstring</a>(<span class="keyword">const</span> std::string&amp; message) -&gt; std::wstring</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../da/d9d/classutility__module_1_1converter.html">converter&lt;std::string, std::wstring&gt;</a>(message).<a class="code" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d">convert</a>();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        std::vector&lt;uint8_t&gt; result;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        result.reserve(value.size());</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../dd/d2a/namespaceutility__module.html#a216fa48bc8dd28211c121281045d6cdc">has_utf8_bom</a>(value))</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            result.insert(result.end(), value.begin() + 3, value.end());</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        {</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            result.insert(result.end(), value.begin(), value.end());</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        }</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#a779c8a1a956c3007bc4dfe85c599d5ae">  120</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#a1b1c3e5caa136d7800402338f181846e">convert_string::to_wstring</a>(<span class="keyword">const</span> std::u16string&amp; message) -&gt; std::wstring</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../da/d9d/classutility__module_1_1converter.html">converter&lt;std::u16string, std::wstring&gt;</a>(message).<a class="code" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d">convert</a>();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#ac58f55b6a68886b40eeaaa424a28d872">  125</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#a1b1c3e5caa136d7800402338f181846e">convert_string::to_wstring</a>(<span class="keyword">const</span> std::u32string&amp; message) -&gt; std::wstring</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../da/d9d/classutility__module_1_1converter.html">converter&lt;std::u32string, std::wstring&gt;</a>(message).<a class="code" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d">convert</a>();</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#a588aacb6f0f1e0510eb13abd0e1ae0e7">  130</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#a588aacb6f0f1e0510eb13abd0e1ae0e7">convert_string::to_u16string</a>(<span class="keyword">const</span> std::string&amp; message) -&gt; std::u16string</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../da/d9d/classutility__module_1_1converter.html">converter&lt;std::string, std::u16string&gt;</a>(message).<a class="code" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d">convert</a>();</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#a393a740a92b54526f14b59facb5ff381">  135</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#acbe6436243bc1fec3d87f914a2cef321">convert_string::to_string</a>(<span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; value) -&gt; std::string</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#ad9d8c3f15f7a08e0cd8972d26806accc">  135</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#a588aacb6f0f1e0510eb13abd0e1ae0e7">convert_string::to_u16string</a>(<span class="keyword">const</span> std::wstring&amp; message) -&gt; std::u16string</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    {</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">if</span> (value.empty())</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        {</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="keywordflow">return</span> std::string();</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        }</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        std::string_view view(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(value.data()), value.size());</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordtype">size_t</span> start_index = <a class="code" href="../../dd/d2a/namespaceutility__module.html#a42b38b8811bee6e59a9139854953134e">get_utf8_start_index</a>(view);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../da/d9d/classutility__module_1_1converter.html">converter&lt;std::wstring, std::u16string&gt;</a>(message).<a class="code" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d">convert</a>();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#a35c2feafed63d38805d6b813679fb968">  140</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#a588aacb6f0f1e0510eb13abd0e1ae0e7">convert_string::to_u16string</a>(<span class="keyword">const</span> std::u32string&amp; message) -&gt; std::u16string</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../da/d9d/classutility__module_1_1converter.html">converter&lt;std::u32string, std::u16string&gt;</a>(message).<a class="code" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d">convert</a>();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    }</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = start_index; i &lt; view.size();)</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        {</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="keywordflow">if</span> (!is_valid_utf8(view, i))</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            {</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                <span class="keywordflow">return</span> std::string();</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            }</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        }</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">return</span> std::string(view.substr(start_index));</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    }</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keyword">template</span> &lt;<span class="keywordtype">size_t</span> N&gt;</div>
-<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#acbd67641e7492097e898c85e36be4aaf">  157</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#acbd67641e7492097e898c85e36be4aaf">convert_string::is_valid_multi_byte_sequence</a>(std::string_view view,</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                                                      <span class="keyword">const</span> <span class="keywordtype">size_t</span>&amp; index) -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    {</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">if</span> (index + N &gt; view.size())</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        {</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        }</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordflow">if</span> constexpr (N &gt; 1)</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        {</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="keywordflow">return</span> (std::bit_cast&lt;uint8_t&gt;(view[index + 1]) &amp; 0xC0) == 0x80</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                   &amp;&amp; is_valid_multi_byte_sequence&lt;N - 1&gt;(view, index + 1);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        }</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    }</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#adee30de0745822dd8e0ed8c731193d08">  173</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#adee30de0745822dd8e0ed8c731193d08">convert_string::is_valid_utf8</a>(std::string_view view, <span class="keywordtype">size_t</span>&amp; index) -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    {</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordflow">if</span> (index &gt;= view.size())</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        {</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        }</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keyword">auto</span> first_byte = std::bit_cast&lt;uint8_t&gt;(view[index]);</div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#acb608e0ba2390f675a62c303914a798b">  145</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#acb608e0ba2390f675a62c303914a798b">convert_string::to_u32string</a>(<span class="keyword">const</span> std::string&amp; message) -&gt; std::u32string</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../da/d9d/classutility__module_1_1converter.html">converter&lt;std::string, std::u32string&gt;</a>(message).<a class="code" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d">convert</a>();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#ad2388006a9e4f3fb4b914299b279c667">  150</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#acb608e0ba2390f675a62c303914a798b">convert_string::to_u32string</a>(<span class="keyword">const</span> std::wstring&amp; message) -&gt; std::u32string</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../da/d9d/classutility__module_1_1converter.html">converter&lt;std::wstring, std::u32string&gt;</a>(message).<a class="code" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d">convert</a>();</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#a7b9481c08935c46cefe6e1efa1ad6683">  155</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#acb608e0ba2390f675a62c303914a798b">convert_string::to_u32string</a>(<span class="keyword">const</span> std::u16string&amp; message) -&gt; std::u32string</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../da/d9d/classutility__module_1_1converter.html">converter&lt;std::u16string, std::u32string&gt;</a>(message).<a class="code" href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d">convert</a>();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#aa093b41bae554d89c3630f9bf488472d">  160</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#aa093b41bae554d89c3630f9bf488472d">convert_string::to_array</a>(<span class="keyword">const</span> std::string&amp; value) -&gt; std::vector&lt;uint8_t&gt;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">if</span> (value.empty())</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="keywordflow">return</span> {};</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        }</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        std::vector&lt;uint8_t&gt; result;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        result.reserve(value.size());</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../dd/d2a/namespaceutility__module.html#a216fa48bc8dd28211c121281045d6cdc">has_utf8_bom</a>(value))</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            result.insert(result.end(), value.begin() + 3, value.end());</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            result.insert(result.end(), value.begin(), value.end());</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    }</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordflow">if</span> (first_byte &lt;= 0x7F)</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        {</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            index++;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        }</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">if</span> ((first_byte &amp; 0xE0) == 0xC0)</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        {</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordflow">if</span> (is_valid_multi_byte_sequence&lt;2&gt;(view, index))</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            {</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                index += 2;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            }</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        }</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">if</span> ((first_byte &amp; 0xF0) == 0xE0)</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        {</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="keywordflow">if</span> (is_valid_multi_byte_sequence&lt;3&gt;(view, index))</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            {</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                index += 3;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            }</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        }</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordflow">if</span> ((first_byte &amp; 0xF8) == 0xF0)</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        {</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <span class="keywordflow">if</span> (is_valid_multi_byte_sequence&lt;4&gt;(view, index))</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            {</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                index += 4;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            }</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        }</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    }</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter&lt;std::string, std::wstring&gt;</a>;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter&lt;std::string, std::u16string&gt;</a>;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter&lt;std::string, std::u32string&gt;</a>;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter&lt;std::wstring, std::string&gt;</a>;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter&lt;std::wstring, std::u16string&gt;</a>;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter&lt;std::wstring, std::u32string&gt;</a>;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter&lt;std::u16string, std::string&gt;</a>;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter&lt;std::u16string, std::wstring&gt;</a>;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter&lt;std::u16string, std::u32string&gt;</a>;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter&lt;std::u32string, std::string&gt;</a>;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter&lt;std::u32string, std::wstring&gt;</a>;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter&lt;std::u32string, std::u16string&gt;</a>;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;} <span class="comment">// namespace utility_module</span></div>
-<div class="ttc" id="aclassutility__module_1_1StringConverter_html"><div class="ttname"><a href="../../d4/d57/classutility__module_1_1StringConverter.html">utility_module::StringConverter</a></div><div class="ttdoc">A utility class for converting between different string types.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d46/convert__string_8h_source.html#l00073">convert_string.h:74</a></div></div>
-<div class="ttc" id="aclassutility__module_1_1StringConverter_html_a1cbabb4dceb86c043c394ac22cda57e9"><div class="ttname"><a href="../../d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9">utility_module::StringConverter::convert</a></div><div class="ttdeci">To convert()</div><div class="ttdoc">Performs the string conversion.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00030">convert_string.cpp:30</a></div></div>
-<div class="ttc" id="aclassutility__module_1_1StringConverter_html_aca42292ba4a69ce8e7073973e84cd63a"><div class="ttname"><a href="../../d4/d57/classutility__module_1_1StringConverter.html#aca42292ba4a69ce8e7073973e84cd63a">utility_module::StringConverter::StringConverter</a></div><div class="ttdeci">StringConverter(std::basic_string_view&lt; typename From::value_type &gt; f, const ConversionOptions &amp;opts=ConversionOptions())</div><div class="ttdoc">Constructs a StringConverter object.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00024">convert_string.cpp:24</a></div></div>
-<div class="ttc" id="aclassutility__module_1_1convert__string_html_a1b1c3e5caa136d7800402338f181846e"><div class="ttname"><a href="../../d1/d53/classutility__module_1_1convert__string.html#a1b1c3e5caa136d7800402338f181846e">utility_module::convert_string::to_wstring</a></div><div class="ttdeci">static auto to_wstring(const std::string &amp;message) -&gt; std::wstring</div><div class="ttdoc">Converts a UTF-8 string to a wide string.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00068">convert_string.cpp:68</a></div></div>
-<div class="ttc" id="aclassutility__module_1_1convert__string_html_a588aacb6f0f1e0510eb13abd0e1ae0e7"><div class="ttname"><a href="../../d1/d53/classutility__module_1_1convert__string.html#a588aacb6f0f1e0510eb13abd0e1ae0e7">utility_module::convert_string::to_u16string</a></div><div class="ttdeci">static auto to_u16string(const std::string &amp;message) -&gt; std::u16string</div><div class="ttdoc">Converts a UTF-8 string to a UTF-16 string.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00083">convert_string.cpp:83</a></div></div>
-<div class="ttc" id="aclassutility__module_1_1convert__string_html_aa093b41bae554d89c3630f9bf488472d"><div class="ttname"><a href="../../d1/d53/classutility__module_1_1convert__string.html#aa093b41bae554d89c3630f9bf488472d">utility_module::convert_string::to_array</a></div><div class="ttdeci">static auto to_array(const std::string &amp;value) -&gt; std::vector&lt; uint8_t &gt;</div><div class="ttdoc">Converts a string to a byte array.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00113">convert_string.cpp:113</a></div></div>
-<div class="ttc" id="aclassutility__module_1_1convert__string_html_acb608e0ba2390f675a62c303914a798b"><div class="ttname"><a href="../../d1/d53/classutility__module_1_1convert__string.html#acb608e0ba2390f675a62c303914a798b">utility_module::convert_string::to_u32string</a></div><div class="ttdeci">static auto to_u32string(const std::string &amp;message) -&gt; std::u32string</div><div class="ttdoc">Converts a UTF-8 string to a UTF-32 string.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00098">convert_string.cpp:98</a></div></div>
-<div class="ttc" id="aclassutility__module_1_1convert__string_html_acbd67641e7492097e898c85e36be4aaf"><div class="ttname"><a href="../../d1/d53/classutility__module_1_1convert__string.html#acbd67641e7492097e898c85e36be4aaf">utility_module::convert_string::is_valid_multi_byte_sequence</a></div><div class="ttdeci">static auto is_valid_multi_byte_sequence(std::string_view view, const size_t &amp;index) -&gt; bool</div><div class="ttdoc">Checks if a multi-byte sequence is valid UTF-8.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00157">convert_string.cpp:157</a></div></div>
-<div class="ttc" id="aclassutility__module_1_1convert__string_html_acbe6436243bc1fec3d87f914a2cef321"><div class="ttname"><a href="../../d1/d53/classutility__module_1_1convert__string.html#acbe6436243bc1fec3d87f914a2cef321">utility_module::convert_string::to_string</a></div><div class="ttdeci">static auto to_string(const std::wstring &amp;message) -&gt; std::string</div><div class="ttdoc">Converts a wide string to a UTF-8 string.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00053">convert_string.cpp:53</a></div></div>
-<div class="ttc" id="aclassutility__module_1_1convert__string_html_adee30de0745822dd8e0ed8c731193d08"><div class="ttname"><a href="../../d1/d53/classutility__module_1_1convert__string.html#adee30de0745822dd8e0ed8c731193d08">utility_module::convert_string::is_valid_utf8</a></div><div class="ttdeci">static auto is_valid_utf8(std::string_view value, size_t &amp;index) -&gt; bool</div><div class="ttdoc">Checks if a string is valid UTF-8.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00173">convert_string.cpp:173</a></div></div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#a393a740a92b54526f14b59facb5ff381">  182</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#acbe6436243bc1fec3d87f914a2cef321">convert_string::to_string</a>(<span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; value) -&gt; std::string</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">if</span> (value.empty())</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="keywordflow">return</span> std::string();</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        std::string_view view(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(value.data()), value.size());</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordtype">size_t</span> start_index = <a class="code" href="../../dd/d2a/namespaceutility__module.html#a42b38b8811bee6e59a9139854953134e">get_utf8_start_index</a>(view);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = start_index; i &lt; view.size();)</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        {</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="keywordflow">if</span> (!is_valid_utf8(view, i))</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                <span class="keywordflow">return</span> std::string();</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keywordflow">return</span> std::string(view.substr(start_index));</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keyword">template</span> &lt;<span class="keywordtype">size_t</span> N&gt;</div>
+<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#acbd67641e7492097e898c85e36be4aaf">  204</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#acbd67641e7492097e898c85e36be4aaf">convert_string::is_valid_multi_byte_sequence</a>(std::string_view view,</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                                                      <span class="keyword">const</span> <span class="keywordtype">size_t</span>&amp; index) -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordflow">if</span> (index + N &gt; view.size())</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="keywordflow">if</span> constexpr (N &gt; 1)</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        {</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="keywordflow">return</span> (std::bit_cast&lt;uint8_t&gt;(view[index + 1]) &amp; 0xC0) == 0x80</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                   &amp;&amp; is_valid_multi_byte_sequence&lt;N - 1&gt;(view, index + 1);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    }</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="../../d1/d53/classutility__module_1_1convert__string.html#adee30de0745822dd8e0ed8c731193d08">  220</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="../../d1/d53/classutility__module_1_1convert__string.html#adee30de0745822dd8e0ed8c731193d08">convert_string::is_valid_utf8</a>(std::string_view view, <span class="keywordtype">size_t</span>&amp; index) -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    {</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keywordflow">if</span> (index &gt;= view.size())</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        }</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keyword">auto</span> first_byte = std::bit_cast&lt;uint8_t&gt;(view[index]);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keywordflow">if</span> (first_byte &lt;= 0x7F)</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        {</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            index++;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keywordflow">if</span> ((first_byte &amp; 0xE0) == 0xC0)</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        {</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            <span class="keywordflow">if</span> (is_valid_multi_byte_sequence&lt;2&gt;(view, index))</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            {</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                index += 2;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            }</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        }</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordflow">if</span> ((first_byte &amp; 0xF0) == 0xE0)</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            <span class="keywordflow">if</span> (is_valid_multi_byte_sequence&lt;3&gt;(view, index))</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            {</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                index += 3;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        }</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordflow">if</span> ((first_byte &amp; 0xF8) == 0xF0)</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="keywordflow">if</span> (is_valid_multi_byte_sequence&lt;4&gt;(view, index))</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            {</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                index += 4;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            }</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    }</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="../../da/d9d/classutility__module_1_1converter.html">converter&lt;std::string, std::wstring&gt;</a>;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="../../da/d9d/classutility__module_1_1converter.html">converter&lt;std::string, std::u16string&gt;</a>;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="../../da/d9d/classutility__module_1_1converter.html">converter&lt;std::string, std::u32string&gt;</a>;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="../../da/d9d/classutility__module_1_1converter.html">converter&lt;std::wstring, std::string&gt;</a>;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="../../da/d9d/classutility__module_1_1converter.html">converter&lt;std::wstring, std::u16string&gt;</a>;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="../../da/d9d/classutility__module_1_1converter.html">converter&lt;std::wstring, std::u32string&gt;</a>;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="../../da/d9d/classutility__module_1_1converter.html">converter&lt;std::u16string, std::string&gt;</a>;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="../../da/d9d/classutility__module_1_1converter.html">converter&lt;std::u16string, std::wstring&gt;</a>;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="../../da/d9d/classutility__module_1_1converter.html">converter&lt;std::u16string, std::u32string&gt;</a>;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="../../da/d9d/classutility__module_1_1converter.html">converter&lt;std::u32string, std::string&gt;</a>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="../../da/d9d/classutility__module_1_1converter.html">converter&lt;std::u32string, std::wstring&gt;</a>;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="../../da/d9d/classutility__module_1_1converter.html">converter&lt;std::u32string, std::u16string&gt;</a>;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;} <span class="comment">// namespace utility_module</span></div>
+<div class="ttc" id="aclassutility__module_1_1convert__string_html_a1b1c3e5caa136d7800402338f181846e"><div class="ttname"><a href="../../d1/d53/classutility__module_1_1convert__string.html#a1b1c3e5caa136d7800402338f181846e">utility_module::convert_string::to_wstring</a></div><div class="ttdeci">static auto to_wstring(const std::string &amp;message) -&gt; std::wstring</div><div class="ttdoc">Converts a UTF-8 string to a wide string.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00115">convert_string.cpp:115</a></div></div>
+<div class="ttc" id="aclassutility__module_1_1convert__string_html_a4fe86a06d0930f0f722c57265c64298a"><div class="ttname"><a href="../../d1/d53/classutility__module_1_1convert__string.html#a4fe86a06d0930f0f722c57265c64298a">utility_module::convert_string::split</a></div><div class="ttdeci">static auto split(const std::string &amp;source, const std::string &amp;token) -&gt; std::tuple&lt; std::optional&lt; std::vector&lt; std::string &gt;&gt;, std::optional&lt; std::string &gt;&gt;</div><div class="ttdoc">Splits a string into substrings based on a delimiter token.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00053">convert_string.cpp:53</a></div></div>
+<div class="ttc" id="aclassutility__module_1_1convert__string_html_a588aacb6f0f1e0510eb13abd0e1ae0e7"><div class="ttname"><a href="../../d1/d53/classutility__module_1_1convert__string.html#a588aacb6f0f1e0510eb13abd0e1ae0e7">utility_module::convert_string::to_u16string</a></div><div class="ttdeci">static auto to_u16string(const std::string &amp;message) -&gt; std::u16string</div><div class="ttdoc">Converts a UTF-8 string to a UTF-16 string.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00130">convert_string.cpp:130</a></div></div>
+<div class="ttc" id="aclassutility__module_1_1convert__string_html_aa093b41bae554d89c3630f9bf488472d"><div class="ttname"><a href="../../d1/d53/classutility__module_1_1convert__string.html#aa093b41bae554d89c3630f9bf488472d">utility_module::convert_string::to_array</a></div><div class="ttdeci">static auto to_array(const std::string &amp;value) -&gt; std::vector&lt; uint8_t &gt;</div><div class="ttdoc">Converts a string to a byte array.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00160">convert_string.cpp:160</a></div></div>
+<div class="ttc" id="aclassutility__module_1_1convert__string_html_acb608e0ba2390f675a62c303914a798b"><div class="ttname"><a href="../../d1/d53/classutility__module_1_1convert__string.html#acb608e0ba2390f675a62c303914a798b">utility_module::convert_string::to_u32string</a></div><div class="ttdeci">static auto to_u32string(const std::string &amp;message) -&gt; std::u32string</div><div class="ttdoc">Converts a UTF-8 string to a UTF-32 string.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00145">convert_string.cpp:145</a></div></div>
+<div class="ttc" id="aclassutility__module_1_1convert__string_html_acbd67641e7492097e898c85e36be4aaf"><div class="ttname"><a href="../../d1/d53/classutility__module_1_1convert__string.html#acbd67641e7492097e898c85e36be4aaf">utility_module::convert_string::is_valid_multi_byte_sequence</a></div><div class="ttdeci">static auto is_valid_multi_byte_sequence(std::string_view view, const size_t &amp;index) -&gt; bool</div><div class="ttdoc">Checks if a multi-byte sequence is valid UTF-8.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00204">convert_string.cpp:204</a></div></div>
+<div class="ttc" id="aclassutility__module_1_1convert__string_html_acbe6436243bc1fec3d87f914a2cef321"><div class="ttname"><a href="../../d1/d53/classutility__module_1_1convert__string.html#acbe6436243bc1fec3d87f914a2cef321">utility_module::convert_string::to_string</a></div><div class="ttdeci">static auto to_string(const std::wstring &amp;message) -&gt; std::string</div><div class="ttdoc">Converts a wide string to a UTF-8 string.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00100">convert_string.cpp:100</a></div></div>
+<div class="ttc" id="aclassutility__module_1_1convert__string_html_adee30de0745822dd8e0ed8c731193d08"><div class="ttname"><a href="../../d1/d53/classutility__module_1_1convert__string.html#adee30de0745822dd8e0ed8c731193d08">utility_module::convert_string::is_valid_utf8</a></div><div class="ttdeci">static auto is_valid_utf8(std::string_view value, size_t &amp;index) -&gt; bool</div><div class="ttdoc">Checks if a string is valid UTF-8.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00220">convert_string.cpp:220</a></div></div>
+<div class="ttc" id="aclassutility__module_1_1converter_html"><div class="ttname"><a href="../../da/d9d/classutility__module_1_1converter.html">utility_module::converter</a></div><div class="ttdoc">A utility class for converting between different string types.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d46/convert__string_8h_source.html#l00075">convert_string.h:76</a></div></div>
+<div class="ttc" id="aclassutility__module_1_1converter_html_ab39e356dd8723332d016b6da2826015d"><div class="ttname"><a href="../../da/d9d/classutility__module_1_1converter.html#ab39e356dd8723332d016b6da2826015d">utility_module::converter::convert</a></div><div class="ttdeci">To convert()</div><div class="ttdoc">Performs the string conversion.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00030">convert_string.cpp:30</a></div></div>
+<div class="ttc" id="aclassutility__module_1_1converter_html_ae992c695162656f03753536fff1febba"><div class="ttname"><a href="../../da/d9d/classutility__module_1_1converter.html#ae992c695162656f03753536fff1febba">utility_module::converter::converter</a></div><div class="ttdeci">converter(std::basic_string_view&lt; typename From::value_type &gt; f, const conversion_options &amp;opts=conversion_options())</div><div class="ttdoc">Constructs a converter object.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00024">convert_string.cpp:24</a></div></div>
 <div class="ttc" id="aconvert__string_8h_html"><div class="ttname"><a href="../../d1/d46/convert__string_8h.html">convert_string.h</a></div></div>
-<div class="ttc" id="anamespaceutility__module_html"><div class="ttname"><a href="../../dd/d2a/namespaceutility__module.html">utility_module</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00007">convert_string.cpp:8</a></div></div>
+<div class="ttc" id="anamespaceutility__module_html"><div class="ttname"><a href="../../dd/d2a/namespaceutility__module.html">utility_module</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d2f/argument__parser_8cpp_source.html#l00040">argument_parser.cpp:41</a></div></div>
 <div class="ttc" id="anamespaceutility__module_html_a216fa48bc8dd28211c121281045d6cdc"><div class="ttname"><a href="../../dd/d2a/namespaceutility__module.html#a216fa48bc8dd28211c121281045d6cdc">utility_module::has_utf8_bom</a></div><div class="ttdeci">bool has_utf8_bom(const std::string &amp;value)</div><div class="ttdoc">Checks if a string starts with a UTF-8 BOM.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00009">convert_string.cpp:9</a></div></div>
-<div class="ttc" id="anamespaceutility__module_html_a26855fecef2f4a43213ec00bc42425a7"><div class="ttname"><a href="../../dd/d2a/namespaceutility__module.html#a26855fecef2f4a43213ec00bc42425a7">utility_module::UTF8_BOM</a></div><div class="ttdeci">constexpr std::array&lt; uint8_t, 3 &gt; UTF8_BOM</div><div class="ttdoc">UTF-8 Byte Order Mark (BOM)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d46/convert__string_8h_source.html#l00049">convert_string.h:49</a></div></div>
+<div class="ttc" id="anamespaceutility__module_html_a26855fecef2f4a43213ec00bc42425a7"><div class="ttname"><a href="../../dd/d2a/namespaceutility__module.html#a26855fecef2f4a43213ec00bc42425a7">utility_module::UTF8_BOM</a></div><div class="ttdeci">constexpr std::array&lt; uint8_t, 3 &gt; UTF8_BOM</div><div class="ttdoc">UTF-8 Byte Order Mark (BOM)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d46/convert__string_8h_source.html#l00051">convert_string.h:51</a></div></div>
 <div class="ttc" id="anamespaceutility__module_html_a42b38b8811bee6e59a9139854953134e"><div class="ttname"><a href="../../dd/d2a/namespaceutility__module.html#a42b38b8811bee6e59a9139854953134e">utility_module::get_utf8_start_index</a></div><div class="ttdeci">size_t get_utf8_start_index(std::string_view view)</div><div class="ttdoc">Gets the starting index after the UTF-8 BOM, if present.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d86/convert__string_8cpp_source.html#l00014">convert_string.cpp:14</a></div></div>
-<div class="ttc" id="astructutility__module_1_1ConversionOptions_html"><div class="ttname"><a href="../../d5/d36/structutility__module_1_1ConversionOptions.html">utility_module::ConversionOptions</a></div><div class="ttdoc">Options for string conversion operations.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d46/convert__string_8h_source.html#l00057">convert_string.h:58</a></div></div>
+<div class="ttc" id="astructutility__module_1_1conversion__options_html"><div class="ttname"><a href="../../dc/db9/structutility__module_1_1conversion__options.html">utility_module::conversion_options</a></div><div class="ttdoc">Options for string conversion operations.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d46/convert__string_8h_source.html#l00059">convert_string.h:60</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
