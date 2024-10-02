@@ -63,7 +63,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">utility_module Namespace Reference</div>  </div>
 </div><!--header-->
@@ -71,6 +72,12 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d36/structutility__module_1_1ConversionOptions.html">ConversionOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for string conversion operations.  <a href="../../d5/d36/structutility__module_1_1ConversionOptions.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/classutility__module_1_1StringConverter.html">StringConverter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A utility class for converting between different string types.  <a href="../../d4/d57/classutility__module_1_1StringConverter.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d53/classutility__module_1_1convert__string.html">convert_string</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A utility class for string conversions between different character encodings.  <a href="../../d1/d53/classutility__module_1_1convert__string.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -80,8 +87,20 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a216fa48bc8dd28211c121281045d6cdc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2a/namespaceutility__module.html#a216fa48bc8dd28211c121281045d6cdc">has_utf8_bom</a> (const std::string &amp;value)</td></tr>
+<tr class="memdesc:a216fa48bc8dd28211c121281045d6cdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a string starts with a UTF-8 BOM.  <a href="../../dd/d2a/namespaceutility__module.html#a216fa48bc8dd28211c121281045d6cdc">More...</a><br /></td></tr>
+<tr class="separator:a216fa48bc8dd28211c121281045d6cdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42b38b8811bee6e59a9139854953134e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2a/namespaceutility__module.html#a42b38b8811bee6e59a9139854953134e">get_utf8_start_index</a> (std::string_view view)</td></tr>
+<tr class="memdesc:a42b38b8811bee6e59a9139854953134e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the starting index after the UTF-8 BOM, if present.  <a href="../../dd/d2a/namespaceutility__module.html#a42b38b8811bee6e59a9139854953134e">More...</a><br /></td></tr>
+<tr class="separator:a42b38b8811bee6e59a9139854953134e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf34574b9652431c382280969ebf1007"><td class="memItemLeft" align="right" valign="top">template auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2a/namespaceutility__module.html#adf34574b9652431c382280969ebf1007">datetime_tool::time_difference&lt; std::chrono::milliseconds, std::chrono::high_resolution_clock &gt;</a> (const std::chrono::time_point&lt; std::chrono::high_resolution_clock &gt; &amp;, const std::chrono::time_point&lt; std::chrono::high_resolution_clock &gt; &amp;) -&gt; double</td></tr>
 <tr class="separator:adf34574b9652431c382280969ebf1007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a26855fecef2f4a43213ec00bc42425a7"><td class="memItemLeft" align="right" valign="top">constexpr std::array&lt; uint8_t, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2a/namespaceutility__module.html#a26855fecef2f4a43213ec00bc42425a7">UTF8_BOM</a> = { 0xEF, 0xBB, 0xBF }</td></tr>
+<tr class="memdesc:a26855fecef2f4a43213ec00bc42425a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF-8 Byte Order Mark (BOM)  <a href="../../dd/d2a/namespaceutility__module.html#a26855fecef2f4a43213ec00bc42425a7">More...</a><br /></td></tr>
+<tr class="separator:a26855fecef2f4a43213ec00bc42425a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="adf34574b9652431c382280969ebf1007"></a>
@@ -109,6 +128,121 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42b38b8811bee6e59a9139854953134e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42b38b8811bee6e59a9139854953134e">&#9670;&nbsp;</a></span>get_utf8_start_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t utility_module::get_utf8_start_index </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>view</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the starting index after the UTF-8 BOM, if present. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">view</td><td>The string view to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The index after the BOM if present, or 0 if not. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00014">14</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">return</span> (view.size() &gt;= 3</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                &amp;&amp; view.substr(0, 3)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                       == std::string_view(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code" href="../../dd/d2a/namespaceutility__module.html#a26855fecef2f4a43213ec00bc42425a7">UTF8_BOM</a>.data()), 3))</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                   ? 3</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                   : 0;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
+<div class="ttc" id="anamespaceutility__module_html_a26855fecef2f4a43213ec00bc42425a7"><div class="ttname"><a href="../../dd/d2a/namespaceutility__module.html#a26855fecef2f4a43213ec00bc42425a7">utility_module::UTF8_BOM</a></div><div class="ttdeci">constexpr std::array&lt; uint8_t, 3 &gt; UTF8_BOM</div><div class="ttdoc">UTF-8 Byte Order Mark (BOM)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d46/convert__string_8h_source.html#l00049">convert_string.h:49</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d2a/namespaceutility__module_a42b38b8811bee6e59a9139854953134e_icgraph.png" border="0" usemap="#add/d2a/namespaceutility__module_a42b38b8811bee6e59a9139854953134e_icgraph" alt=""/></div>
+<map name="add/d2a/namespaceutility__module_a42b38b8811bee6e59a9139854953134e_icgraph" id="add/d2a/namespaceutility__module_a42b38b8811bee6e59a9139854953134e_icgraph">
+<area shape="rect" title="Gets the starting index after the UTF&#45;8 BOM, if present." alt="" coords="227,5,372,47"/>
+<area shape="rect" href="../../d1/d53/classutility__module_1_1convert__string.html#a393a740a92b54526f14b59facb5ff381" title="Converts a byte array to a string." alt="" coords="5,5,179,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a216fa48bc8dd28211c121281045d6cdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a216fa48bc8dd28211c121281045d6cdc">&#9670;&nbsp;</a></span>has_utf8_bom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool utility_module::has_utf8_bom </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if a string starts with a UTF-8 BOM. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The string to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the string starts with a UTF-8 BOM, false otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d86/convert__string_8cpp_source.html#l00009">9</a> of file <a class="el" href="../../d9/d86/convert__string_8cpp_source.html">convert_string.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keywordflow">return</span> value.size() &gt;= 3 &amp;&amp; std::equal(<a class="code" href="../../dd/d2a/namespaceutility__module.html#a26855fecef2f4a43213ec00bc42425a7">UTF8_BOM</a>.begin(), <a class="code" href="../../dd/d2a/namespaceutility__module.html#a26855fecef2f4a43213ec00bc42425a7">UTF8_BOM</a>.end(), value.begin());</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    }</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d2a/namespaceutility__module_a216fa48bc8dd28211c121281045d6cdc_icgraph.png" border="0" usemap="#add/d2a/namespaceutility__module_a216fa48bc8dd28211c121281045d6cdc_icgraph" alt=""/></div>
+<map name="add/d2a/namespaceutility__module_a216fa48bc8dd28211c121281045d6cdc_icgraph" id="add/d2a/namespaceutility__module_a216fa48bc8dd28211c121281045d6cdc_icgraph">
+<area shape="rect" title="Checks if a string starts with a UTF&#45;8 BOM." alt="" coords="227,5,373,47"/>
+<area shape="rect" href="../../d1/d53/classutility__module_1_1convert__string.html#aa093b41bae554d89c3630f9bf488472d" title="Converts a string to a byte array." alt="" coords="5,5,179,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a26855fecef2f4a43213ec00bc42425a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26855fecef2f4a43213ec00bc42425a7">&#9670;&nbsp;</a></span>UTF8_BOM</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::array&lt;uint8_t, 3&gt; utility_module::UTF8_BOM = { 0xEF, 0xBB, 0xBF }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>UTF-8 Byte Order Mark (BOM) </p>
+<p>This constant represents the UTF-8 Byte Order Mark, which is a sequence of bytes (0xEF, 0xBB, 0xBF) that may appear at the beginning of a UTF-8 encoded file or stream. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d46/convert__string_8h_source.html#l00049">49</a> of file <a class="el" href="../../d1/d46/convert__string_8h_source.html">convert_string.h</a>.</p>
 
 </div>
 </div>

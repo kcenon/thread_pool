@@ -1,0 +1,4 @@
+<map id="utility_module::convert_string::to_u16string" name="utility_module::convert_string::to_u16string">
+<area shape="rect" id="node1" title="Converts a UTF&#45;8 string to a UTF&#45;16 string." alt="" coords="5,5,179,47"/>
+<area shape="rect" id="node2" href="$d4/d57/classutility__module_1_1StringConverter.html#a1cbabb4dceb86c043c394ac22cda57e9" title="Performs the string conversion." alt="" coords="227,5,453,47"/>
+</map>

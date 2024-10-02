@@ -1,0 +1,4 @@
+<map id="utility_module::get_utf8_start_index" name="utility_module::get_utf8_start_index">
+<area shape="rect" id="node1" title="Gets the starting index after the UTF&#45;8 BOM, if present." alt="" coords="227,5,372,47"/>
+<area shape="rect" id="node2" href="$d1/d53/classutility__module_1_1convert__string.html#a393a740a92b54526f14b59facb5ff381" title="Converts a byte array to a string." alt="" coords="5,5,179,47"/>
+</map>

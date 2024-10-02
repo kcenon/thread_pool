@@ -67,7 +67,9 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">convert_string.h File Reference</div>  </div>
 </div><!--header-->
@@ -105,6 +107,12 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d36/structutility__module_1_1ConversionOptions.html">utility_module::ConversionOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for string conversion operations.  <a href="../../d5/d36/structutility__module_1_1ConversionOptions.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d57/classutility__module_1_1StringConverter.html">utility_module::StringConverter&lt; From, To &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A utility class for converting between different string types.  <a href="../../d4/d57/classutility__module_1_1StringConverter.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d53/classutility__module_1_1convert__string.html">utility_module::convert_string</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A utility class for string conversions between different character encodings.  <a href="../../d1/d53/classutility__module_1_1convert__string.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -113,6 +121,21 @@ Classes</h2></td></tr>
 Namespaces</h2></td></tr>
 <tr class="memitem:dd/d2a/namespaceutility__module"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2a/namespaceutility__module.html">utility_module</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a216fa48bc8dd28211c121281045d6cdc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2a/namespaceutility__module.html#a216fa48bc8dd28211c121281045d6cdc">utility_module::has_utf8_bom</a> (const std::string &amp;value)</td></tr>
+<tr class="memdesc:a216fa48bc8dd28211c121281045d6cdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a string starts with a UTF-8 BOM.  <a href="../../dd/d2a/namespaceutility__module.html#a216fa48bc8dd28211c121281045d6cdc">More...</a><br /></td></tr>
+<tr class="separator:a216fa48bc8dd28211c121281045d6cdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42b38b8811bee6e59a9139854953134e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2a/namespaceutility__module.html#a42b38b8811bee6e59a9139854953134e">utility_module::get_utf8_start_index</a> (std::string_view view)</td></tr>
+<tr class="memdesc:a42b38b8811bee6e59a9139854953134e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the starting index after the UTF-8 BOM, if present.  <a href="../../dd/d2a/namespaceutility__module.html#a42b38b8811bee6e59a9139854953134e">More...</a><br /></td></tr>
+<tr class="separator:a42b38b8811bee6e59a9139854953134e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a26855fecef2f4a43213ec00bc42425a7"><td class="memItemLeft" align="right" valign="top">constexpr std::array&lt; uint8_t, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2a/namespaceutility__module.html#a26855fecef2f4a43213ec00bc42425a7">utility_module::UTF8_BOM</a> = { 0xEF, 0xBB, 0xBF }</td></tr>
+<tr class="memdesc:a26855fecef2f4a43213ec00bc42425a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF-8 Byte Order Mark (BOM)  <a href="../../dd/d2a/namespaceutility__module.html#a26855fecef2f4a43213ec00bc42425a7">More...</a><br /></td></tr>
+<tr class="separator:a26855fecef2f4a43213ec00bc42425a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
