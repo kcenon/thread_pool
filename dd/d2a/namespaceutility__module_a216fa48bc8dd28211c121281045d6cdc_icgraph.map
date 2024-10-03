@@ -1,4 +1,0 @@
-<map id="utility_module::has_utf8_bom" name="utility_module::has_utf8_bom">
-<area shape="rect" id="node1" title="Checks if a string starts with a UTF&#45;8 BOM." alt="" coords="227,5,373,47"/>
-<area shape="rect" id="node2" href="$d1/d53/classutility__module_1_1convert__string.html#aa093b41bae554d89c3630f9bf488472d" title="Converts a string to a byte array." alt="" coords="5,5,179,47"/>
-</map>
