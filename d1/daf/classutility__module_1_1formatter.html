@@ -73,13 +73,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>A utility class for string formatting.  
+ <a href="../../d1/daf/classutility__module_1_1formatter.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="../../de/d52/formatter_8h_source.html">formatter.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for utility_module::formatter:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d0/daa/classutility__module_1_1formatter__coll__graph.png" border="0" usemap="#autility__module_1_1formatter_coll__map" alt="Collaboration graph"/></div>
 <map name="autility__module_1_1formatter_coll__map" id="autility__module_1_1formatter_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,192,97"/>
+<area shape="rect" title="A utility class for string formatting." alt="" coords="5,5,192,97"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -87,14 +90,18 @@ Collaboration diagram for utility_module::formatter:</div>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a106c65e6f61f42a54f8ac76d11b84424"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:a106c65e6f61f42a54f8ac76d11b84424"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/daf/classutility__module_1_1formatter.html#a106c65e6f61f42a54f8ac76d11b84424">format</a> (fmt::format_string&lt; Args... &gt; format_str, Args &amp;&amp;... args) -&gt; std::string</td></tr>
+<tr class="memdesc:a106c65e6f61f42a54f8ac76d11b84424"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats a string using the provided format string and arguments.  <a href="../../d1/daf/classutility__module_1_1formatter.html#a106c65e6f61f42a54f8ac76d11b84424">More...</a><br /></td></tr>
 <tr class="separator:a106c65e6f61f42a54f8ac76d11b84424"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b533ddadc1260bb5efc38b4e4b995fd"><td class="memTemplParams" colspan="2">template&lt;typename OutputIt , typename... Args&gt; </td></tr>
 <tr class="memitem:a0b533ddadc1260bb5efc38b4e4b995fd"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/daf/classutility__module_1_1formatter.html#a0b533ddadc1260bb5efc38b4e4b995fd">format_to</a> (OutputIt out, fmt::format_string&lt; Args... &gt; format_str, Args &amp;&amp;... args) -&gt; void</td></tr>
+<tr class="memdesc:a0b533ddadc1260bb5efc38b4e4b995fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats a string and writes the result to the provided output iterator.  <a href="../../d1/daf/classutility__module_1_1formatter.html#a0b533ddadc1260bb5efc38b4e4b995fd">More...</a><br /></td></tr>
 <tr class="separator:a0b533ddadc1260bb5efc38b4e4b995fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../de/d52/formatter_8h_source.html#l00013">13</a> of file <a class="el" href="../../de/d52/formatter_8h_source.html">formatter.h</a>.</p>
+<div class="textblock"><p>A utility class for string formatting. </p>
+<p>This class provides static methods for string formatting using either the C++20 std::format or the {fmt} library, depending on the compilation flag. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d52/formatter_8h_source.html#l00052">52</a> of file <a class="el" href="../../de/d52/formatter_8h_source.html">formatter.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a106c65e6f61f42a54f8ac76d11b84424"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a106c65e6f61f42a54f8ac76d11b84424">&#9670;&nbsp;</a></span>format()</h2>
@@ -133,16 +140,33 @@ template&lt;typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d52/formatter_8h_source.html#l00017">17</a> of file <a class="el" href="../../de/d52/formatter_8h_source.html">formatter.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#ifdef USE_STD_FORMAT</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                std::format</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                fmt::format</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                (format_str, std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
+<p>Formats a string using the provided format string and arguments. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>Variadic template parameter for the argument types. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format_str</td><td>The format string. </td></tr>
+    <tr><td class="paramname">args</td><td>The arguments to be formatted. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::string The formatted string.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This method uses std::format if USE_STD_FORMAT is defined, otherwise it uses fmt::format. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d52/formatter_8h_source.html#l00067">67</a> of file <a class="el" href="../../de/d52/formatter_8h_source.html">formatter.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">return</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#ifdef USE_STD_FORMAT</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                std::format</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                fmt::format</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                (format_str, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -189,14 +213,32 @@ template&lt;typename OutputIt , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d52/formatter_8h_source.html#l00035">35</a> of file <a class="el" href="../../de/d52/formatter_8h_source.html">formatter.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#ifdef USE_STD_FORMAT</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            std::format_to(out, format_str, std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            fmt::format_to(out, format_str, std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
+<p>Formats a string and writes the result to the provided output iterator. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">OutputIt</td><td>The type of the output iterator. </td></tr>
+    <tr><td class="paramname">Args</td><td>Variadic template parameter for the argument types. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>The output iterator to write the formatted string to. </td></tr>
+    <tr><td class="paramname">format_str</td><td>The format string. </td></tr>
+    <tr><td class="paramname">args</td><td>The arguments to be formatted.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This method uses std::format_to if USE_STD_FORMAT is defined, otherwise it uses fmt::format_to. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d52/formatter_8h_source.html#l00097">97</a> of file <a class="el" href="../../de/d52/formatter_8h_source.html">formatter.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#ifdef USE_STD_FORMAT</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            std::format_to(out, format_str, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            fmt::format_to(out, format_str, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
