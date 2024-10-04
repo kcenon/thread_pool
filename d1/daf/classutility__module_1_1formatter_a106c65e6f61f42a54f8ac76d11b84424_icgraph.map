@@ -1,0 +1,10 @@
+<map id="utility_module::formatter::format" name="utility_module::formatter::format">
+<area shape="rect" id="node1" title="Formats a string using the provided format string and arguments." alt="" coords="461,136,648,177"/>
+<area shape="rect" id="node2" href="$d1/d53/classutility__module_1_1convert__string.html#a99eb5fd5f035c80ea1d947e4c3ea25a0" title="Converts a string to a byte array, handling UTF&#45;8 BOM if present." alt="" coords="240,5,413,47"/>
+<area shape="rect" id="node3" href="$d1/d53/classutility__module_1_1convert__string.html#a7d18265a83e3727363b352e731782ec4" title="Converts a wide string to a UTF&#45;8 string." alt="" coords="240,71,413,112"/>
+<area shape="rect" id="node6" href="$d1/d53/classutility__module_1_1convert__string.html#ac7c3ffec0401b515dee58081da414ebb" title="Converts a UTF&#45;8 string to a UTF&#45;16 string." alt="" coords="240,136,413,177"/>
+<area shape="rect" id="node7" href="$d1/d53/classutility__module_1_1convert__string.html#afb2fe1d8a5eb084a9b5bd98fc19e84ee" title="Converts a UTF&#45;8 string to a UTF&#45;32 string." alt="" coords="240,201,413,243"/>
+<area shape="rect" id="node8" href="$d1/d53/classutility__module_1_1convert__string.html#a267866b4c387793ae6edebcea71b8e1c" title="Converts a UTF&#45;8 string to a wide string." alt="" coords="240,267,413,308"/>
+<area shape="rect" id="node4" href="$de/d30/classutility__module_1_1argument__manager.html#a35df20808a71003b65aafedb6f5772e9" title="Parses command&#45;line arguments from argc and argv." alt="" coords="5,39,192,80"/>
+<area shape="rect" id="node5" href="$de/d30/classutility__module_1_1argument__manager.html#a93d9851616d90497fe8ffc99b0ec710e" title="Constructs the argument manager with a wstring of arguments." alt="" coords="5,104,192,145"/>
+</map>
