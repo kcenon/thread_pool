@@ -190,12 +190,12 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d69/message__job_8cpp_source.html#l00043">43</a> of file <a class="el" href="../../d1/d69/message__job_8cpp_source.html">message_job.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        : <a class="code" href="../../d8/d42/classthread__module_1_1job.html#a2b1d0ad3dc7b26addd56500efba35782">job</a>(<span class="keyword">nullptr</span>, <span class="stringliteral">&quot;message_job&quot;</span>), <a class="code" href="../../db/daf/classlog__module_1_1message__job.html#a466e219e731d30e2b116dd4e8c074ed6">message_</a>(<a class="code" href="../../db/daf/classlog__module_1_1message__job.html#ab456b5a13c2e86a7e68e93aa4f8cac6a">message</a>)</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d69/message__job_8cpp_source.html#l00041">41</a> of file <a class="el" href="../../d1/d69/message__job_8cpp_source.html">message_job.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        : <a class="code" href="../../d8/d42/classthread__module_1_1job.html#a2b1d0ad3dc7b26addd56500efba35782">job</a>(<span class="keyword">nullptr</span>, <span class="stringliteral">&quot;message_job&quot;</span>), <a class="code" href="../../db/daf/classlog__module_1_1message__job.html#a466e219e731d30e2b116dd4e8c074ed6">message_</a>(<a class="code" href="../../db/daf/classlog__module_1_1message__job.html#ab456b5a13c2e86a7e68e93aa4f8cac6a">message</a>)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
 <div class="ttc" id="aclasslog__module_1_1message__job_html_a466e219e731d30e2b116dd4e8c074ed6"><div class="ttname"><a href="../../db/daf/classlog__module_1_1message__job.html#a466e219e731d30e2b116dd4e8c074ed6">log_module::message_job::message_</a></div><div class="ttdeci">std::string message_</div><div class="ttdoc">The log message to be written to the console.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dd4/message__job_8h_source.html#l00083">message_job.h:83</a></div></div>
-<div class="ttc" id="aclasslog__module_1_1message__job_html_ab456b5a13c2e86a7e68e93aa4f8cac6a"><div class="ttname"><a href="../../db/daf/classlog__module_1_1message__job.html#ab456b5a13c2e86a7e68e93aa4f8cac6a">log_module::message_job::message</a></div><div class="ttdeci">auto message(const bool &amp;append_newline=false) const -&gt; std::string</div><div class="ttdoc">Retrieves the log message, optionally appending a newline.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d69/message__job_8cpp_source.html#l00048">message_job.cpp:48</a></div></div>
+<div class="ttc" id="aclasslog__module_1_1message__job_html_ab456b5a13c2e86a7e68e93aa4f8cac6a"><div class="ttname"><a href="../../db/daf/classlog__module_1_1message__job.html#ab456b5a13c2e86a7e68e93aa4f8cac6a">log_module::message_job::message</a></div><div class="ttdeci">auto message(const bool &amp;append_newline=false) const -&gt; std::string</div><div class="ttdoc">Retrieves the log message, optionally appending a newline.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d69/message__job_8cpp_source.html#l00046">message_job.cpp:46</a></div></div>
 <div class="ttc" id="aclassthread__module_1_1job_html_a2b1d0ad3dc7b26addd56500efba35782"><div class="ttname"><a href="../../d8/d42/classthread__module_1_1job.html#a2b1d0ad3dc7b26addd56500efba35782">thread_module::job::job</a></div><div class="ttdeci">job(const std::function&lt; std::tuple&lt; bool, std::optional&lt; std::string &gt;&gt;(void)&gt; &amp;callback, const std::string &amp;name=&quot;job&quot;)</div><div class="ttdoc">Constructs a new job object.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d83/job_8cpp_source.html#l00039">job.cpp:39</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -234,15 +234,15 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="../../d8/d42/classthread__module_1_1job.html#a8516f8001e878a4d8359d63ebc568acc">thread_module::job</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d69/message__job_8cpp_source.html#l00064">64</a> of file <a class="el" href="../../d1/d69/message__job_8cpp_source.html">message_job.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../db/daf/classlog__module_1_1message__job.html#a466e219e731d30e2b116dd4e8c074ed6">message_</a>.empty())</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">false</span>, <span class="stringliteral">&quot;empty message&quot;</span> };</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">return</span> { <span class="keyword">true</span>, std::nullopt };</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d69/message__job_8cpp_source.html#l00056">56</a> of file <a class="el" href="../../d1/d69/message__job_8cpp_source.html">message_job.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../db/daf/classlog__module_1_1message__job.html#a466e219e731d30e2b116dd4e8c074ed6">message_</a>.empty())</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">return</span> { <span class="keyword">false</span>, <span class="stringliteral">&quot;empty message&quot;</span> };</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">return</span> { <span class="keyword">true</span>, std::nullopt };</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -271,21 +271,15 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The log message as a string, with an optional newline appended. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d69/message__job_8cpp_source.html#l00048">48</a> of file <a class="el" href="../../d1/d69/message__job_8cpp_source.html">message_job.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">if</span> (!append_newline)</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../db/daf/classlog__module_1_1message__job.html#a466e219e731d30e2b116dd4e8c074ed6">message_</a>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#ifdef USE_STD_FORMAT</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            std::format</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            fmt::format</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            (<span class="stringliteral">&quot;{}\n&quot;</span>, <a class="code" href="../../db/daf/classlog__module_1_1message__job.html#a466e219e731d30e2b116dd4e8c074ed6">message_</a>);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d69/message__job_8cpp_source.html#l00046">46</a> of file <a class="el" href="../../d1/d69/message__job_8cpp_source.html">message_job.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">if</span> (!append_newline)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../db/daf/classlog__module_1_1message__job.html#a466e219e731d30e2b116dd4e8c074ed6">message_</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> formatter::format(<span class="stringliteral">&quot;{}\n&quot;</span>, <a class="code" href="../../db/daf/classlog__module_1_1message__job.html#a466e219e731d30e2b116dd4e8c074ed6">message_</a>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
