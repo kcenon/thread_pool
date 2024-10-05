@@ -1,5 +1,0 @@
-<map id="utility_module::convert_string::to_string" name="utility_module::convert_string::to_string">
-<area shape="rect" id="node1" title="Converts a wide string to a UTF&#45;8 string." alt="" coords="240,39,413,80"/>
-<area shape="rect" id="node2" href="$de/d30/classutility__module_1_1argument__manager.html#a35df20808a71003b65aafedb6f5772e9" title="Parses command&#45;line arguments from argc and argv." alt="" coords="5,5,192,47"/>
-<area shape="rect" id="node3" href="$de/d30/classutility__module_1_1argument__manager.html#a93d9851616d90497fe8ffc99b0ec710e" title="Constructs the argument manager with a wstring of arguments." alt="" coords="5,71,192,112"/>
-</map>
