@@ -73,7 +73,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:df/dbc/namespacelog__module_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/namespacelog__module_1_1detail.html">detail</a></td></tr>
+<tr class="memitem:de/d98/namespacelog__module_1_1log__detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d98/namespacelog__module_1_1log__detail.html">log_detail</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -216,10 +216,11 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="../../d1/d18/log__types_8h_source.html#l00084">84</a> of file <a class="el" href="../../d1/d18/log__types_8h_source.html">log_types.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keyword">auto</span> index = <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(log_type);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> (index &lt; <a class="code" href="../../df/dbc/namespacelog__module_1_1detail.html#aac9fbafeefbe59bec8a1d74d7174ad4e">detail::log_type_count</a>) ? <a class="code" href="../../df/dbc/namespacelog__module_1_1detail.html#a983eec45953b5a4154339867e4721a1b">detail::log_type_strings</a>[index] : <span class="stringliteral">&quot;UNKNOWN&quot;</span>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
-<div class="ttc" id="anamespacelog__module_1_1detail_html_a983eec45953b5a4154339867e4721a1b"><div class="ttname"><a href="../../df/dbc/namespacelog__module_1_1detail.html#a983eec45953b5a4154339867e4721a1b">log_module::detail::log_type_strings</a></div><div class="ttdeci">constexpr std::array log_type_strings</div><div class="ttdoc">Array of string representations for log types.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/log__types_8h_source.html#l00068">log_types.h:69</a></div></div>
-<div class="ttc" id="anamespacelog__module_1_1detail_html_aac9fbafeefbe59bec8a1d74d7174ad4e"><div class="ttname"><a href="../../df/dbc/namespacelog__module_1_1detail.html#aac9fbafeefbe59bec8a1d74d7174ad4e">log_module::detail::log_type_count</a></div><div class="ttdeci">constexpr size_t log_type_count</div><div class="ttdoc">Number of log types.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/log__types_8h_source.html#l00072">log_types.h:72</a></div></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> (index &lt; <a class="code" href="../../de/d98/namespacelog__module_1_1log__detail.html#a5fe62eb65ab4da20620746d7cdfb022e">log_detail::log_type_count</a>) ? <a class="code" href="../../de/d98/namespacelog__module_1_1log__detail.html#a3c603ab668f8accaf020653b72779105">log_detail::log_type_strings</a>[index]</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                                                    : <span class="stringliteral">&quot;UNKNOWN&quot;</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="ttc" id="anamespacelog__module_1_1log__detail_html_a3c603ab668f8accaf020653b72779105"><div class="ttname"><a href="../../de/d98/namespacelog__module_1_1log__detail.html#a3c603ab668f8accaf020653b72779105">log_module::log_detail::log_type_strings</a></div><div class="ttdeci">constexpr std::array log_type_strings</div><div class="ttdoc">Array of string representations for log types.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/log__types_8h_source.html#l00068">log_types.h:69</a></div></div>
+<div class="ttc" id="anamespacelog__module_1_1log__detail_html_a5fe62eb65ab4da20620746d7cdfb022e"><div class="ttname"><a href="../../de/d98/namespacelog__module_1_1log__detail.html#a5fe62eb65ab4da20620746d7cdfb022e">log_module::log_detail::log_type_count</a></div><div class="ttdeci">constexpr size_t log_type_count</div><div class="ttdoc">Number of log types.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d18/log__types_8h_source.html#l00072">log_types.h:72</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d4/d6d/namespacefmt.html">fmt</a></li><li class="navelem"><a class="el" href="../../db/dc8/structfmt_1_1formatter_3_01priority__thread__pool__module_1_1job__priorities_01_4.html">formatter&lt; priority_thread_pool_module::job_priorities &gt;</a></li>  </ul>
+<li class="navelem"><b>fmt</b></li><li class="navelem"><a class="el" href="../../db/dc8/structfmt_1_1formatter_3_01priority__thread__pool__module_1_1job__priorities_01_4.html">formatter&lt; priority_thread_pool_module::job_priorities &gt;</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -88,8 +88,8 @@ Collaboration diagram for fmt::formatter&lt; priority_thread_pool_module::job_pr
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a40cb87ac1dd5555e7aa829cd3c0a7b9d"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc8/structfmt_1_1formatter_3_01priority__thread__pool__module_1_1job__priorities_01_4.html#a40cb87ac1dd5555e7aa829cd3c0a7b9d">parse</a> (format_parse_context &amp;ctx)</td></tr>
-<tr class="separator:a40cb87ac1dd5555e7aa829cd3c0a7b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe46c13db30eff85a0ac880d580885bd"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc8/structfmt_1_1formatter_3_01priority__thread__pool__module_1_1job__priorities_01_4.html#afe46c13db30eff85a0ac880d580885bd">parse</a> (fmt::format_parse_context &amp;ctx)</td></tr>
+<tr class="separator:afe46c13db30eff85a0ac880d580885bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46f7dcf20471e64e16aa88b696e0d3b9"><td class="memTemplParams" colspan="2">template&lt;typename FormatContext &gt; </td></tr>
 <tr class="memitem:a46f7dcf20471e64e16aa88b696e0d3b9"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/dc8/structfmt_1_1formatter_3_01priority__thread__pool__module_1_1job__priorities_01_4.html#a46f7dcf20471e64e16aa88b696e0d3b9">format</a> (const <a class="el" href="../../d8/da5/namespacepriority__thread__pool__module.html#ad02023113ce2026fd0599170b3aad090">priority_thread_pool_module::job_priorities</a> &amp;job_priority, FormatContext &amp;ctx) const</td></tr>
 <tr class="separator:a46f7dcf20471e64e16aa88b696e0d3b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -98,7 +98,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Specialization of fmt::formatter for <a class="el" href="../../d8/da5/namespacepriority__thread__pool__module.html#ad02023113ce2026fd0599170b3aad090" title="Enumeration of job priority levels.">priority_thread_pool_module::job_priorities</a>. </p>
 <p>This formatter allows job_priorities to be used with fmt::format. It converts the job_priorities enum values to their string representations. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/db4/job__priorities_8h_source.html#l00117">117</a> of file <a class="el" href="../../d4/db4/job__priorities_8h_source.html">job_priorities.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/db4/job__priorities_8h_source.html#l00113">113</a> of file <a class="el" href="../../d4/db4/job__priorities_8h_source.html">job_priorities.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a46f7dcf20471e64e16aa88b696e0d3b9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a46f7dcf20471e64e16aa88b696e0d3b9">&#9670;&nbsp;</a></span>format()</h2>
@@ -136,10 +136,11 @@ template&lt;typename FormatContext &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/db4/job__priorities_8h_source.html#l00122">122</a> of file <a class="el" href="../../d4/db4/job__priorities_8h_source.html">job_priorities.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;{}&quot;</span>, <a class="code" href="../../d8/da5/namespacepriority__thread__pool__module.html#aa0d88f2662a7efa64969e6abfc30cef0">priority_thread_pool_module::to_string</a>(job_priority));</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="../../d4/db4/job__priorities_8h_source.html#l00118">118</a> of file <a class="el" href="../../d4/db4/job__priorities_8h_source.html">job_priorities.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">return</span> fmt::format_to(ctx.out(), <span class="stringliteral">&quot;{}&quot;</span>,</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                              <a class="code" href="../../d8/da5/namespacepriority__thread__pool__module.html#aa0d88f2662a7efa64969e6abfc30cef0">priority_thread_pool_module::to_string</a>(job_priority));</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
 <div class="ttc" id="anamespacepriority__thread__pool__module_html_aa0d88f2662a7efa64969e6abfc30cef0"><div class="ttname"><a href="../../d8/da5/namespacepriority__thread__pool__module.html#aa0d88f2662a7efa64969e6abfc30cef0">priority_thread_pool_module::to_string</a></div><div class="ttdeci">constexpr std::string_view to_string(job_priorities job_priority)</div><div class="ttdoc">Converts a job_priorities value to its string representation.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db4/job__priorities_8h_source.html#l00079">job_priorities.h:79</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -153,8 +154,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a40cb87ac1dd5555e7aa829cd3c0a7b9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40cb87ac1dd5555e7aa829cd3c0a7b9d">&#9670;&nbsp;</a></span>parse()</h2>
+<a id="afe46c13db30eff85a0ac880d580885bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe46c13db30eff85a0ac880d580885bd">&#9670;&nbsp;</a></span>parse()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -165,7 +166,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">constexpr auto fmt::formatter&lt; <a class="el" href="../../d8/da5/namespacepriority__thread__pool__module.html#ad02023113ce2026fd0599170b3aad090">priority_thread_pool_module::job_priorities</a> &gt;::parse </td>
           <td>(</td>
-          <td class="paramtype">format_parse_context &amp;&#160;</td>
+          <td class="paramtype">fmt::format_parse_context &amp;&#160;</td>
           <td class="paramname"><em>ctx</em></td><td>)</td>
           <td></td>
         </tr>
@@ -177,8 +178,8 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/db4/job__priorities_8h_source.html#l00119">119</a> of file <a class="el" href="../../d4/db4/job__priorities_8h_source.html">job_priorities.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;{ <span class="keywordflow">return</span> ctx.begin(); }</div>
+<p class="definition">Definition at line <a class="el" href="../../d4/db4/job__priorities_8h_source.html#l00115">115</a> of file <a class="el" href="../../d4/db4/job__priorities_8h_source.html">job_priorities.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;{ <span class="keywordflow">return</span> ctx.begin(); }</div>
 </div><!-- fragment -->
 </div>
 </div>

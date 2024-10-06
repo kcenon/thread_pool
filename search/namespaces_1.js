@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['detail_242',['detail',['../df/dbc/namespacelog__module_1_1detail.html',1,'log_module']]],
-  ['log_5fmodule_243',['log_module',['../d9/de0/namespacelog__module.html',1,'']]]
+  ['job_5fdetail_242',['job_detail',['../d8/dc9/namespacepriority__thread__pool__module_1_1job__detail.html',1,'priority_thread_pool_module']]],
+  ['priority_5fthread_5fpool_5fmodule_243',['priority_thread_pool_module',['../d8/da5/namespacepriority__thread__pool__module.html',1,'']]]
 ];
