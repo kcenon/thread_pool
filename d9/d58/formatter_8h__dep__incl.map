@@ -1,5 +1,5 @@
 <map id="sources/utilities/formatter.h" name="sources/utilities/formatter.h">
-<area shape="rect" id="node1" title=" " alt="" coords="592,5,795,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="500,5,703,32"/>
 <area shape="rect" id="node2" href="$d1/d4f/console__writer_8cpp.html" title=" " alt="" coords="5,80,176,121"/>
 <area shape="rect" id="node3" href="$de/d2a/file__writer_8cpp.html" title=" " alt="" coords="200,80,341,121"/>
 <area shape="rect" id="node4" href="$d7/d3c/log__collector_8cpp.html" title=" " alt="" coords="365,80,507,121"/>
@@ -7,5 +7,4 @@
 <area shape="rect" id="node6" href="$d1/d69/message__job_8cpp.html" title=" " alt="" coords="697,80,877,121"/>
 <area shape="rect" id="node7" href="$df/d17/thread__pool_8cpp.html" title=" " alt="" coords="901,80,1054,121"/>
 <area shape="rect" id="node8" href="$de/d61/thread__worker_8cpp.html" title=" " alt="" coords="1078,80,1231,121"/>
-<area shape="rect" id="node9" href="$d9/d86/convert__string_8cpp.html" title=" " alt="" coords="1256,80,1435,121"/>
 </map>

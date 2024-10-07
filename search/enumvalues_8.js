@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['u16string_450',['U16String',['../df/df4/classlog__module_1_1log__job.html#a9659665b71a5b0beb2a851fe6fbabecba6b352ec039f3c13da567703866271fb6',1,'log_module::log_job']]],
-  ['u32string_451',['U32String',['../df/df4/classlog__module_1_1log__job.html#a9659665b71a5b0beb2a851fe6fbabecba6260469c9293bbfde2398c6971915ce8',1,'log_module::log_job']]]
+  ['sequence_482',['Sequence',['../d9/de0/namespacelog__module.html#ac59af6ec9704b7fd0d73e7becbc54709a3ff39d3acb327553070a64ef0cb321d5',1,'log_module']]],
+  ['string_483',['String',['../df/df4/classlog__module_1_1log__job.html#a9659665b71a5b0beb2a851fe6fbabecba27118326006d3829667a400ad23d5d98',1,'log_module::log_job']]]
 ];

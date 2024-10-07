@@ -1,7 +1,0 @@
-<map id="utility_module::formatter::format" name="utility_module::formatter::format">
-<area shape="rect" id="node1" title="Formats a string using the provided format string and arguments." alt="" coords="227,104,413,145"/>
-<area shape="rect" id="node2" href="$d1/d53/classutility__module_1_1convert__string.html#a99eb5fd5f035c80ea1d947e4c3ea25a0" title="Converts a string to a byte array, handling UTF&#45;8 BOM if present." alt="" coords="5,5,179,47"/>
-<area shape="rect" id="node3" href="$d1/d53/classutility__module_1_1convert__string.html#aaf75020cc2b97ce6237077d39cadc238" title="Converts a UTF&#45;16 string to a UTF&#45;8 string." alt="" coords="5,71,179,112"/>
-<area shape="rect" id="node4" href="$d1/d53/classutility__module_1_1convert__string.html#ac7c3ffec0401b515dee58081da414ebb" title="Converts a UTF&#45;8 string to a UTF&#45;16 string." alt="" coords="5,136,179,177"/>
-<area shape="rect" id="node5" href="$d1/d53/classutility__module_1_1convert__string.html#afb2fe1d8a5eb084a9b5bd98fc19e84ee" title="Converts a UTF&#45;8 string to a UTF&#45;32 string." alt="" coords="5,201,179,243"/>
-</map>
